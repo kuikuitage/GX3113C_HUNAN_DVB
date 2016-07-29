@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_qilian_cas_baseinfo" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_qilian_cas_baseinfo_create</create>
+        <destroy>win_qilian_cas_baseinfo_destroy</destroy>
+        <keypress>win_qilian_cas_baseinfo_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_qilian_cas_baseinfo_backgroup" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_qilian_cas_baseinfo_image202" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Base info</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_time_text" class="text">
+            <property>
+                <rect>[910,110,200,35]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_version_name" class="text">
+            <property>
+                <rect>[106,162,200,40]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string>Version</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_cardid_name" class="text">
+            <property>
+                <rect>[106,214,200,40]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string>Card Id</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_zone_name" class="text">
+            <property>
+                <rect>[106,271,200,40]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string>Sys Ct Id</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_version" class="text">
+            <property>
+                <rect>[309,162,300,40]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_cardid" class="text">
+            <property>
+                <rect>[310,214,300,40]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_baseinfo_zone" class="text">
+            <property>
+                <rect>[310,271,300,40]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_tip_image_exit" class="image">
+            <property>
+                <rect>[297,460,34,22]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[350,456,200,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

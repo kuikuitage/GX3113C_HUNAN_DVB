@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_music_info" class="window">
+    <property>
+        <rect>[60,70,600,340]</rect>
+        <forecolor>[#909092,#909092,#00FF00]</forecolor>
+        <backcolor>[#16161c,#16161c,#16161c]</backcolor>
+    </property>
+    <signal>
+        <create>music_info_init</create>
+        <destroy>music_info_destroy</destroy>
+        <service>music_info_service</service>
+        <keypress>music_info_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="music_info_textback" class="image">
+            <property>
+                <rect>[0,0,600,340]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text89" class="text">
+            <property>
+                <rect>[34,27,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#addd28]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#191819]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Artist</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text90" class="text">
+            <property>
+                <rect>[34,66,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Album</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text91" class="text">
+            <property>
+                <rect>[34,105,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Year</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text92" class="text">
+            <property>
+                <rect>[34,144,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Genre</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text93" class="text">
+            <property>
+                <rect>[34,183,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Track</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text100" class="text">
+            <property>
+                <rect>[34,222,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Title</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text94" class="text">
+            <property>
+                <rect>[216,26,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#addd28]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text95" class="text">
+            <property>
+                <rect>[216,65,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text96" class="text">
+            <property>
+                <rect>[216,104,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text97" class="text">
+            <property>
+                <rect>[216,144,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text98" class="text">
+            <property>
+                <rect>[216,183,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_text99" class="text">
+            <property>
+                <rect>[216,222,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="music_info_button51" class="button">
+            <property>
+                <rect>[255,271,91,32]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|vcentre</alignment>
+                <string>OK</string>
+                <focus_img>MP_BUTTON_OK.bmp</focus_img>
+                <unfocus_img>MP_BUTTON_OK.bmp</unfocus_img>
+            </property>
+        </widget>
+    </children>
+</widget>

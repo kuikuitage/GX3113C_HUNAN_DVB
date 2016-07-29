@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_text_view" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#000000,#000000,#242424]</backcolor>
+    </property>
+    <signal>
+        <create>text_view_init</create>
+        <destroy>text_view_destroy</destroy>
+        <service>text_view_service</service>
+        <keypress>text_view_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="text_view_notepad" class="notepad">
+            <property>
+                <rect>[60,50,600,476]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#cecece]</forecolor>
+                <backcolor>[#000000,#000000,#242424]</backcolor>
+                <alignment>left|top</alignment>
+                <font>Arial</font>
+                <vertical_margin>50</vertical_margin>
+                <horizontal_margin>50</horizontal_margin>
+            </property>
+            <children>
+                <widget style="default" name="text_view_scrollbar" class="scrollbar">
+                    <property>
+                        <rect>[581,0,19,476]</rect>
+                        <forecolor>[#909092,#909092,#909092]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <back_img>HDMP_SCROLL_MIDDLE.bmp</back_img>
+                        <arrow_up>HDMP_SCROLL_UP.bmp</arrow_up>
+                        <arrow_down>HDMP_SCROLL_DOWN.bmp</arrow_down>
+                        <fore_img>HDMP_SCROLL_MIDDLE2.bmp</fore_img>
+                        <format>scroll_show</format>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

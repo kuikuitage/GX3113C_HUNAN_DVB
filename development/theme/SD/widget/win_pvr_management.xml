@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_pvr_management" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00ff00,#00ff00,#000000]</backcolor>
+        <back_ground>mediacenter.jpg</back_ground>
+    </property>
+    <signal>
+        <create>pvr_management_create</create>
+        <destroy>pvr_management_destroy</destroy>
+        <keypress>pvr_management_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_movie_set_image_back" class="image">
+            <property>
+                <rect>[40,50,640,360]</rect>
+                <forecolor>[#16161c,#16161c,#16161c]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="pvr_management_box" class="box">
+            <property>
+                <rect>[69,128,580,212]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#242424]</backcolor>
+                <interval>2</interval>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>pvr_management_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="pvr_management_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,2,580,40]</rect>
+                        <state>disable</state>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pvr_management_boxitem1_text" class="text">
+                            <property>
+                                <rect>[59,9,500,25]</rect>
+                                <forecolor>[#16a2c6,#16a2c6,#16a2c6]</forecolor>
+                                <backcolor>[#34394C,#34394C,#34394C]</backcolor>
+                                <font>Arial</font>
+                                <string>TimeshiftTitle</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pvr_management_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[0,44,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pvr_management_boxitem2_text" class="text">
+                            <property>
+                                <rect>[72,2,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Timeshift</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pvr_management_boxitem1_combox" class="combobox">
+                            <property>
+                                <rect>[268,4,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[Off,On]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pvr_management_boxitem3" class="boxitem">
+                    <property>
+                        <rect>[0,86,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pvr_management_boxitem3_text" class="text">
+                            <property>
+                                <rect>[72,2,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>TS File Size</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pvr_management_boxitem2_combox" class="combobox">
+                            <property>
+                                <rect>[268,4,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[1G,2G,4G]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pvr_management_boxitem4" class="boxitem">
+                    <property>
+                        <rect>[0,128,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pvr_management_boxitem4_text" class="text">
+                            <property>
+                                <rect>[72,4,500,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#bbff00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Record</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pvr_management_boxitem5" class="boxitem">
+                    <property>
+                        <rect>[0,170,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pvr_management_boxitem5_text" class="text">
+                            <property>
+                                <rect>[72,2,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#bbff00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Record Duration</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pvr_management_boxitem3_combox" class="combobox">
+                            <property>
+                                <rect>[268,0,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[2h,2h30min,3h,3h30min,4h,4h30min,5h,5h30min,6h,6h30min,7h,7h30min,8h,8h30min,9h,9h30min,10h,10h30min,11h,11h30min,12h]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

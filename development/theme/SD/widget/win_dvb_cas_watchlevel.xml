@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_dvb_cas_watchlevel" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_dvb_cas_rating_create</create>
+        <destroy>win_dvb_cas_rating_destroy</destroy>
+        <keypress>win_dvb_cas_rating_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_dvb_cas_watchlevel_backgroup" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_divitone_cas_cardinfo_image202" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_dvb_cas_watchlevel_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Watch Level</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_dvb_cas_watchlevel_time_text" class="text">
+            <property>
+                <rect>[910,110,200,35]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_dvb_cas_watchlevel_box" class="box">
+            <property>
+                <rect>[140,177,447,160]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <interval>10</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="win_dvb_cas_watchlevel_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,10,447,29]</rect>
+                        <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_ORANGE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_dvb_cas_watchlevel_boxitem1_text" class="text">
+                            <property>
+                                <rect>[29,1,200,26]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#ff00ff,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Watch Level</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_dvb_cas_watchlevel_boxitem1_value" class="combobox">
+                            <property>
+                                <rect>[235,1,200,26]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_dvb_cas_watchlevel_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[0,49,447,29]</rect>
+                        <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_BLUE.bmp</focus_image>
+                        <disable_image>DS_BOX_ALLOW_BLUE.bmp</disable_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_dvb_cas_watchlevel_boxitem2_text" class="text">
+                            <property>
+                                <rect>[29,1,200,26]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#ff00ff,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Input PIN</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_dvb_cas_watchlevel_boxitem2_edit" class="edit">
+                            <property>
+                                <rect>[235,3,200,23]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#6bc65a,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <intaglio>*</intaglio>
+                                <maxlen>6</maxlen>
+                                <format>edit_digit</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_dvb_cas_watchlevel_tip_3times" class="text">
+            <property>
+                <rect>[110,390,500,30]</rect>
+                <forecolor>[#381313,#381313,#381313]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <string>[NOTICE]Failed 3 times, the PIN will be locked</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_dvb_cas_watchlevel_updown" class="image">
+            <property>
+                <rect>[134,466,54,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_SWORD.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_dvb_cas_watchlevel_tip_image_exit" class="image">
+            <property>
+                <rect>[299,461,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_dvb_cas_watchlevel_tip_image_ok" class="image">
+            <property>
+                <rect>[446,460,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_OK.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_updown" class="text">
+            <property>
+                <rect>[190,457,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Move Focus</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[341,455,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_ok" class="text">
+            <property>
+                <rect>[491,457,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Save</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

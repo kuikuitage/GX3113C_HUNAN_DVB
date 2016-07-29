@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/3201_DVBC/!svn/ver/761/gxapp_common/ads/byads/gongban/api
+END
+app_by_ads_porting_stb_api.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3201_DVBC/!svn/ver/761/gxapp_common/ads/byads/gongban/api/app_by_ads_porting_stb_api.c
+END
+app_by_ads_gif.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/3201_DVBC/!svn/ver/579/gxapp_common/ads/byads/gongban/api/app_by_ads_gif.c
+END
+app_by_ads_av_logo.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/3201_DVBC/!svn/ver/553/gxapp_common/ads/byads/gongban/api/app_by_ads_av_logo.c
+END
+app_by_ads_scroll_bmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/3201_DVBC/!svn/ver/714/gxapp_common/ads/byads/gongban/api/app_by_ads_scroll_bmp.c
+END
+app_by_ads_bmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/3201_DVBC/!svn/ver/463/gxapp_common/ads/byads/gongban/api/app_by_ads_bmp.c
+END

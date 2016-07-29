@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_movie_view" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+        <back_ground>null</back_ground>
+    </property>
+    <signal>
+        <create>movie_view_init</create>
+        <destroy>movie_view_destroy</destroy>
+        <got_focus>movie_view_got_focus</got_focus>
+        <lost_focus>movie_view_lost_focus</lost_focus>
+        <service>movie_view_service</service>
+        <keypress>movie_view_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="movie_view_text_status" class="text">
+            <property>
+                <rect>[233,77,260,30]</rect>
+                <state>hide</state>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#242424]</backcolor>
+                <font>Arial</font>
+                <string>Can not play the file!</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_image_popmsg" class="image">
+            <property>
+                <rect>[496,120,128,40]</rect>
+                <state>hide</state>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_imag_mute" class="image">
+            <property>
+                <rect>[534,42,71,58]</rect>
+                <state>hide</state>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_VOL_2.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_combo_popmsg" class="combobox">
+            <property>
+                <rect>[280,125,176,32]</rect>
+                <state>hide</state>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#808080]</backcolor>
+                <font>Arial</font>
+                <content>[Stereo,Left,Right,Auto,Full screen,Original,4:3,16:9]</content>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_text_subt" class="text">
+            <property>
+                <rect>[63,175,600,330]</rect>
+                <forecolor>[#cecece,#cecece,#cecece]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|bottom</alignment>
+                <string></string>
+                <format>automatic</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_image_boxback" class="image">
+            <property>
+                <rect>[62,361,600,140]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_img_sliderback" class="image">
+            <property>
+                <rect>[88,377,550,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <l_img>MP_PROGRESS_L.bmp</l_img>
+                <r_img>MP_PROGRESS_R.bmp</r_img>
+                <t_img>MP_PROGRESS_M.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_text_name1" class="text">
+            <property>
+                <rect>[86,467,550,30]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#292829,#292829,#292829]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>fix_r2l</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_box" class="box">
+            <property>
+                <rect>[233,412,257,50]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#242424]</backcolor>
+                <interval>4</interval>
+                <format>horizontal</format>
+            </property>
+            <signal>
+                <keypress>movie_view_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="movie_view_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[4,5,38,41]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_view_boxitem1_button" class="button">
+                            <property>
+                                <rect>[0,0,38,41]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_PREVIOUS_YELLOW.bmp</focus_img>
+                                <unfocus_img>MP_ICON_PREVIOUS.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_view_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[46,5,38,41]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_view_boxitem2_button" class="button">
+                            <property>
+                                <rect>[0,0,38,41]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_PAUSE_YELLOW.bmp</focus_img>
+                                <unfocus_img>MP_ICON_PAUSE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_view_boxitem3" class="boxitem">
+                    <property>
+                        <rect>[88,5,38,41]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_view_boxitem3_button" class="button">
+                            <property>
+                                <rect>[0,0,38,41]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_NEXT_YELLOW.bmp</focus_img>
+                                <unfocus_img>MP_ICON_NEXT.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_view_boxitem4" class="boxitem">
+                    <property>
+                        <rect>[130,5,38,41]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_view_boxitem4_button" class="button">
+                            <property>
+                                <rect>[0,0,38,41]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_STOP_YELLOW.bmp</focus_img>
+                                <unfocus_img>MP_ICON_STOP.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_view_boxitem5" class="boxitem">
+                    <property>
+                        <rect>[172,5,38,41]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_view_boxitem5_button" class="button">
+                            <property>
+                                <rect>[0,0,38,41]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_SET_YELLOW.bmp</focus_img>
+                                <unfocus_img>MP_ICON_SET.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_view_boxitem6" class="boxitem">
+                    <property>
+                        <rect>[214,5,38,41]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_view_boxitem6_button" class="button">
+                            <property>
+                                <rect>[0,0,38,41]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_INFO_YELLOW.bmp</focus_img>
+                                <unfocus_img>MP_ICON_INFO.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="movie_view_sliderbar" class="sliderbar">
+            <property>
+                <rect>[112,386,502,12]</rect>
+                <forecolor>[#909092,#909092,#FF00FF]</forecolor>
+                <backcolor>[#383A3D,#383A3D,#383A3D]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <step>2</step>
+                <fore_image>MP_PROGRESS_M1.bmp</fore_image>
+                <format>normal</format>
+                <cursor_image>MP_PROGRESS_M1.bmp</cursor_image>
+            </property>
+            <signal>
+                <keypress>movie_view_sliderbar_keypress</keypress>
+            </signal>
+        </widget>
+        <widget style="default" name="movie_view_text_start_time" class="text">
+            <property>
+                <rect>[88,419,120,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <font>Arial</font>
+                <string>00:00:00</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_text_stop_time" class="text">
+            <property>
+                <rect>[517,418,120,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <font>Arial</font>
+                <string>00:00:00</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_view_sliderbar_cursor" class="sliderbar">
+            <property>
+                <rect>[112,386,502,12]</rect>
+                <forecolor>[#909092,#909092,#FF00FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <step>2</step>
+                <format>normal</format>
+                <cursor_image>MP_PROGRESS_CURSOR.bmp</cursor_image>
+            </property>
+            <signal>
+                <keypress>movie_view_cursor_keypress</keypress>
+            </signal>
+        </widget>
+    </children>
+</widget>

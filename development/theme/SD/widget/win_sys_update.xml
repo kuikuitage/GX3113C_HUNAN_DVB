@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_sys_update" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_sys_update_create</create>
+        <destroy>win_sys_update_destroy</destroy>
+        <service>win_sys_update_service</service>
+        <keypress>win_sys_update_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_sys_update_image_bg" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#334E8C,#334E8C,#334E8C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_sys_update_box" class="box">
+            <property>
+                <rect>[246,210,244,160]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <interval>20</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="win_sys_update_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,20,244,54]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <unfocus_image>DS_ADVANCED_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_ADVANCED_ORANGE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_sys_update_boxitem1_text" class="text">
+                            <property>
+                                <rect>[0,11,244,34]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <string>OTA Update</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_sys_update_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[0,94,244,54]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <unfocus_image>DS_ADVANCED_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_ADVANCED_ORANGE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_sys_update_boxitem2_text" class="text">
+                            <property>
+                                <rect>[0,10,244,34]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <string>USB Update</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_sys_update_text406" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>System Update</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

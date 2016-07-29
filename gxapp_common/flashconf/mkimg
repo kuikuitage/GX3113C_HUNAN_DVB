@@ -1,0 +1,160 @@
+#!/bin/bash
+
+
+cd ../flash
+
+rm rootfs_ecos -rf
+cp -rf file_tree/rootfs_ecos ./
+cp -rf file_tree/datafs_ecos ./
+cp -rf ../theme/$DVB_RESOLUTION rootfs_ecos/theme
+cp -rf ../theme/$DVB_RESOLUTION/widget rootfs_ecos/widget_bak
+find rootfs_ecos -name '.svn'|xargs rm -rf
+find rootfs_ecos -name '*.sh'|xargs rm -rf
+find rootfs_ecos -name '*.xls'|xargs rm -rf
+find rootfs_ecos -name '*.db'|xargs rm -rf
+find rootfs_ecos -name '*.py'|xargs rm -rf
+find datafs_ecos -name '.svn'|xargs rm -rf
+find datafs_ecos -name '*.sh'|xargs rm -rf
+find datafs_ecos -name '*.xls'|xargs rm -rf
+
+
+
+if [ "no" = $DVB_MEDIA_FLAG ] ; then
+	rm -rf rootfs_ecos/theme/image/media
+	rm -rf rootfs_ecos/theme/widget/win_disk_information.xml
+	rm -rf rootfs_ecos/theme/widget/win_down_view.xml
+	rm -rf rootfs_ecos/theme/widget/win_duration_set.xml
+	rm -rf rootfs_ecos/theme/widget/win_file_browser.xml
+	rm -rf rootfs_ecos/theme/widget/win_file_edit.xml
+	rm -rf rootfs_ecos/theme/widget/win_media_centre.xml
+	rm -rf rootfs_ecos/theme/widget/win_media_popmsg_ok.xml
+	rm -rf rootfs_ecos/theme/widget/win_media_popmsg_timeout.xml
+	rm -rf rootfs_ecos/theme/widget/win_media_popmsg_yesno.xml
+	rm -rf rootfs_ecos/theme/widget/win_movie_info.xml
+	rm -rf rootfs_ecos/theme/widget/win_movie_set.xml
+	rm -rf rootfs_ecos/theme/widget/win_movie_subt.xml
+	rm -rf rootfs_ecos/theme/widget/win_movie_view.xml
+	rm -rf rootfs_ecos/theme/widget/win_music_info.xml
+	rm -rf rootfs_ecos/theme/widget/win_music_set.xml
+	rm -rf rootfs_ecos/theme/widget/win_music_view.xml
+	rm -rf rootfs_ecos/theme/widget/win_open_file.xml
+	rm -rf rootfs_ecos/theme/widget/win_pic_info.xml
+	rm -rf rootfs_ecos/theme/widget/win_pic_set.xml
+	rm -rf rootfs_ecos/theme/widget/win_pic_view.xml
+	rm -rf rootfs_ecos/theme/widget/win_pmp_set.xml
+	rm -rf rootfs_ecos/theme/widget/win_pvr_management.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_pvr_bar.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_pvr_media_list.xml
+fi
+
+if [ "no" = $GAME_SNAKE ] ; then
+	rm -rf rootfs_ecos/theme/image/game
+	rm -rf rootfs_ecos/theme/widget/win_snake.xml
+fi
+
+if [ "no" = $FACTORY_MENU ] ; then
+	rm -rf rootfs_ecos/theme/widget/win_factory_menu.xml
+	rm -rf rootfs_ecos/theme/widget/win_factory_menu_dplay.xml
+	rm -rf rootfs_ecos/theme/widget/win_factory_menu_port.xml
+	rm -rf rootfs_ecos/theme/widget/win_factory_menu_scan.xml
+fi
+if [ "no" = $DVB_PVR_FLAG ] ; then
+	rm -rf rootfs_ecos/theme/image/pvr
+	rm -rf rootfs_ecos/theme/widget/wnd_pvr_bar.xml
+fi
+if [ "no" = $DVB_NETWORK_FLAG ] ; then
+	rm -rf rootfs_ecos/theme/image/rss
+	rm -rf rootfs_ecos/theme/image/tip
+	rm -rf rootfs_ecos/theme/image/weather
+	rm -rf rootfs_ecos/theme/image/wifi
+	rm -rf rootfs_ecos/theme/image/youtube
+	rm -rf rootfs_ecos/theme/widget/win_wifi.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_network.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_picasa.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_picasa_play.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_rss.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_rss_dialog.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_weather_map.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_youtube.xml
+	rm -rf rootfs_ecos/theme/widget/wnd_youtube_play.xml
+	rm -rf rootfs_ecos/theme/widget/Wnd_full_keyboard.xml
+fi
+if [ "no" = $DVB_SUBTITLE_FLAG ] ; then
+if [ "no" = $DVB_NETWORK_FLAG ] ; then
+	rm -rf rootfs_ecos/theme/image/button
+fi
+fi
+if [ "no" = $DVB_SUBTITLE_FLAG ] ; then
+	rm -rf rootfs_ecos/theme/widget/wnd_subtitling.xml
+fi
+find rootfs_ecos/theme/widget -name "*_cas*.xml"|xargs rm -rf
+if [ -z "$DVB_CA_1_NAME" ] ; then
+        echo "ca 1 not exist "
+else
+	find rootfs_ecos/widget_bak -name "*_${DVB_CA_1_NAME}_*" |xargs -i cp {} rootfs_ecos/theme/widget/
+fi
+
+if [ -z "$DVB_CA_2_NAME" ] ; then
+        echo " ca 2 not exist "
+else
+        find rootfs_ecos/widget_bak -name "*_${DVB_CA_2_NAME}_*" |xargs -i cp {} rootfs_ecos/theme/widget/
+fi
+
+
+rm -rf rootfs_ecos/widget_bak
+
+mkfs.cramfs rootfs_ecos root_cramfs.img
+
+ecos_size=`du -sb ecos.img | awk '{print $1}'`
+ecos_size1=`expr ${ecos_size} % 65536`
+if [ ${ecos_size1} -ne 0 ]; then
+    ecos_size=`expr ${ecos_size} - ${ecos_size1} + 65536`
+fi
+rootfs_cramfs_size=`du -sb root_cramfs.img | awk '{print $1}'`
+rootfs_cramfs_size1=`expr ${rootfs_cramfs_size} % 65536`
+if [ ${rootfs_cramfs_size1} -ne 0 ]; then
+    rootfs_cramfs_size=`expr ${rootfs_cramfs_size} - ${rootfs_cramfs_size1} + 65536`
+fi
+
+datafs_jffs2_addr=`expr 131072 + ${ecos_size} + ${rootfs_cramfs_size}`
+
+printf "/dev/flash/0/10  /home/gx  minifs\nNONE  /mnt  ramfs"  $datafs_jffs2_addr  >rootfs_ecos/etc/fstab
+
+
+mkfs.cramfs rootfs_ecos root_cramfs.img
+
+mkfs.jffs2 -r datafs_ecos -o datafs.jffs2 -l -e 0x10000 -n --pad=0x10000
+
+
+rm -rf rootfs_ecos datafs_ecos
+chmod +x ./genflash
+#./genflash mkflash flash_booter.conf flash_booter.bin
+
+#./genflash mkflash flash_logo.conf flash_logo.bin
+
+#./genflash mkflash flash_loader.conf flash_loader.bin
+
+#./genflash mkflash flash_kernel.conf flash_kernel.bin
+
+#./genflash mkflash flash_rootfs.conf flash_rootfs.bin
+
+#./genflash mkflash flash_usb.conf flash_usb.bin
+
+if [ "DVB_NONE_OTA" = $DVB_OTA_TYPE ] ; then
+	echo " not support ota "
+fi
+
+if [ $CUSTOMER = "CUST_JINGANGSHAN" ]; then
+./genflash mkflash flash_ts.conf flash_ts.dat
+./genflash mkflash flash_JGS.conf flash.bin
+elif [ $CUSTOMER = "CUST_SHANGSHUI" ]; then
+./genflash mkflash flash_ts.conf flash_ts.dat
+./genflash mkflash flash_shangshui.conf flash.bin
+else
+./genflash mkflash flash_ts.conf flash_ts.dat
+./genflash mkflash flash.conf flash.bin
+
+fi
+
+	cp  flash.bin "$CHIP"_"$DVB_CA_1_NAME"_"$CUSTOMER"_"$DVB_AD_NAME"_`date +%Y%m%d_%H%M`.bin
+	echo "Generateing new flash.bin Success!!!"

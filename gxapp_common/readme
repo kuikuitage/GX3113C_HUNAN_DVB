@@ -1,0 +1,5 @@
+ecos:
+source env.sh csky-ecos
+make clean;make
+
+

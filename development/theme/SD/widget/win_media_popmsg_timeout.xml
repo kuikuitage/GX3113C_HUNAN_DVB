@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_media_popmsg_timeout" class="window">
+    <property>
+        <rect>[0,0,300,150]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#424242,#424242,#424242]</backcolor>
+        <format>popup</format>
+    </property>
+    <signal>
+        <create>app_popmsg_timeout_create</create>
+        <destroy>app_popmsg_timeout_destroy</destroy>
+        <keypress>app_popmsg_timeout_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="text_popmsg_timeout_back" class="text">
+            <property>
+                <rect>[2,2,296,146]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="text_popmsg_timeout_info" class="text">
+            <property>
+                <rect>[2,20,296,30]</rect>
+                <forecolor>[#909092,#909092,#000000]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <string>content</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="button_popmsg_timeout_yes" class="button">
+            <property>
+                <rect>[70,100,60,29]</rect>
+                <forecolor>[#cecece,#a8ca08,#000000]</forecolor>
+                <backcolor>[#242424,#16a2c6,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>vcentre|hcentre</alignment>
+                <string>Yes</string>
+                <focus_img>MP_BUTTON9.bmp</focus_img>
+            </property>
+        </widget>
+        <widget style="default" name="button_popmsg_timeout_no" class="button">
+            <property>
+                <rect>[170,100,60,29]</rect>
+                <forecolor>[#cecece,#a8ca08,#000000]</forecolor>
+                <backcolor>[#242424,#16a2c6,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>vcentre|hcentre</alignment>
+                <string>No</string>
+                <focus_img>MP_BUTTON9.bmp</focus_img>
+            </property>
+        </widget>
+        <widget style="default" name="text_popmsg_timeout_time" class="text">
+            <property>
+                <rect>[2,55,296,30]</rect>
+                <forecolor>[#909092,#909092,#000000]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_stb_info" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_stb_info_create</create>
+        <destroy>win_stb_info_destroy</destroy>
+        <keypress>win_stb_info_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_stb_info_image_bg" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_image202" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_corporation_name" class="text">
+            <property>
+                <rect>[126,380,400,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_hardware_version" class="text">
+            <property>
+                <rect>[127,137,210,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Hardware Version</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_hardware_version_value" class="text">
+            <property>
+                <rect>[341,137,300,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>00.00.00.01</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_software_version" class="text">
+            <property>
+                <rect>[126,187,210,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Software Version</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_software_version_value" class="text">
+            <property>
+                <rect>[340,187,300,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>00.00.00.01</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_serial" class="text">
+            <property>
+                <rect>[126,237,210,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Serial number</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_serial_value" class="text">
+            <property>
+                <rect>[340,237,300,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>00.00.00.01</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_Issue_date" class="text">
+            <property>
+                <rect>[126,287,210,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Issue date</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_Issue_date_value" class="text">
+            <property>
+                <rect>[340,287,300,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_tip_image_exit" class="image">
+            <property>
+                <rect>[302,461,34,22]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[350,458,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_text_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>STB Information</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_stb_info_ad_version_value" class="text">
+            <property>
+                <rect>[126,334,300,40]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

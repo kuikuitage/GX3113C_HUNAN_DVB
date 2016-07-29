@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_music_set" class="window">
+    <property>
+        <rect>[60,50,600,290]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#16161c,#16161c,#16161c]</backcolor>
+    </property>
+    <signal>
+        <create>music_set_init</create>
+        <destroy>music_set_destroy</destroy>
+        <service>music_set_service</service>
+        <keypress>music_set_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_music_set_image220" class="image">
+            <property>
+                <rect>[0,0,600,290]</rect>
+                <forecolor>[#16161c,#16161c,#16161c]</forecolor>
+                <backcolor>[#191819,#191819,#16161c]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="music_set_image_logo" class="image">
+            <property>
+                <rect>[240,41,126,30]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <mode>single</mode>
+                <img>MP_SETTING.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="music_set_box" class="box">
+            <property>
+                <rect>[9,112,580,100]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#242424]</backcolor>
+                <interval>2</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="music_set_boxitem0" class="boxitem">
+                    <property>
+                        <rect>[0,2,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="music_set_text0" class="text">
+                            <property>
+                                <rect>[37,0,150,40]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Play Mode</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="music_set_combo_play_sequence" class="combobox">
+                            <property>
+                                <rect>[260,0,300,40]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[Only once,Repeat one,Sequence]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="music_set_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,44,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="music_set_text1" class="text">
+                            <property>
+                                <rect>[37,0,150,40]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>View Mode</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="music_set_combo_view_mode" class="combobox">
+                            <property>
+                                <rect>[260,0,300,40]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[ID3,Lyric,Spectrum]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_pic_set_image223" class="image">
+            <property>
+                <rect>[122,85,350,2]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_LINE.bmp</img>
+            </property>
+        </widget>
+    </children>
+</widget>

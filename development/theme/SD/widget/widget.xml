@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<interface>
+  <width>720</width>
+  <height>576</height>
+  <bpp>16</bpp>
+  <osd_trans>#00FF00</osd_trans>
+  <gui_trans>#FF00FF</gui_trans>
+  <osd_alpha_global>#000000</osd_alpha_global>
+  <widget class="window" style="default" name="win_factory_menu_port"/>
+  <widget class="window" style="default" name="win_qilian_cas_email"/>
+  <widget class="window" style="default" name="win_qilian_cas_baseinfo"/>
+  <widget class="window" style="default" name="win_pvr_management"/>
+  <widget class="window" style="default" name="win_prog_num"/>
+  <widget class="window" style="default" name="win_prog_menu"/>
+  <widget class="window" style="default" name="win_prog_manage"/>
+  <widget class="window" style="default" name="win_prog_info"/>
+  <widget class="window" style="default" name="win_prog_bar"/>
+  <widget class="window" style="default" name="win_pop_tip"/>
+  <widget class="window" style="default" name="win_popmsg_yesno"/>
+  <widget class="window" style="default" name="win_popmsg"/>
+  <widget class="window" style="default" name="win_popmsg_ok"/>
+  <widget class="window" style="default" name="win_pmp_set"/>
+  <widget class="window" style="default" name="win_pic_view"/>
+  <widget class="window" style="default" name="win_pic_set"/>
+  <widget class="window" style="default" name="win_pic_info"/>
+  <widget class="window" style="default" name="win_password_input"/>
+  <widget class="window" style="default" name="win_password_check"/>
+  <widget class="window" style="default" name="win_passwd_set"/>
+  <widget class="window" style="default" name="win_open_file"/>
+  <widget class="window" style="default" name="win_music_view"/>
+  <widget class="window" style="default" name="win_music_set"/>
+  <widget class="window" style="default" name="win_music_info"/>
+  <widget class="window" style="default" name="win_movie_view"/>
+  <widget class="window" style="default" name="win_movie_subt"/>
+  <widget class="window" style="default" name="win_movie_set"/>
+  <widget class="window" style="default" name="win_movie_info"/>
+  <widget class="window" style="default" name="win_menu_tv_list"/>
+  <widget class="window" style="default" name="win_media_popmsg_yesno"/>
+  <widget class="window" style="default" name="win_media_popmsg_timeout"/>
+  <widget class="window" style="default" name="win_media_popmsg_ok"/>
+  <widget class="window" style="default" name="win_media_info"/>
+  <widget class="window" style="default" name="win_media_centre"/>
+  <widget class="window" style="default" name="win_manual_search"/>
+  <widget class="window" style="default" name="win_main_menu"/>
+  <widget class="window" style="default" name="win_main_frequecy_set"/>
+  <widget class="window" style="default" name="win_lang_set"/>
+  <widget class="window" style="default" name="win_file_edit"/>
+  <widget class="window" style="default" name="win_file_browser"/>
+  <widget class="window" style="default" name="win_favorite_prog_list"/>
+  <widget class="window" style="default" name="win_factory_menu"/>
+  <widget class="window" style="default" name="win_factory_menu_scan"/>
+  <widget class="window" style="default" name="win_factory_menu_dplay"/>
+  <widget class="window" style="default" name="win_epg_list"/>
+  <widget class="window" style="default" name="win_dvb_cas_worktime"/>
+  <widget class="window" style="default" name="win_dvb_cas_watchlevel"/>
+  <widget class="window" style="default" name="win_dvb_cas_stb_pair"/>
+  <widget class="window" style="default" name="win_dvb_cas_pin"/>
+  <widget class="window" style="default" name="win_dvb_cas_operator"/>
+  <widget class="window" style="default" name="win_dvb_cas_entitle"/>
+  <widget class="window" style="default" name="win_dvb_cas_email"/>
+  <widget class="window" style="default" name="win_dvb_cas_email_content"/>
+  <widget class="window" style="default" name="win_dvb_cas_baseinfo"/>
+  <widget class="window" style="default" name="win_duration_set"/>
+  <widget class="window" style="default" name="win_down_view"/>
+  <widget class="window" style="default" name="win_disk_information"/>
+  <widget class="window" style="default" name="win_channel_set"/>
+  <widget class="window" style="default" name="win_ca_menu"/>
+  <widget class="window" style="default" name="win_by_cas_entitle"/>
+  <widget class="window" style="default" name="win_by_cas_email"/>
+  <widget class="window" style="default" name="win_by_cas_email_content"/>
+  <widget class="window" style="default" name="win_by_cas_baseinfo"/>
+  <widget class="window" style="default" name="win_book_manage"/>
+  <widget class="window" style="default" name="win_audio_set"/>
+  <widget class="window" style="default" name="win_all_search"/>
+  <widget class="window" style="default" name="win_advanced_set_menu"/>
+  <widget class="window" style="default" name="wnd_pvr_media_list"/>
+  <widget class="window" style="default" name="wnd_pvr_bar"/>
+  <widget class="window" style="default" name="wnd_file_list"/>
+  <widget class="window" style="default" name="win_volume"/>
+  <widget class="window" style="default" name="win_video_set"/>
+  <widget class="window" style="default" name="win_video_menu"/>
+  <widget class="window" style="default" name="win_videocolor_set"/>
+  <widget class="window" style="default" name="win_update_manual"/>
+  <widget class="window" style="default" name="win_trans_set"/>
+  <widget class="window" style="default" name="win_text_view"/>
+  <widget class="window" style="default" name="win_text_set"/>
+  <widget class="window" style="default" name="win_sys_update"/>
+  <widget class="window" style="default" name="win_sys_set"/>
+  <widget class="window" style="default" name="win_stb_info"/>
+  <widget class="window" style="default" name="win_snake"/>
+  <widget class="window" style="default" name="win_search_result"/>
+  <widget class="window" style="default" name="win_search_result_tip"/>
+  <widget class="window" style="default" name="win_search_menu"/>
+  <widget class="window" style="default" name="win_qz_cas_masterslave"/>
+  <widget class="window" style="default" name="win_qz_cas_email"/>
+  <widget class="window" style="default" name="win_qz_cas_email_content"/>
+  <widget class="window" style="default" name="win_qz_cas_baseinfo"/>
+  <widget class="window" style="default" name="win_qilian_cas_entitle"/>
+  <widget class="window" style="default" name="win_qilian_cas_email_content"/>
+  <widget class="window" style="default" name="win_full_screen"/>
+  <widget class="window" style="default" name="win_menu_volume"/>
+</interface>

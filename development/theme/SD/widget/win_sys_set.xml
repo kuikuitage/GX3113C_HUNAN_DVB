@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_sys_set" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>sys_set_create</create>
+        <destroy>sys_set_destroy</destroy>
+        <service>sys_set_service</service>
+        <keypress>sys_set_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_system_men_image3" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_system_menu_box1" class="box">
+            <property>
+                <rect>[87,133,274,364]</rect>
+                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_system_menu_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="win_system_menu_boxitem30" class="boxitem">
+                    <property>
+                        <rect>[0,0,274,91]</rect>
+                        <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_menu_button36" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Program Search</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image575" class="image">
+                            <property>
+                                <rect>[54,31,30,30]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_SEARCH.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_system_menu_boxitem31" class="boxitem">
+                    <property>
+                        <rect>[0,91,274,91]</rect>
+                        <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_menu_button37" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Menu Setting</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image583" class="image">
+                            <property>
+                                <rect>[54,31,32,25]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_VIEW.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_system_menu_boxitem95" class="boxitem">
+                    <property>
+                        <rect>[0,182,274,91]</rect>
+                        <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_menu_button59" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>CA Information</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image585" class="image">
+                            <property>
+                                <rect>[54,31,31,27]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_CAINFO.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_system_menu_boxitem96" class="boxitem">
+                    <property>
+                        <rect>[0,273,274,91]</rect>
+                        <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_menu_button61" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>System Information</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image587" class="image">
+                            <property>
+                                <rect>[54,31,32,32]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_SYSINFO.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_system_menu_box32" class="box">
+            <property>
+                <rect>[361,133,274,364]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_system_menu_box1_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="win_system_menu_boxitem97" class="boxitem">
+                    <property>
+                        <rect>[0,0,274,91]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_menu_button62" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>AV Setting</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image582" class="image">
+                            <property>
+                                <rect>[54,31,30,30]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_VIEW_TRACK.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_system_menu_boxitem98" class="boxitem">
+                    <property>
+                        <rect>[0,91,274,91]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_menu_button63" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Language</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image584" class="image">
+                            <property>
+                                <rect>[57,31,30,30]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_LANGUAGE.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_system_menu_boxitem99" class="boxitem">
+                    <property>
+                        <rect>[0,182,274,91]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_menu_button64" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Advance Setting</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image569" class="image">
+                            <property>
+                                <rect>[56,34,32,31]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_SETTING_smail.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_sys_set_boxitem148" class="boxitem">
+                    <property>
+                        <rect>[0,273,274,91]</rect>
+                        <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_sys_set_button97" class="button">
+                            <property>
+                                <rect>[0,0,274,91]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Program Information</string>
+                                <focus_img>DS_SYSTEM_SET_ORANGE274_91.bmp</focus_img>
+                                <unfocus_img>DS_SYSTEM_SET_BLUE274_91.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_sys_set_image568" class="image">
+                            <property>
+                                <rect>[57,35,30,25]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_ICON_PROGINFO.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_system_menu_text_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>System Set</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

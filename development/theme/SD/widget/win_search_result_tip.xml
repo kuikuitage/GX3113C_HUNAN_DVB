@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_search_result_tip" class="window">
+    <property>
+        <rect>[180,180,340,141]</rect>
+        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+    </property>
+    <children>
+        <widget style="default" name="win_search_result_tip_rect_image" class="image">
+            <property>
+                <rect>[0,0,340,141]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#515151,#515151,#515151]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_MESSAGE_LEFT.bmp</lt_img>
+                <rt_img>DS_MESSAGE_RIGHT.bmp</rt_img>
+                <lb_img>DS_MESSAGE_LEFT.bmp</lb_img>
+                <rb_img>DS_MESSAGE_RIGHT.bmp</rb_img>
+                <l_img>DS_MESSAGE_LEFT.bmp</l_img>
+                <r_img>DS_MESSAGE_RIGHT.bmp</r_img>
+                <t_img>DS_MESSAGE_MIDDLE.bmp</t_img>
+                <b_img>DS_MESSAGE_MIDDLE.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tip_save" class="text">
+            <property>
+                <rect>[44,46,250,40]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Saving prog,please waiting...</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tip_tv_total" class="text">
+            <property>
+                <rect>[9,94,100,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>TvTotal:</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tip_tv_num1" class="text">
+            <property>
+                <rect>[109,94,60,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tip_radio_total" class="text">
+            <property>
+                <rect>[169,94,110,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>RadioTotal:</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tip_radio_num1" class="text">
+            <property>
+                <rect>[279,94,55,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tip_text_title" class="text">
+            <property>
+                <rect>[45,2,250,35]</rect>
+                <forecolor>[#bbff00,#bbff00,#bbff00]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Tips title</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

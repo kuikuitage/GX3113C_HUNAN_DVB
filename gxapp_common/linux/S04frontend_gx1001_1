@@ -1,0 +1,17 @@
+#!/bin/sh
+case "$1" in
+    start)
+        if [ ! -c /dev/dvb0.frontend0 ]; then
+            echo "Install frontend driver..."
+            modprobe fe num=1 profile="|0:2:0x18:1:0:0xc0:&0:1:7:0"
+        fi
+        ;;
+    stop)
+        ;;
+    restart|reload)
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+

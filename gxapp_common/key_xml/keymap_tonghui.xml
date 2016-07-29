@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<keymap>
+	  <tree>
+    <item display="Remote Key map">
+    <item display="Remote 1" group="KEY_TONGHUI"/>
+    </item>
+    </tree>
+    <group name="KEY_TONGHUI">
+	<key name="GUIK_0">0xFDb7</key>
+	<key name="GUIK_1">0xFD6F</key>
+	<key name="GUIK_2">0xFD47</key>
+	<key name="GUIK_3">0xFD07</key>
+	<key name="GUIK_4">0xFD4f</key>
+	<key name="GUIK_5">0xFD67</key>
+	<key name="GUIK_6">0xFD27</key>
+	<key name="GUIK_7">0xFD77</key>
+	<key name="GUIK_8">0xFD57</key>
+	<key name="GUIK_9">0xFD17</key>
+	<key name="GUIK_M">0xFdd7</key>		<!--menu-->
+	<key name="GUIK_ESCAPE">0xFDc5</key>	<!--exit-->
+	<key name="GUIK_RETURN">0xFD1f</key>	<!--enter-->
+	<key name="GUIK_UP">0xFD3f</key>
+	<key name="GUIK_DOWN">0xFDbf</key>
+	<key name="GUIK_LEFT">0xFD8f</key>
+	<key name="GUIK_RIGHT">0xFDa7</key>
+	<key name="GUIK_HOME">0xFD7d</key>		<!--mute-->
+	<key name="GUIK_T">0xFDc7</key>	<!--tv radio switch-->
+	<key name="GUIK_F5">0xFD8D</key>		<!--email-->
+	<key name="GUIK_S">0xFD15</key>	<!--audio-->
+	<key name="GUIK_E">0xFDE7</key>		<!--epg-->
+	<key name="GUIK_F">0xFDFF</key>		<!--fav-->
+	<key name="GUIK_PAGE_UP">0xFD37</key>		<!--page up-->
+	<key name="GUIK_PAGE_DOWN">0xFD9F</key>		<!--page down-->
+	<key name="GUIK_MINUS">0xFDb5</key>   <!--vol minus-->
+	<key name="GUIK_PLUS">0xfd35</key>   <!--vol plus-->
+	<key name="GUIK_BACKSPACE">0xFD95</key><!-->KEY_recall<-->
+	<key name="GUIK_R">0xfdff</key><!-->KEY_RED<-->
+	<key name="GUIK_G">0xfdcf</key><!-->KEY_GREEN<-->
+	<key name="GUIK_Y">0xfdef</key><!-->KEY_YELLOW<-->
+	<key name="GUIK_B">0xfdaf</key><!-->KEY_BLUE<-->
+	<key name="GUIK_P">0xfd5d</key><!-->KEY_POWER<-->
+	<key name="GUIK_I">0xfded</key><!-->KEY_INFO<-->
+	 </group>
+</keymap>
+
+

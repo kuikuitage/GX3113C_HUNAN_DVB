@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_channel_set" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+    </property>
+    <signal>
+        <create>win_channel_set_create</create>
+        <destroy>win_channel_set_destroy</destroy>
+        <keypress>win_channel_set_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_channel_set_image_bg" class="image">
+            <property>
+                <rect>[0,0,720,576]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>bg.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_backgroup" class="image">
+            <property>
+                <rect>[40,50,640,440]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#515151,#515151,#515151]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>s_win_l_t.bmp</lt_img>
+                <rt_img>s_win_r_t.bmp</rt_img>
+                <lb_img>s_win_l_b.bmp</lb_img>
+                <rb_img>s_win_r_b.bmp</rb_img>
+                <l_img>s_win_l_m.bmp</l_img>
+                <r_img>s_win_r_m.bmp</r_img>
+                <t_img>s_win_m_t.bmp</t_img>
+                <b_img>s_win_m_b.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_time_text" class="text">
+            <property>
+                <rect>[460,52,200,35]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_list1_image" class="image">
+            <property>
+                <rect>[50,110,620,350]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#212021,#212021,#212021]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>menu_win_l_u.bmp</lt_img>
+                <rt_img>menu_win_r_u.bmp</rt_img>
+                <lb_img>menu_win_l_b.bmp</lb_img>
+                <rb_img>menu_win_r_b.bmp</rb_img>
+                <l_img>menu_win_l_m.bmp</l_img>
+                <r_img>menu_win_r_m.bmp</r_img>
+                <t_img>menu_win_u_m.bmp</t_img>
+                <b_img>menu_win_b_m.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_box" class="box">
+            <property>
+                <rect>[71,189,580,160]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#212021,#212021,#212021]</backcolor>
+                <interval>10</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="win_channel_set_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,10,580,36]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <focus_image>s_bar_orange580.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_channel_set_boxitem1_text" class="text">
+                            <property>
+                                <rect>[40,2,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#212021,#ff00ff,#212021]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Channel</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_channel_set_boxitem1_combobox" class="combobox">
+                            <property>
+                                <rect>[294,2,275,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#212021,#ff00ff,#212021]</backcolor>
+                                <font>Arial</font>
+                                <content>[DTMB,DVB-C]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_channel_set_image_updown" class="image">
+            <property>
+                <rect>[81,500,40,26]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#212021,#212021,#212021]</backcolor>
+                <mode>single</mode>
+                <img>tips_arrowhead.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_image_leftright" class="image">
+            <property>
+                <rect>[301,500,40,26]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#212021,#212021,#212021]</backcolor>
+                <mode>single</mode>
+                <img>tips_arrowhead4.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_tip_image_exit" class="image">
+            <property>
+                <rect>[497,500,40,26]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#212021,#212021,#212021]</backcolor>
+                <mode>single</mode>
+                <img>tips_exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_text_updown" class="text">
+            <property>
+                <rect>[127,498,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Move Focus</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_text_leftright" class="text">
+            <property>
+                <rect>[346,498,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Change</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_text_exit" class="text">
+            <property>
+                <rect>[547,498,130,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_channel_set_text_title" class="text">
+            <property>
+                <rect>[260,52,200,35]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Channel Set</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

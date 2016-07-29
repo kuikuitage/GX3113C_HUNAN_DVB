@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_all_search" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+    </property>
+    <signal>
+        <create>win_all_search_create</create>
+        <destroy>win_all_search_destroy</destroy>
+        <keypress>win_all_search_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_all_search_image_bg" class="image">
+            <property>
+                <rect>[80,79,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_full_image202" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_all_search_box" class="box">
+            <property>
+                <rect>[135,192,450,220]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <interval>10</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="win_all_search_begin_frequency_boxitem" class="boxitem">
+                    <property>
+                        <rect>[2,10,447,29]</rect>
+                        <forecolor>[#120212,#FFFFFF,#120212]</forecolor>
+                        <backcolor>[#3a5593,#3a5593,#3a5593]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_BLUE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_all_search_begin_frequency" class="text">
+                            <property>
+                                <rect>[42,1,220,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Begin Freq(MHz)</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_all_search_begin_frequency_value" class="edit">
+                            <property>
+                                <rect>[272,1,140,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#debe42,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <maxlen>5</maxlen>
+                                <format>edit_float</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_all_search_end_requency_boxitem" class="boxitem">
+                    <property>
+                        <rect>[2,49,447,29]</rect>
+                        <forecolor>[#120212,#FFFFFF,#120212]</forecolor>
+                        <backcolor>[#3a5593,#3a5593,#3a5593]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_BLUE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_all_search_end_frequency" class="text">
+                            <property>
+                                <rect>[41,1,220,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>End Freq(MHz)</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_all_search_end_frequency_value" class="edit">
+                            <property>
+                                <rect>[272,1,140,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#debe42,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <maxlen>5</maxlen>
+                                <format>edit_float</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_all_search_symbol_boxitem" class="boxitem">
+                    <property>
+                        <rect>[2,88,447,29]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_BLUE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_all_search_symbol" class="text">
+                            <property>
+                                <rect>[40,1,200,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Symbolrate(Kbps)</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_all_search_symbol_value" class="edit">
+                            <property>
+                                <rect>[271,1,144,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#debe42,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>6875</string>
+                                <maxlen>4</maxlen>
+                                <format>edit_digit</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_all_search_qam_boxitem" class="boxitem">
+                    <property>
+                        <rect>[2,127,447,29]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_ORANGE.bmp</focus_image>
+                        <disable_image>DS_BOX_ALLOW_BLUE.bmp</disable_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_all_search_qam" class="text">
+                            <property>
+                                <rect>[40,1,200,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>QAM</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_all_search_qam_value" class="combobox">
+                            <property>
+                                <rect>[243,1,194,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <content>[16QAM,32QAM,64QAM,128QAM,256QAM]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_tip_image_leftright" class="image">
+            <property>
+                <rect>[108,466,54,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_SWORD.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_all_search_tip_image_exit" class="image">
+            <property>
+                <rect>[303,461,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_all_search_tip_image_ok" class="image">
+            <property>
+                <rect>[478,461,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_OK.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_updown" class="text">
+            <property>
+                <rect>[164,457,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Move Focus</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[339,458,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_ok" class="text">
+            <property>
+                <rect>[514,458,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Confirm Search</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_all_search_text_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Full Frequency Search</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

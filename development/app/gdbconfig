@@ -1,0 +1,421 @@
+##############################################################################
+#  						   CONFIDENTIAL								
+#        Hangzhou GuoXin Science and Technology Co., Ltd.             
+#                   (C)2007-2008, All right reserved
+##############################################################################
+# File Name : gdbconfig
+# Author    : Baiwx
+# Project   : API
+# Type      : GDB Debug Config Script
+##############################################################################
+# Purpose   : This Script is used for gdbinit.
+##############################################################################
+# Release History:
+# VERSION      Date          AUTHOR         Description
+#   0.1      2011.01.06       Baiwx          Creation
+##############################################################################
+
+
+################################################
+# DDR CLOCK CONFIG
+################################################
+define jtag_ddr_clock_config
+    if ($GX3200_MPW2_BOARD == 1)
+        if ( $RAM_CLOCK_FREQ_189MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x00024036
+            set *(int *)0x0050A0E0 = 0x0002c036
+        end
+        if ( $RAM_CLOCK_FREQ_202MHZ == 1)
+                set *(int *)0x0050A0E0 = 0x0002403a
+                set *(int *)0x0050A0E0 = 0x0002c03a
+            end
+        if ( $RAM_CLOCK_FREQ_229MHZ == 1)
+                set *(int *)0x0050A0E0 = 0x00024042
+                set *(int *)0x0050A0E0 = 0x0002c042
+            end
+        if ( $RAM_CLOCK_FREQ_243MHZ == 1)
+                set *(int *)0x0050A0E0 = 0x00024046
+                set *(int *)0x0050A0E0 = 0x0002c046
+            end
+        if ( $RAM_CLOCK_FREQ_270MHZ == 1)
+                set *(int *)0x0050A0E0 = 0x00022026
+                set *(int *)0x0050A0E0 = 0x0002a026
+            end
+        if ( $RAM_CLOCK_FREQ_297MHZ == 1)
+                set *(int *)0x0050A0E0 = 0x0002202a
+                set *(int *)0x0050A0E0 = 0x0002a02a
+            end
+        if ( $RAM_CLOCK_FREQ_324MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x0002202e
+            set *(int *)0x0050A0E0 = 0x0002a02e
+        end
+        if ( $RAM_CLOCK_FREQ_337MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x00022030
+            set *(int *)0x0050A0E0 = 0x0002A030
+        end
+        if ( $RAM_CLOCK_FREQ_351MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x00022032
+            set *(int *)0x0050A0E0 = 0x0002a032
+        end
+        if ( $RAM_CLOCK_FREQ_364MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x00022034 
+            set *(int *)0x0050A0E0 = 0x0002A034
+        end
+        if ( $RAM_CLOCK_FREQ_378MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x00022036
+            set *(int *)0x0050A0E0 = 0x0002A036
+        end
+    end
+    if ($GX3200_MPW3_BOARD == 1)
+        if ( $RAM_CLOCK_FREQ_189MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x011B031B
+            set *(int *)0x0050A0E0 = 0x031B031B
+            set *(int *)0x0050A0E0 = 0x021B031B
+        end
+        if ( $RAM_CLOCK_FREQ_202MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x010E010E
+            set *(int *)0x0050A0E0 = 0x030E010E
+            set *(int *)0x0050A0E0 = 0x020E010E
+        end
+        if ( $RAM_CLOCK_FREQ_229MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01100110
+            set *(int *)0x0050A0E0 = 0x03100110
+            set *(int *)0x0050A0E0 = 0x02100110
+        end
+        if ( $RAM_CLOCK_FREQ_243MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x011A021A
+            set *(int *)0x0050A0E0 = 0x031A021A
+            set *(int *)0x0050A0E0 = 0x021A021A
+        end
+        if ( $RAM_CLOCK_FREQ_270MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01130113
+            set *(int *)0x0050A0E0 = 0x03130113
+            set *(int *)0x0050A0E0 = 0x02130113
+        end
+        if ( $RAM_CLOCK_FREQ_297MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01150115
+            set *(int *)0x0050A0E0 = 0x03150115
+            set *(int *)0x0050A0E0 = 0x02150115
+        end
+        if ( $RAM_CLOCK_FREQ_324MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01170117
+            set *(int *)0x0050A0E0 = 0x03170117
+            set *(int *)0x0050A0E0 = 0x02170117
+        end
+        if ( $RAM_CLOCK_FREQ_337MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01180118
+            set *(int *)0x0050A0E0 = 0x03180118
+            set *(int *)0x0050A0E0 = 0x02180118
+        end
+        if ( $RAM_CLOCK_FREQ_351MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01190119
+            set *(int *)0x0050A0E0 = 0x03190119
+            set *(int *)0x0050A0E0 = 0x02190119
+        end
+        if ( $RAM_CLOCK_FREQ_364MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01272027
+            set *(int *)0x0050A0E0 = 0x03272027
+            set *(int *)0x0050A0E0 = 0x02272027
+        end
+        if ( $RAM_CLOCK_FREQ_371MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x01361136
+            set *(int *)0x0050A0E0 = 0x03361136
+            set *(int *)0x0050A0E0 = 0x02361136
+        end
+        if ( $RAM_CLOCK_FREQ_378MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x011B011B
+            set *(int *)0x0050A0E0 = 0x031B011B
+            set *(int *)0x0050A0E0 = 0x021B011B
+        end
+        if ( $RAM_CLOCK_FREQ_396MHZ == 1)
+            set *(int *)0x0050A0E0 = 0x012b202b
+            set *(int *)0x0050A0E0 = 0x032b202b
+            set *(int *)0x0050A0E0 = 0x022b202b
+        end
+    end
+end
+document jtag_ddr_clock_config
+    DDR Clock Config.
+end
+
+################################################
+# SDC CLOCK CONFIG
+################################################
+define jtag_sdc_clock_config
+    if ($GX3200_MPW2_BOARD == 1)
+        if ( $SDC_CLOCK_FREQ_94MHZ == 1)
+            set *(int *)0x0050A0C4 = 0x00004337 
+            set *(int *)0x0050A0C4 = 0x0000c337
+        end
+        if ( $SDC_CLOCK_FREQ_168MHZ == 1)
+            set *(int *)0x0050A0C4 = 0x00002331 
+            set *(int *)0x0050A0C4 = 0x0000a331
+        end
+        if ( $SDC_CLOCK_FREQ_175MHZ == 1)
+            set *(int *)0x0050A0C4 = 0x00002333 
+            set *(int *)0x0050A0C4 = 0x0000a333
+        end
+        if ( $SDC_CLOCK_FREQ_189MHZ == 1)
+            set *(int *)0x0050A0C4 = 0x00002337 
+            set *(int *)0x0050A0C4 = 0x0000a337
+        end
+    end
+    if ($GX3200_MPW3_BOARD == 1)
+        if ($SDC_CLOCK_FREQ_189MHZ == 1)
+            set *(int *)0x0050A0C4 = 0x011B031B
+            set *(int *)0x0050A0C4 = 0x031B031B
+            set *(int *)0x0050A0C4 = 0x021B031B
+        end
+        if ($SDC_CLOCK_FREQ_229MHZ == 1)
+            set *(int *)0x0050A0C4 = 0x01100110
+            set *(int *)0x0050A0C4 = 0x03100110
+            set *(int *)0x0050A0C4 = 0x02100110
+        end
+    end
+end
+document jtag_sdc_clock_config
+    SDC Clock Config.
+end
+
+################################################
+# CPU CLOCK CONFIG
+################################################
+define jtag_cpu_clock_config
+    if ($GX3200_MPW2_BOARD == 1)
+        if ($CPU_CLOCK_FREQ_189MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000 
+            set *(int *)0x0050A0C0 = 0x00002337 
+            set *(int *)0x0050A0C0 = 0x0000a337 
+        end
+        if ($CPU_CLOCK_FREQ_202MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000 
+            set *(int *)0x0050A0C0 = 0x0000031d 
+            set *(int *)0x0050A0C0 = 0x0000831d 
+        end
+	    if ($CPU_CLOCK_FREQ_229MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000 
+            set *(int *)0x0050A0C0 = 0x00000321 
+            set *(int *)0x0050A0C0 = 0x00008321 
+        end
+	    if ($CPU_CLOCK_FREQ_243MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000 
+            set *(int *)0x0050A0C0 = 0x00000323 
+            set *(int *)0x0050A0C0 = 0x00008323 
+        end
+	    if ($CPU_CLOCK_FREQ_270MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000 
+            set *(int *)0x0050A0C0 = 0x00000327 
+            set *(int *)0x0050A0C0 = 0x00008327 
+        end
+	    if ($CPU_CLOCK_FREQ_297MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000 
+            set *(int *)0x0050A0C0 = 0x0000032b 
+            set *(int *)0x0050A0C0 = 0x0000832b 
+        end
+	    if ($CPU_CLOCK_FREQ_324MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000 
+            set *(int *)0x0050A0C0 = 0x0000032e 
+            set *(int *)0x0050A0C0 = 0x0000832e 
+        end
+        if ($CPU_CLOCK_FREQ_337MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000    
+            set *(int *)0x0050A0C0 = 0x00000331
+            set *(int *)0x0050A0C0 = 0x00008331
+        end
+        if ($CPU_CLOCK_FREQ_351MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000
+            set *(int *)0x0050A0C0 = 0x00000333
+            set *(int *)0x0050A0C0 = 0x00008333
+        end
+        if ($CPU_CLOCK_FREQ_364MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000
+            set *(int *)0x0050A0C0 = 0x00000335
+            set *(int *)0x0050A0C0 = 0x00008335
+        end
+        if ($CPU_CLOCK_FREQ_378MHZ == 1)
+            set *(int *)0x0050A024 = 0x00020000
+            set *(int *)0x0050A0C0 = 0x00000337
+            set *(int *)0x0050A0C0 = 0x00008337
+        end
+    end  
+    if ($GX3200_MPW3_BOARD == 1)
+        set *(int *)0x0050A024 |= (1<<17)
+        if ($CPU_CLOCK_FREQ_297MHZ == 1)
+        end
+    end
+end
+document jtag_cpu_clock_config
+    CPU Clock Config.
+end
+
+################################################
+# USB CLOCK CONFIG
+################################################
+define jtag_usb_clock_config
+    if ($GX3200_MPW2_BOARD == 1)
+        if ( $CLKEN_USB_OPEN == 1)
+            # 396M
+			set *(int *)0x0050a0cc = (2<<8) | (43)
+            set *(int *)0x0050a0cc = (1<<15) | (2<<8) | (43)
+            set *(int *)0x0050a038 = 0x00000000
+            set *(int *)0x0050a038 = 0xc1F07C1F
+            set *(int *)0x0050a03c = 0x00000000
+            set *(int *)0x0050a03c = 0xc1F07C1F
+            set *(int *)0x0050a024 |= ((1 << 20) | (1 << 21))
+            set *(int *)0x0050a170 |= ((1 << 1) | (1 << 2))
+			set *(int *)0x0050a1b0 = 0x00000000
+			set *(int *)0x0050a138 = 0x0202AA80
+			set *(int *)0x20000030 = 0x00000401 
+			set *(int *)0x20000034 = 0x00000181
+			set *(int *)0x2000002c = 0x00000004			
+        end
+    end
+    if ($GX3200_MPW3_BOARD == 1)
+        if ( $CLKEN_USB_OPEN == 1)
+            # 648M 
+            #set *(int *)0x0050A0CC = 0x01170017
+            #set *(int *)0x0050A0CC = 0x03170017
+            #set *(int *)0x0050A0CC = 0x02170017
+            # 594M 
+            set *(int *)0x0050A0CC = 0x01150015
+            set *(int *)0x0050A0CC = 0x03150015
+            set *(int *)0x0050A0CC = 0x02150015
+        end
+    end
+end
+document jtag_usb_clock_config
+    USB Clock Config.
+end
+
+################################################
+# MAC CLOCK CONFIG
+################################################
+define jtag_mac_clock_config
+    if ($GX3200_MPW2_BOARD == 1)
+        if ( $CLKEN_MAC_OPEN == 1)
+        set *(int *)0x0050a170 |= 0x0000c000
+        set *(int *)0x0050a1b0 =  0x00000000
+        end
+    end
+end
+document jtag_usb_clock_config
+    USB Clock Config.
+end
+
+################################################
+# JTAG START
+################################################
+define jtagstart
+    if ($GX3200_MPW2_BOARD == 1)
+	
+        set *(int *)0x0050a170 = 0x00000000
+
+        jtag_sdc_clock_config
+        jtag_ddr_clock_config
+        jtag_cpu_clock_config
+        jtag_usb_clock_config
+	    jtag_mac_clock_config
+
+        set *(int *)0x0050a170 |= 0x08002400
+
+        set *(int *)0x0050A000 = 0x00000001
+        set *(int *)0x0050A008 = 0x00000001
+
+        set *(int *)0x01800000 = 0x00000200
+        set *(int *)0x01800004 = 0x00043061
+        set *(int *)0x01800014 = 0x00040CC0
+        set *(int *)0x01800014 = 0x00040CD6
+        set *(int *)0x01800018 = 0x049B00CD
+        set *(int *)0x01800018 = 0x049B48CD
+########################
+#        set *(int *)0x0180001c = 0x14612c83
+#        set *(int *)0x0180001c = 0x08612c85
+########################
+        set *(int *)0x01800020 = 0x2508428B
+########################
+#        set *(int *)0x01800030 = 0x00000b52
+#       set *(int *)0x01800030 = 0x00180b42
+########################
+        set *(int *)0x0180003C = 0x00000888
+        set *(int *)0x01800040 = 0xFF000000
+        set *(int *)0x01800044 = 0x0FF44444
+########################
+#        set *(int *)0x01800050 = 0x00000045
+#       set *(int *)0x01800050 = 0x00000067
+########################
+        set *(int *)0x01800000 = 0x00000201
+
+#        x /wx 0x0180001c
+
+        printf "\n"
+        printf "[CPU CLOCK      0x0050a0c0  : 0x%08lX]\n",*(int *)0x0050a0c0
+        printf "[DDR CLOCK      0x0050a0e0  : 0x%08lX]\n",*(int *)0x0050a0e0
+        printf "[SDC CLOCK      0x0050a0c4  : 0x%08lX]\n",*(int *)0x0050a0c4
+        printf "[SOURCE SELECT  0x0050a170  : 0x%08lX]\n",*(int *)0x0050a170
+    end
+    if ($GX3200_MPW3_BOARD == 1)
+        set *(int *)0x0050A170 = 0x00000000
+        jtag_sdc_clock_config
+        jtag_ddr_clock_config
+        jtag_cpu_clock_config
+        jtag_usb_clock_config
+	    jtag_mac_clock_config
+
+        # set ddr cpu sdc pll source 
+        set *(int *)0x0050a170 |= 0xa8002400
+# set *(int *)0x0050a170 |= 0x28002400
+
+        #drive strength , ???
+        set *(int *)0x0050A124 = 0x00000008
+        #32bit
+        set *(int *)0x01800000 = 0x00000200
+        #16bit
+#set *(int *)0x01800000 = 0x00000204
+
+        set *(int *)0x01800004 = 0x00043061
+        set *(int *)0x01800014 = 0x00040CD6
+        set *(int *)0x01800018 = 0x049B48CC
+        set *(int *)0x0180001C = 0x14612CA3
+        set *(int *)0x01800020 = 0x2508528b
+
+        #32bit
+        set *(int *)0x0180003C = 0x00000888
+        set *(int *)0x01800040 = 0xFF000000
+        set *(int *)0x01800044 = 0x0FF44444
+        #16bit
+#       set *(int *)0x0180003C = 0x00000777
+#       set *(int *)0x01800040 = 0xFFF00000
+#       set *(int *)0x01800044 = 0x0FFF3333
+
+        set *(int *)0x01800204 = 0xFFFFFC00
+        set *(int *)0x01800030 = 0x00420B52
+#set *(int *)0x01800048 = 0x0000101A
+        set *(int *)0x01800048 = 0x0000201A
+        set *(int *)0x01800050 = 0x00000245
+        set *(int *)0x0180005C = 0x00002212
+
+#vpu write priority
+       set *(int *)0x01800208 = 0
+#vpu read priority
+        set *(int *)0x01800218 = 0
+#sdc       
+        set *(int *)0x0050A128 = 0x100FFFFF
+#
+#resart ddr
+
+        #32bit
+        set *(int *)0x01800000 = 0x00000201
+        #16bit
+# set *(int *)0x01800000 = 0x00000205        
+
+        printf "\n"
+        printf "[CPU CLOCK      0x0050a0c0  : 0x%08lX]\n",*(int *)0x0050a0c0
+        printf "[DDR CLOCK      0x0050a0e0  : 0x%08lX]\n",*(int *)0x0050a0e0
+        printf "[SDC CLOCK      0x0050a0c4  : 0x%08lX]\n",*(int *)0x0050a0c4
+        printf "[DTO CLOCK      0x0050a0cc  : 0x%08lX]\n",*(int *)0x0050a0cc
+        printf "[SOURCE SELECT  0x0050a170  : 0x%08lX]\n",*(int *)0x0050a170
+    end
+end
+document jtagstart
+    GDB DEBUG FROM JTAG START !!
+END

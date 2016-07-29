@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_menu_volume" class="window">
+    <property>
+        <rect>[30,403,660,110]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_volume_create</create>
+        <destroy>win_volume_destroy</destroy>
+        <service>win_volume_service</service>
+        <keypress>win_volume_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_volume_back" class="image">
+            <property>
+                <rect>[12,33,400,50]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#000000,#000000,#000000]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <l_img>DS_V_F_L.bmp</l_img>
+                <r_img>DS_V_F_R.bmp</r_img>
+                <t_img>DS_V_F_M.bmp</t_img>
+                <b_img>DS_V_F_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default_img" name="win_volume_image201" class="image">
+            <property>
+                <rect>[25,43,38,35]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_volume.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_volume_text_value" class="text">
+            <property>
+                <rect>[353,43,50,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_volume_progbar" class="progbar">
+            <property>
+                <rect>[70,51,280,15]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#384B60,#47A83C,#384B60]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <value>14</value>
+                <back_image_l>DS_VB_l.bmp</back_image_l>
+                <back_image_m>DS_VB_m.bmp</back_image_m>
+                <back_image_r>DS_VB_r.bmp</back_image_r>
+                <fore_image_l>DS_VF_l.bmp</fore_image_l>
+                <fore_image_m>DS_VF_m.bmp</fore_image_m>
+                <fore_image_r>DS_VF_r.bmp</fore_image_r>
+                <format>water</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+            </property>
+        </widget>
+        <widget style="default" name="win_menu_volume_ad" class="file_image">
+            <property>
+                <rect>[413,0,245,110]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <mode>single</mode>
+                <img>ad.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_menu_volume_text831" class="text">
+            <property>
+                <rect>[80,4,120,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <font>Arial</font>
+                <string>Audio Track</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_menu_volume_text_track" class="text">
+            <property>
+                <rect>[200,4,100,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_menu_volume_image577" class="image">
+            <property>
+                <rect>[415,0,245,110]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>ad.bmp</img>
+            </property>
+        </widget>
+    </children>
+</widget>

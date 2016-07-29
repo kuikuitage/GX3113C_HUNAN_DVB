@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_movie_subt" class="window">
+    <property>
+        <rect>[60,70,600,295]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#16161c,#16161c,#16161c]</backcolor>
+    </property>
+    <signal>
+        <create>movie_subt_init</create>
+        <destroy>movie_subt_destroy</destroy>
+        <service>movie_subt_service</service>
+        <keypress>movie_subt_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_movie_subt_image_back" class="image">
+            <property>
+                <rect>[0,0,600,295]</rect>
+                <forecolor>[#16161c,#16161c,#16161c]</forecolor>
+                <backcolor>[#000000,#000000,#000000]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_subt_image_logo" class="image">
+            <property>
+                <rect>[244,27,126,30]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <mode>single</mode>
+                <img>MP_SETTING.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_subt_box" class="box">
+            <property>
+                <rect>[13,75,580,173]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#242424]</backcolor>
+                <interval>2</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="movie_subt_boxitem0" class="boxitem">
+                    <property>
+                        <rect>[0,2,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_subt_txt0" class="text">
+                            <property>
+                                <rect>[41,0,155,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Load</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_subt_button_load" class="button">
+                            <property>
+                                <rect>[236,2,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#191819,#191819,#242424]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_subt_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,44,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_set_txt1" class="text">
+                            <property>
+                                <rect>[41,2,155,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Visibility</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_subt_combo_visibility" class="combobox">
+                            <property>
+                                <rect>[236,3,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[Off,On]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_subt_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[0,86,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_subt_txt2" class="text">
+                            <property>
+                                <rect>[41,2,155,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Select</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_subt_combo_select" class="combobox">
+                            <property>
+                                <rect>[236,1,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[Chinese,English]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_subt_boxitem3" class="boxitem">
+                    <property>
+                        <rect>[0,128,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_subt_txt3" class="text">
+                            <property>
+                                <rect>[41,3,155,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Delay</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_subt_button_delay" class="button">
+                            <property>
+                                <rect>[238,2,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_movie_set_image_line" class="image">
+            <property>
+                <rect>[134,66,350,2]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_LINE.bmp</img>
+            </property>
+        </widget>
+    </children>
+</widget>

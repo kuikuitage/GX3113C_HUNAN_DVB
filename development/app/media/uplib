@@ -1,0 +1,18 @@
+#! /bin/bash
+
+WORK_PATH=/home/gx/svn
+API=$WORK_PATH/*.bz2
+BUS=$WORK_PATH/gxbus
+APP=$WORK_PATH/solution/net_player
+
+##API
+rm -rf /opt/goxceed/*
+mv $API  /opt/goxceed
+cd /opt/goxceed && tar -xjf *.bz2 && rm *.bz2
+
+#BUS
+cd $BUS && source env.sh && make media
+
+#APP
+cd $APP && source env.sh && cd app && make
+

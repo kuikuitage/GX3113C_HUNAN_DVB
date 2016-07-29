@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<fonts>
+
+    <font>
+      <name>Num</name>
+      <file>Num</file>
+      <size>52</size>
+    </font>
+      <font>
+      <name>Arial</name>
+      <file>Arial</file>
+      <size>24</size>
+    </font>
+      <font>
+      <name>simhei</name>
+      <file>simhei</file>
+      <size>30</size>
+    </font>
+</fonts>

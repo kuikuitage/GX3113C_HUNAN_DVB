@@ -1,0 +1,11 @@
+#ifndef _DEVELOPMENT_VERSION_H_
+#define _DEVELOPMENT_VERSION_H_
+  
+  
+  
+  
+#define DEVELOPMENT_GIT 19
+#define DEVELOPMENT_GIT_VER "50072b6453"
+  
+  
+#endif

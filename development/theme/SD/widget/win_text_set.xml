@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_text_set" class="window">
+    <property>
+        <rect>[60,70,600,260]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#909092,#909092,#909092]</backcolor>
+    </property>
+    <signal>
+        <create>text_set_init</create>
+        <destroy>text_set_destroy</destroy>
+        <service>text_set_service</service>
+        <keypress>text_set_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_text_set_image220" class="image">
+            <property>
+                <rect>[0,0,600,260]</rect>
+                <forecolor>[#16161c,#16161c,#16161c]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="text_set_image_logo" class="image">
+            <property>
+                <rect>[237,21,126,30]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <mode>single</mode>
+                <img>MP_SETTING.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="text_set_box" class="box">
+            <property>
+                <rect>[10,83,580,100]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#242424]</backcolor>
+                <interval>2</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="text_set_boxitem0" class="boxitem">
+                    <property>
+                        <rect>[0,2,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="text_set_text0" class="text">
+                            <property>
+                                <rect>[41,5,150,34]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Roll Lines</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="text_set_combo_roll_lines" class="combobox">
+                            <property>
+                                <rect>[276,6,300,34]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[1,3,5]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="text_set_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,44,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="text_set_txt1" class="text">
+                            <property>
+                                <rect>[41,3,150,34]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Auto Roll</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="text_set_combo_auto_roll" class="combobox">
+                            <property>
+                                <rect>[276,6,300,34]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[Off,On]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_pic_set_image223" class="image">
+            <property>
+                <rect>[123,67,350,2]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_LINE.bmp</img>
+            </property>
+        </widget>
+    </children>
+</widget>

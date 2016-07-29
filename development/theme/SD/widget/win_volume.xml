@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_volume" class="window">
+    <property>
+        <rect>[350,100,292,65]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#242424,#242424,#242424]</backcolor>
+    </property>
+    <signal>
+        <create>volume_init</create>
+        <destroy>volume_destroy</destroy>
+        <service>volume_service</service>
+        <keypress>volume_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="volume_img_back" class="image">
+            <property>
+                <rect>[2,34,288,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <t_img>MP_PROGRESS_M.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default" name="volume_text_title" class="text">
+            <property>
+                <rect>[0,0,292,36]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <string>Volume</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="volume_progbar" class="progbar">
+            <property>
+                <rect>[2,43,288,12]</rect>
+                <forecolor>[#909092,#909092,#909092]</forecolor>
+                <backcolor>[#383A3D,#383A3D,#383A3D]</backcolor>
+                <min>0</min>
+                <max>25</max>
+                <value>14</value>
+                <fore_image>MP_PROGRESS_M1.bmp</fore_image>
+                <fore_image_l>MP_PROGRESS_L1</fore_image_l>
+                <fore_image_m>MP_PROGRESS_M1</fore_image_m>
+                <fore_image_r>MP_PROGRESS_R1</fore_image_r>
+                <format>normal</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+                <font>Arial</font>
+            </property>
+        </widget>
+    </children>
+</widget>

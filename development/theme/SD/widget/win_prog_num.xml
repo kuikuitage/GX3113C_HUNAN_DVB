@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default_window" name="win_prog_num" class="window">
+    <property>
+        <rect>[520,75,150,60]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>prog_num_create</create>
+        <destroy>prog_num_destroy</destroy>
+        <keypress>prog_num_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="prog_num_text" class="text">
+            <property>
+                <rect>[0,0,150,60]</rect>
+                <forecolor>[#10ff10,#10ff10,#10ff10]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <font>Num</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

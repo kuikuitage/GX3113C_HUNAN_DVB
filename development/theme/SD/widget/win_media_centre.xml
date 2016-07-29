@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_media_centre" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00ff00,#00ff00,#000000]</backcolor>
+        <back_ground>mediacenter.jpg</back_ground>
+    </property>
+    <signal>
+        <create>media_centre_init</create>
+        <destroy>media_centre_destroy</destroy>
+        <keypress>media_centre_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_media_centre_image_title" class="image">
+            <property>
+                <rect>[0,0,720,120]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lb_img>MP_TITLE_PICTURE.bmp</lb_img>
+                <rb_img>MP_TITLE_PICTURE.bmp</rb_img>
+                <b_img>MP_TITLE_PICTURE.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_media_centre_box_main" class="box">
+            <property>
+                <rect>[60,172,600,214]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <format>horizontal</format>
+            </property>
+            <signal>
+                <keypress>media_centre_box_keypress</keypress>
+                <change>media_centre_item_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="win_media_centre_boxitem_file" class="boxitem">
+                    <property>
+                        <rect>[0,0,120,214]</rect>
+                        <forecolor>[#00ff00,#00ff00,#00ff00]</forecolor>
+                        <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="media_centre_button_file_back" class="button">
+                            <property>
+                                <rect>[0,0,120,214]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#000000,#42a6de,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                        <widget style="default" name="media_centre_button_file" class="button">
+                            <property>
+                                <rect>[5,5,110,204]</rect>
+                                <forecolor>[#e0e0e0,#addd28,#000000]</forecolor>
+                                <backcolor>[#020206,#020206,#020206]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_FILE_A.bmp</focus_img>
+                                <unfocus_img>MP_ICON_FILE_A.bmp</unfocus_img>
+                                <link>win_file_browser</link>
+                            </property>
+                            <signal>
+                                <clicked>media_centre_button_file_clicked</clicked>
+                            </signal>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_media_centre_boxitem_video" class="boxitem">
+                    <property>
+                        <rect>[120,0,120,214]</rect>
+                        <forecolor>[#00ff00,#00ff00,#00ff00]</forecolor>
+                        <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="media_centre_button_video_back" class="button">
+                            <property>
+                                <rect>[0,0,120,214]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#000000,#42a6de,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                        <widget style="default" name="media_centre_button_video" class="button">
+                            <property>
+                                <rect>[5,5,110,204]</rect>
+                                <forecolor>[#e0e0e0,#addd28,#000000]</forecolor>
+                                <backcolor>[#000000,#000000,#000000]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_MOVICE_A.bmp</focus_img>
+                                <unfocus_img>MP_ICON_MOVICE_A.bmp</unfocus_img>
+                                <link>win_file_browser</link>
+                            </property>
+                            <signal>
+                                <clicked>media_centre_button_video_clicked</clicked>
+                            </signal>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_media_centre_boxitem_music" class="boxitem">
+                    <property>
+                        <rect>[240,0,120,214]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="media_centre_button_music_back" class="button">
+                            <property>
+                                <rect>[0,0,120,214]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#000000,#42a6de,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                        <widget style="default" name="media_centre_button_music" class="button">
+                            <property>
+                                <rect>[5,5,110,204]</rect>
+                                <forecolor>[#e0e0e0,#addd28,#000000]</forecolor>
+                                <backcolor>[#242424,#242424,#242424]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_MUSIC_A.bmp</focus_img>
+                                <unfocus_img>MP_ICON_MUSIC_A.bmp</unfocus_img>
+                                <link>win_file_browser</link>
+                            </property>
+                            <signal>
+                                <clicked>media_centre_button_music_clicked</clicked>
+                            </signal>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_media_centre_boxitem_pic" class="boxitem">
+                    <property>
+                        <rect>[360,0,120,214]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="media_centre_button_pic_back" class="button">
+                            <property>
+                                <rect>[0,0,120,214]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#000000,#42a6de,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                        <widget style="default" name="media_centre_button_picture" class="button">
+                            <property>
+                                <rect>[5,5,110,204]</rect>
+                                <forecolor>[#e0e0e0,#addd28,#000000]</forecolor>
+                                <backcolor>[#242424,#242424,#242424]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_PIC_A.bmp</focus_img>
+                                <unfocus_img>MP_ICON_PIC_A.bmp</unfocus_img>
+                                <link>win_file_browser</link>
+                            </property>
+                            <signal>
+                                <clicked>media_centre_button_picture_clicked</clicked>
+                            </signal>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_media_centre_boxitem_text" class="boxitem">
+                    <property>
+                        <rect>[480,0,120,214]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="media_centre_button_text_back" class="button">
+                            <property>
+                                <rect>[0,0,120,214]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#000000,#42a6de,#ff00ff]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                        <widget style="default" name="media_centre_button_text" class="button">
+                            <property>
+                                <rect>[5,5,110,204]</rect>
+                                <forecolor>[#e0e0e0,#addd28,#000000]</forecolor>
+                                <backcolor>[#242424,#242424,#242424]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <focus_img>MP_ICON_TXT_A.bmp</focus_img>
+                                <unfocus_img>MP_ICON_TXT_A.bmp</unfocus_img>
+                                <link>win_file_browser</link>
+                            </property>
+                            <signal>
+                                <clicked>media_centre_button_text_clicked</clicked>
+                            </signal>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_media_centre_text_title" class="text">
+            <property>
+                <rect>[60,24,600,80]</rect>
+                <forecolor>[#d6d2d6,#d6d2d6,#d6d2d6]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <string>File</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

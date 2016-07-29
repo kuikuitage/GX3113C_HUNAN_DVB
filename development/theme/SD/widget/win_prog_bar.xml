@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_prog_bar" class="window">
+    <property>
+        <rect>[30,403,660,110]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#000000,#000000,#000000]</backcolor>
+    </property>
+    <signal>
+        <create>prog_bar_create</create>
+        <destroy>prog_bar_destroy</destroy>
+        <service>prog_bar_service</service>
+        <keypress>prog_bar_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_prog_bar_backgroup" class="image">
+            <property>
+                <rect>[0,0,410,110]</rect>
+                <forecolor>[#3a518c,#3a518c,#3a518c]</forecolor>
+                <backcolor>[#3a518c,#3a518c,#3a518c]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <l_img>DS_BG_S.bmp</l_img>
+                <r_img>DS_BG_S.bmp</r_img>
+                <t_img>DS_BG_S.bmp</t_img>
+                <b_img>DS_BG_S.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_program_bar_image173" class="image">
+            <property>
+                <rect>[18,41,380,60]</rect>
+                <forecolor>[#3a518c,#3a518c,#3a518c]</forecolor>
+                <backcolor>[#3a518c,#3a518c,#3a518c]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_PF_BLUE_LEFT.bmp</lt_img>
+                <rt_img>DS_PF_BLUE_RIGHT.bmp</rt_img>
+                <lb_img>DS_PF_BLUE_LEFT.bmp</lb_img>
+                <rb_img>DS_PF_BLUE_RIGHT.bmp</rb_img>
+                <l_img>DS_PF_BLUE_LEFT.bmp</l_img>
+                <r_img>DS_PF_BLUE_RIGHT.bmp</r_img>
+                <t_img>DS_PF_BLUE_MID_.bmp</t_img>
+                <b_img>DS_PF_BLUE_MID_.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_program_bar_image198" class="image">
+            <property>
+                <rect>[18,13,220,23]</rect>
+                <forecolor>[#3a518c,#3a518c,#3a518c]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_PROGRAM_L.bmp</lt_img>
+                <rt_img>DS_PROGRAM_R.bmp</rt_img>
+                <lb_img>DS_PROGRAM_L.bmp</lb_img>
+                <rb_img>DS_PROGRAM_R.bmp</rb_img>
+                <l_img>DS_PROGRAM_L.bmp</l_img>
+                <r_img>DS_PROGRAM_R.bmp</r_img>
+                <t_img>DS_PROGRAM_M.bmp</t_img>
+                <b_img>DS_PROGRAM_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_bar_block2_text1" class="text">
+            <property>
+                <rect>[21,44,360,25]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <time>40</time>
+                <alignment>left|vcentre</alignment>
+                <string>demo cur event</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_bar_block2_text2" class="text">
+            <property>
+                <rect>[21,72,360,25]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <time>40</time>
+                <alignment>left|vcentre</alignment>
+                <string>demo next event</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_bar_prog_name" class="text">
+            <property>
+                <rect>[20,11,220,26]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <time>40</time>
+                <alignment>left|vcentre</alignment>
+                <string>demo prog name</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_bar_adapt" class="text">
+            <property>
+                <rect>[366,8,50,30]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_bar_time_text" class="text">
+            <property>
+                <rect>[264,8,100,30]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_bar_ad_image" class="file_image">
+            <property>
+                <rect>[413,0,245,110]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#515151,#515151,#515151]</backcolor>
+                <mode>single</mode>
+                <img>ad.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_bar_image_money" class="image">
+            <property>
+                <rect>[245,17,13,16]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Channel_list_Money.bmp</img>
+            </property>
+        </widget>
+    </children>
+</widget>

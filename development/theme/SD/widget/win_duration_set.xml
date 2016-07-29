@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_duration_set" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+        <back_ground>mediacenter.jpg</back_ground>
+    </property>
+    <signal>
+        <create>app_duration_set_create</create>
+        <destroy>app_duration_set_destroy</destroy>
+        <keypress>app_duration_set_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_set_duration_title" class="text">
+            <property>
+                <rect>[75,76,300,30]</rect>
+                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|bottom</alignment>
+                <string>Record Time</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_set_duration_box" class="box">
+            <property>
+                <rect>[75,139,580,160]</rect>
+                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <interval>10</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="win_lang_set_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,10,580,40]</rect>
+                        <forecolor>[#909092,#cecece,#909092]</forecolor>
+                        <backcolor>[#191819,#191819,#191819]</backcolor>
+                        <unfocus_image>MP_BUTTON3.bmp</unfocus_image>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pic_set_text" class="text">
+                            <property>
+                                <rect>[46,5,250,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Duration Time</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pic_set_pro_time_duration" class="combobox">
+                            <property>
+                                <rect>[337,5,220,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[1h,2h,3h,4h]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

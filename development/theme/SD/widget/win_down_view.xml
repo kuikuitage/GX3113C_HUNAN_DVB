@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_down_view" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#242424,#242424,#00FF00]</backcolor>
+    </property>
+    <children>
+        <widget style="default" name="down_view_image1" class="image">
+            <property>
+                <rect>[30,36,49,37]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_LOGO.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_text_title" class="text">
+            <property>
+                <rect>[83,34,400,40]</rect>
+                <forecolor>[#cecece,#cecece,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Download view</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_text_secant0" class="text">
+            <property>
+                <rect>[0,88,720,2]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#909092,#909092,#909092]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_text_name" class="text">
+            <property>
+                <rect>[30,100,200,40]</rect>
+                <forecolor>[#909092,#909092,#909092]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <string>Program name</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_image_cover" class="image">
+            <property>
+                <rect>[30,139,200,300]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#1e1e1e,#1e1e1e,#1e1e1e]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_text_desc" class="text">
+            <property>
+                <rect>[250,100,410,90]</rect>
+                <forecolor>[#909092,#909092,#909092]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|top</alignment>
+                <string></string>
+                <format>automatic</format>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_text_link" class="text">
+            <property>
+                <rect>[250,190,410,24]</rect>
+                <forecolor>[#909092,#909092,#909092]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_text_secant1" class="text">
+            <property>
+                <rect>[250,218,454,2]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#909092,#909092,#909092]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="down_view_listview" class="listview">
+            <property>
+                <rect>[250,230,412,300]</rect>
+                <forecolor>[#909092,#cecece,#909092]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <roll_time>0</roll_time>
+                <focus_img>MP_BUTTON8.bmp</focus_img>
+                <item_active_color>#a8ca08</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,400,30]</item_rect>
+                <item_fore_color>[#909092,#cecece,#909092]</item_fore_color>
+                <item_back_color>[#242424,#242424,#242424]</item_back_color>
+                <alignment>left|vcentre</alignment>
+            </property>
+            <signal>
+                <create>down_view_listview_init</create>
+                <keypress>down_view_listview_keypress</keypress>
+                <get_total>down_view_listview_get_count</get_total>
+                <get_data>down_view_listview_get_data</get_data>
+                <change>down_view_listview_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="down_view_listview_header" class="header">
+                    <property>
+                        <rect>[0,0,400,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#67A958,#503A8F,#85347A]</backcolor>
+                        <colum_number>2</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="down_view_listview_header_text0" class="text">
+                            <property>
+                                <rect>[0,0,30,30]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="down_view_listview_header_text1" class="text">
+                            <property>
+                                <rect>[30,0,370,30]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="down_view_listview_scroll" class="scrollbar">
+                    <property>
+                        <rect>[400,30,12,270]</rect>
+                        <forecolor>[#909092,#909092,#909092]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <back_img>MP_SCROLLBAR_BACK.bmp</back_img>
+                        <arrow_up>MP_SCROLLBAR_UP.bmp</arrow_up>
+                        <arrow_down>MP_SCROLLBAR_DOWN.bmp</arrow_down>
+                        <fore_img>MP_SCROLLBAR_FORE.bmp</fore_img>
+                        <format>scroll_show</format>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item0" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item6" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item7" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="down_view_listview_header_item8" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="down_view_text_class" class="text">
+            <property>
+                <rect>[250,230,200,30]</rect>
+                <forecolor>[#909092,#909092,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Site:</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

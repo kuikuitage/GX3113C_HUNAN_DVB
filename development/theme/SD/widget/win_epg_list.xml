@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_epg_list" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_epg_list_create</create>
+        <destroy>win_epg_list_destroy</destroy>
+        <show>win_epg_list_show</show>
+        <lost_focus>win_epg_list_lost_focus</lost_focus>
+        <keypress>win_epg_list_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_epg_list_image_bg" class="image">
+            <property>
+                <rect>[40,48,640,480]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l_320.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r_320.bmp</rt_img>
+                <l_img>DS_WIN_BG_320.bmp</l_img>
+                <r_img>DS_WIN_BG_320.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default_img" name="win_epg_week_list_image225" class="image">
+            <property>
+                <rect>[40,484,640,34]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE_640.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_video_image" class="image">
+            <property>
+                <rect>[64,116,220,150]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+                <mode>multiple</mode>
+                <img>cw_video.bmp</img>
+                <lt_img>DS_TV_l_u.bmp</lt_img>
+                <rt_img>DS_TV_r_u.bmp</rt_img>
+                <lb_img>DS_TV_l_b.bmp</lb_img>
+                <rb_img>DS_TV_r_b.bmp</rb_img>
+                <l_img>DS_TV_l_m.bmp</l_img>
+                <r_img>DS_TV_r_m.bmp</r_img>
+                <t_img>DS_TV_u_m.bmp</t_img>
+                <b_img>DS_TV_b_m.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_msg" class="text">
+            <property>
+                <rect>[74,154,200,70]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|top</alignment>
+                <string></string>
+                <format>automatic</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_prog_list_listview" class="listview">
+            <property>
+                <rect>[54,276,242,200]</rect>
+                <forecolor>[#212021,#212021,#212021]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <roll_time>50</roll_time>
+                <enable_roll>true</enable_roll>
+                <focus_img>DS_Channel_list_Yellow.bmp</focus_img>
+                <item_active_image>DS_Channel_list_Blue.bmp</item_active_image>
+                <item_active_color>#CEE8FF</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,242,30]</item_rect>
+                <item_fore_color>[#CEE8FF,#212021,#CEE8FF]</item_fore_color>
+                <item_back_color>[#FF00FF,#FF00FF,#FF00FF]</item_back_color>
+            </property>
+            <signal>
+                <get_total>app_epg_prog_list_get_total</get_total>
+                <get_data>app_epg_prog_list_get_data</get_data>
+                <change>app_epg_prog_list_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="win_epg_list_header" class="header">
+                    <property>
+                        <rect>[0,0,200,0]</rect>
+                        <state>hide</state>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#808080,#808080,#808080]</backcolor>
+                        <colum_number>3</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_epg_list_tv_number" class="text">
+                            <property>
+                                <rect>[0,0,50,0]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#515151,#515151,#515151]</backcolor>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_epg_list_tv_name" class="text">
+                            <property>
+                                <rect>[50,0,120,0]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#515151,#515151,#515151]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_epg_list_text_money" class="text">
+                            <property>
+                                <rect>[170,0,30,0]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_epg_list_scrollbar" class="scrollbar">
+                    <property>
+                        <rect>[253,0,0,216]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#515151,#515151,#515151]</backcolor>
+                        <format>scroll_hide</format>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_list_listitem1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_list_listitem2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_list_listitem3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_list_listitem4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_list_listitem5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_list_listitem198" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_epg_schedule_listview" class="listview">
+            <property>
+                <rect>[332,320,315,160]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#FF00FF,#FF00FF]</backcolor>
+                <roll_time>50</roll_time>
+                <enable_roll>true</enable_roll>
+                <format>enable_roll</format>
+                <focus_img>DS_EPG_LISTVIEW_orange.bmp</focus_img>
+                <item_active_color>#CEE8FF</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,315,34]</item_rect>
+                <item_fore_color>[#CEE8FF,#212021,#CEE8FF]</item_fore_color>
+                <item_back_color>[#FF00FF,#FF00FF,#FF00FF]</item_back_color>
+            </property>
+            <signal>
+                <get_total>app_epg_schedule_listview_get_total</get_total>
+                <get_data>app_epg_schedule_listview_get_data</get_data>
+                <change>app_epg_schedule_listview_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="win_epg_scheduel_header" class="header">
+                    <property>
+                        <rect>[0,0,315,0]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#808080,#808080,#808080]</backcolor>
+                        <colum_number>2</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_epg_list_schedule" class="text">
+                            <property>
+                                <rect>[0,0,280,0]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#515151,#515151,#515151]</backcolor>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_epg_list_book_flag" class="text">
+                            <property>
+                                <rect>[280,0,30,0]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#515151,#515151,#515151]</backcolor>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_epg_schedule_scrollbar" class="scrollbar">
+                    <property>
+                        <rect>[360,0,0,180]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#515151,#515151,#515151]</backcolor>
+                        <format>scroll_hide</format>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_schedule_listitem1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_schedule_listitem2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_schedule_listitem3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_epg_schedule_listitem4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day1" class="text">
+            <property>
+                <rect>[333,280,45,40]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#33508C,#40FF1E,#33508C]</backcolor>
+                <font>Arial</font>
+                <string>FRI</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day2" class="text">
+            <property>
+                <rect>[377,280,45,40]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#33508C,#40FF1E,#33508C]</backcolor>
+                <font>Arial</font>
+                <string>SAT</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day3" class="text">
+            <property>
+                <rect>[422,280,45,40]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#33508C,#40FF1E,#33508C]</backcolor>
+                <font>Arial</font>
+                <string>SUN</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day4" class="text">
+            <property>
+                <rect>[467,280,45,40]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#33508C,#40FF1E,#33508C]</backcolor>
+                <font>Arial</font>
+                <string>MON</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day5" class="text">
+            <property>
+                <rect>[512,280,45,40]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#33508C,#40FF1E,#33508C]</backcolor>
+                <font>Arial</font>
+                <string>TUE</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day6" class="text">
+            <property>
+                <rect>[557,280,45,40]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#33508C,#40FF1E,#33508C]</backcolor>
+                <font>Arial</font>
+                <string>WED</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day7" class="text">
+            <property>
+                <rect>[602,280,45,40]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#33508C,#40FF1E,#33508C]</backcolor>
+                <font>Arial</font>
+                <string>THU</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_image_leftright" class="image">
+            <property>
+                <rect>[82,495,54,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_SWORD.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_left_right" class="text">
+            <property>
+                <rect>[138,487,130,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Move Focus</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_image_exit" class="image">
+            <property>
+                <rect>[280,489,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#212021,#212021,#212021]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_exit" class="text">
+            <property>
+                <rect>[319,486,80,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_image_book" class="image">
+            <property>
+                <rect>[406,491,20,21]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_ORANGE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_book" class="text">
+            <property>
+                <rect>[433,486,80,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Book</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_image_day" class="image">
+            <property>
+                <rect>[523,491,22,22]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_RED.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text_day" class="text">
+            <property>
+                <rect>[548,486,120,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Switch Day</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_ad_image" class="file_image">
+            <property>
+                <rect>[365,131,245,110]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>ad.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_time_text" class="text">
+            <property>
+                <rect>[523,69,150,35]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_epg_list_text395" class="text">
+            <property>
+                <rect>[167,58,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>EPG</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default_img" name="win_epg_week_list_image251" class="image">
+            <property>
+                <rect>[306,167,4,290]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_channel_list_v.bmp</img>
+            </property>
+        </widget>
+        <widget style="default_img" name="win_epg_week_list_image252" class="image">
+            <property>
+                <rect>[368,259,242,5]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_channel_list_h.bmp</img>
+            </property>
+        </widget>
+    </children>
+</widget>

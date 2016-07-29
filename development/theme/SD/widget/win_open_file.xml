@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_open_file" class="window">
+    <property>
+        <rect>[40,50,340,400]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#909092,#909092,#909092]</backcolor>
+    </property>
+    <signal>
+        <create>open_file_init</create>
+        <service>open_file_service</service>
+        <keypress>open_file_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="open_file_text_back" class="text">
+            <property>
+                <rect>[2,2,336,396]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="open_file_text_title" class="text">
+            <property>
+                <rect>[10,10,140,30]</rect>
+                <forecolor>[#cecece,#cecece,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Open file:</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="open_file_text_path" class="text">
+            <property>
+                <rect>[150,10,180,30]</rect>
+                <forecolor>[#cecece,#cecece,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="open_file_text_secant" class="text">
+            <property>
+                <rect>[10,40,320,2]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#909092,#909092,#909092]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="open_file_listview" class="listview">
+            <property>
+                <rect>[10,50,320,330]</rect>
+                <forecolor>[#909092,#cecece,#909092]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <roll_time>0</roll_time>
+                <focus_img>MP_BUTTON7.bmp</focus_img>
+                <item_active_color>#a8ca08</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,308,36]</item_rect>
+                <item_fore_color>[#909092,#cecece,#909092]</item_fore_color>
+                <item_back_color>[#242424,#242424,#242424]</item_back_color>
+                <alignment>left|vcentre</alignment>
+            </property>
+            <signal>
+                <keypress>open_file_listview_keypress</keypress>
+                <get_total>open_file_listview_get_count</get_total>
+                <get_data>open_file_listview_get_data</get_data>
+            </signal>
+            <children>
+                <widget style="default" name="open_file_listview_header" class="header">
+                    <property>
+                        <rect>[0,0,308,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#67A958,#503A8F,#85347A]</backcolor>
+                        <colum_number>2</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="open_file_listview_header_text0" class="text">
+                            <property>
+                                <rect>[0,0,50,30]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="open_file_listview_header_text1" class="text">
+                            <property>
+                                <rect>[50,0,250,30]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="open_file_listview_scroll" class="scrollbar">
+                    <property>
+                        <rect>[308,30,12,300]</rect>
+                        <forecolor>[#909092,#909092,#909092]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <back_img>MP_SCROLLBAR_BACK.bmp</back_img>
+                        <arrow_up>MP_SCROLLBAR_UP.bmp</arrow_up>
+                        <arrow_down>MP_SCROLLBAR_DOWN.bmp</arrow_down>
+                        <fore_img>MP_SCROLLBAR_FORE.bmp</fore_img>
+                        <format>scroll_show</format>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item0" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item6" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="open_file_listview_header_item7" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

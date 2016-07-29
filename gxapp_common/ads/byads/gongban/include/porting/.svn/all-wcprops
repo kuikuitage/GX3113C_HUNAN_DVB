@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/3201_DVBC/!svn/ver/463/gxapp_common/ads/byads/gongban/include/porting
+END
+adver.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/3201_DVBC/!svn/ver/463/gxapp_common/ads/byads/gongban/include/porting/adver.h
+END
+adver_type.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/3201_DVBC/!svn/ver/463/gxapp_common/ads/byads/gongban/include/porting/adver_type.h
+END
+bmpparse.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/3201_DVBC/!svn/ver/463/gxapp_common/ads/byads/gongban/include/porting/bmpparse.h
+END
+adverparse.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/3201_DVBC/!svn/ver/463/gxapp_common/ads/byads/gongban/include/porting/adverparse.h
+END

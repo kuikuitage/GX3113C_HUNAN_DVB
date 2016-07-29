@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default_widget" name="win_snake" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+        <backcolor>[#000000,#000000,#000000]</backcolor>
+    </property>
+    <signal>
+        <create>app_snake_create</create>
+        <destroy>app_snake_destroy</destroy>
+        <keypress>app_snake_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default_widget" name="img_snake_top" class="image">
+            <property>
+                <rect>[59,50,613,32]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>T_G_WIN1_L.bmp</lt_img>
+                <rt_img>T_G_WIN1_R.bmp</rt_img>
+                <t_img>T_G_WIN1_M.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default_widget" name="img_snake_bottom" class="image">
+            <property>
+                <rect>[59,457,613,32]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>T_G_WIN1_L.bmp</lt_img>
+                <rt_img>T_G_WIN1_R.bmp</rt_img>
+                <t_img>T_G_WIN1_M.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default_widget" name="img_snake_backgroud" class="image">
+            <property>
+                <rect>[70,83,589,374]</rect>
+                <forecolor>[#E6F8F8,#E6F8F8,#E6F8F8]</forecolor>
+                <backcolor>[#88a8d8,#88a8d8,#88a8d8]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget style="default_widget" name="canvas_snake" class="canvas">
+            <property>
+                <rect>[75,90,352,368]</rect>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+            </property>
+            <signal>
+                <create>app_snake_canvas_create</create>
+            </signal>
+        </widget>
+        <widget style="default_widget" name="btn_snake_status" class="button">
+            <property>
+                <rect>[452,269,185,51]</rect>
+                <forecolor>[#1B1A15,#1B1A15,#1B1A15]</forecolor>
+                <backcolor>[#000000,#000000,#000000]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|vcentre</alignment>
+                <focus_img>T_G_BUTTOM5.bmp</focus_img>
+                <unfocus_img>T_G_BUTTOM5.bmp</unfocus_img>
+                <disable_img>T_G_BUTTOM5.bmp</disable_img>
+            </property>
+        </widget>
+        <widget style="default_widget" name="box_snake_info" class="box">
+            <property>
+                <rect>[439,331,207,100]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <interval>10</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default_widget" name="boxitem_snake_level" class="boxitem">
+                    <property>
+                        <rect>[0,10,207,34]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#808080,#808080,#808080]</backcolor>
+                        <unfocus_image>T_G_BUTTON.bmp</unfocus_image>
+                        <focus_image>T_G_BUTTON.bmp</focus_image>
+                        <disable_image>T_G_BUTTON.bmp</disable_image>
+                    </property>
+                    <children>
+                        <widget style="default_widget" name="txt_snake_level" class="text">
+                            <property>
+                                <rect>[0,0,120,34]</rect>
+                                <forecolor>[#1B1A15,#1B1A15,#1B1A15]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Level(0-9)</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_widget" name="txt_snake_level_value" class="text">
+                            <property>
+                                <rect>[120,0,87,34]</rect>
+                                <forecolor>[#1B1A15,#1B1A15,#1B1A15]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default_widget" name="boxitem_snake_score" class="boxitem">
+                    <property>
+                        <rect>[0,54,207,34]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#808080,#808080,#808080]</backcolor>
+                        <unfocus_image>T_G_BUTTON.bmp</unfocus_image>
+                        <focus_image>T_G_BUTTON.bmp</focus_image>
+                        <disable_image>T_G_BUTTON.bmp</disable_image>
+                    </property>
+                    <children>
+                        <widget style="default_widget" name="txt_snake_score" class="text">
+                            <property>
+                                <rect>[0,0,120,34]</rect>
+                                <forecolor>[#1B1A15,#1B1A15,#1B1A15]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Score</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_widget" name="txt_snake_score_value" class="text">
+                            <property>
+                                <rect>[120,0,87,34]</rect>
+                                <forecolor>[#1B1A15,#1B1A15,#1B1A15]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default_widget" name="img_score_logo" class="image">
+            <property>
+                <rect>[467,97,175,66]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>T_G_S_TITLE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default_widget" name="img_score_title" class="text">
+            <property>
+                <rect>[81,53,140,25]</rect>
+                <forecolor>[#1B1A15,#1B1A15,#1B1A15]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <string>Snake</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

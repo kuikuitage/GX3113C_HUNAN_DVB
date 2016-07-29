@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/3201_DVBC/!svn/ver/1256/gxapp_common/osd_msg
+END
+app_osd_msg.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/osd_msg/app_osd_msg.c
+END
+osd_msg.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/3201_DVBC/!svn/ver/1256/gxapp_common/osd_msg/osd_msg.c
+END
+app_send_msg.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/osd_msg/app_send_msg.c
+END
+app_id_manage.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/osd_msg/app_id_manage.c
+END

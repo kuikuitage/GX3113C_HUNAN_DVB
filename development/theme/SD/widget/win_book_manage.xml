@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_book_manage" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+    </property>
+    <signal>
+        <create>book_manage_create</create>
+        <destroy>book_manage_destroy</destroy>
+        <service>book_manage_service</service>
+        <keypress>book_manage_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_book_manage_image_bg" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_book_manage_time_text" class="text">
+            <property>
+                <rect>[439,99,200,35]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_book_manage_image229" class="image">
+            <property>
+                <rect>[80,454,560,32]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_book_manage_listview" class="listview">
+            <property>
+                <rect>[108,138,500,290]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <roll_time>0</roll_time>
+                <focus_img>DS_LISTVIEW_BLUE_500.bmp</focus_img>
+                <i18n>false</i18n>
+                <item_rect>[0,0,500,30]</item_rect>
+                <item_fore_color>[#CEE8FF,#212021,#CEE8FF]</item_fore_color>
+                <item_back_color>[#FF00FF,#FF00FF,#FF00FF]</item_back_color>
+            </property>
+            <signal>
+                <keypress>book_manage_listview_keypress</keypress>
+                <get_total>book_manage_listview_get_count</get_total>
+                <get_data>book_manage_listview_get_data</get_data>
+                <change>book_manage_listview_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="win_book_manage_header" class="header">
+                    <property>
+                        <rect>[0,0,500,30]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <format>headershow</format>
+                        <colum_number>4</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_book_manage_title" class="image">
+                            <property>
+                                <rect>[0,0,940,40]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>button_focus_darkblue940.bmp</img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_book_manage_text1" class="text">
+                            <property>
+                                <rect>[0,0,60,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>ID</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_book_manage_text2" class="text">
+                            <property>
+                                <rect>[60,0,120,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Program Name</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_book_manage_text3" class="text">
+                            <property>
+                                <rect>[180,0,210,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Event</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_book_manage_text4" class="text">
+                            <property>
+                                <rect>[390,0,110,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Start Time</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_book_manage_scrollbar" class="scrollbar">
+                    <property>
+                        <rect>[500,30,0,260]</rect>
+                        <state>hide</state>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <format>scroll_show</format>
+                    </property>
+                </widget>
+                <widget style="default" name="win_book_manage_listitem1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_book_manage_listitem2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_book_manage_listitem3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_book_manage_listitem4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_book_manage_listitem5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_book_manage_listitem6" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_book_manage_listitem92" class="listitem"/>
+                <widget style="default" name="win_book_manage_listitem199" class="listitem"/>
+            </children>
+        </widget>
+        <widget style="default" name="win_book_manage_tip_image_exit" class="image">
+            <property>
+                <rect>[137,459,34,22]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_image_red" class="image">
+            <property>
+                <rect>[317,459,22,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_RED.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_image_yellow" class="image">
+            <property>
+                <rect>[481,461,20,21]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_ORANGE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[179,456,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_red" class="text">
+            <property>
+                <rect>[343,455,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Delete One</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_yellow" class="text">
+            <property>
+                <rect>[507,455,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Delete All</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_book_manage_text395" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Book Manage</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

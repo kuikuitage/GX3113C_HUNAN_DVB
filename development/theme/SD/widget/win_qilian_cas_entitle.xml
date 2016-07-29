@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_qilian_cas_entitle" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>app_qilian_cas_entitle_create</create>
+        <destroy>app_qilian_cas_entitle_destroy</destroy>
+        <keypress>app_qilian_cas_entitle_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_by_cas_entitle_backgroup" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_qilian_cas_baseinfo_image202" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_entitle_time_text" class="text">
+            <property>
+                <rect>[910,110,200,35]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_entitle_listview" class="listview">
+            <property>
+                <rect>[140,159,447,250]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <roll_time>0</roll_time>
+                <interval>1</interval>
+                <focus_img>button_focus_green895_1.bmp</focus_img>
+                <i18n>false</i18n>
+                <item_rect>[0,0,447,35]</item_rect>
+                <item_fore_color>[#CEE8FF,#FFFFFF,#CEE8FF]</item_fore_color>
+                <item_back_color>[#ff00ff,#ff00ff,#ff00ff]</item_back_color>
+            </property>
+            <signal>
+                <keypress>app_by_cas_entitle_listview_key_press</keypress>
+                <get_total>app_by_cas_entitle_get_count</get_total>
+                <get_data>app_by_cas_entitle_get_data</get_data>
+            </signal>
+            <children>
+                <widget style="default" name="win_by_cas_entitle_listwiew_header" class="header">
+                    <property>
+                        <rect>[0,0,447,40]</rect>
+                        <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                        <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                        <format>headershow</format>
+                        <colum_number>4</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_by_cas_entitle_listwiew_id" class="text">
+                            <property>
+                                <rect>[0,0,56,40]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <alignment>left|vcentre</alignment>
+                                <string>ID</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_by_cas_entitle_listwiew_name" class="text">
+                            <property>
+                                <rect>[56,0,135,40]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <alignment>left|vcentre</alignment>
+                                <string>Name</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_by_cas_entitle_listwiew_start" class="text">
+                            <property>
+                                <rect>[191,0,136,40]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <alignment>left|vcentre</alignment>
+                                <string>StartTime</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_by_cas_entitle_listwiew_end" class="text">
+                            <property>
+                                <rect>[327,0,120,40]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                                <alignment>left|vcentre</alignment>
+                                <string>EndTime</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_by_cas_entitle_listwiew_scrollbar" class="scrollbar">
+                    <property>
+                        <rect>[422,40,0,210]</rect>
+                        <state>hide</state>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#408DD2,#408DD2,#408DD2]</backcolor>
+                        <format>scroll_hide</format>
+                    </property>
+                </widget>
+                <widget style="default" name="win_by_cas_entitle_listwiew_listitem1" class="listitem"/>
+                <widget style="default" name="win_by_cas_entitle_listwiew_listitem2" class="listitem"/>
+                <widget style="default" name="win_by_cas_entitle_listwiew_listitem3" class="listitem"/>
+                <widget style="default" name="win_by_cas_entitle_listwiew_listitem4" class="listitem"/>
+                <widget style="default" name="win_by_cas_entitle_listwiew_listitem5" class="listitem"/>
+            </children>
+        </widget>
+        <widget style="default" name="win_by_cas_entitle_text_entitle_num" class="text">
+            <property>
+                <rect>[140,419,250,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#FF00FF,#ff00ff]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string>Authorization num</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_entitle_text_entitle_count" class="text">
+            <property>
+                <rect>[390,420,200,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#FF00FF,#ff00ff]</backcolor>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_entitle_listwiew_updown" class="image">
+            <property>
+                <rect>[185,466,54,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_SWORD.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_entitle_tip_image_exit" class="image">
+            <property>
+                <rect>[358,461,34,22]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_updown" class="text">
+            <property>
+                <rect>[247,457,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <string>Move Focus</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[405,458,200,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_by_cas_entitle_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Authorization info</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

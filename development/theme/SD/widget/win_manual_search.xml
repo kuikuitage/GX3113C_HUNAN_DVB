@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_manual_search" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+    </property>
+    <signal>
+        <create>win_manual_search_create</create>
+        <destroy>win_manual_search_destroy</destroy>
+        <keypress>win_manual_search_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_manual_search_image_bg" class="image">
+            <property>
+                <rect>[80,79,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#3a5594,#3a5594,#3a5594]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_box" class="box">
+            <property>
+                <rect>[136,157,450,200]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <interval>15</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="win_manual_search_frequency_boxitem" class="boxitem">
+                    <property>
+                        <rect>[2,15,447,29]</rect>
+                        <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_BLUE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_manual_search_frequency" class="text">
+                            <property>
+                                <rect>[45,2,170,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Frequency(MHz)</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_manual_search_frequency_value" class="edit">
+                            <property>
+                                <rect>[262,1,140,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#debe42,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>123</string>
+                                <maxlen>5</maxlen>
+                                <format>edit_float</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_manual_search_symbol_boxitem" class="boxitem">
+                    <property>
+                        <rect>[2,59,447,29]</rect>
+                        <forecolor>[#120212,#FF00FF,#120212]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_BLUE.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_manual_search_symbol" class="text">
+                            <property>
+                                <rect>[46,1,170,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Symbolrate(Kbps)</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_manual_search_symbol_value" class="edit">
+                            <property>
+                                <rect>[260,1,140,26]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#debe42,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>6875</string>
+                                <maxlen>4</maxlen>
+                                <format>edit_digit</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_manual_search_qam_boxitem" class="boxitem">
+                    <property>
+                        <rect>[2,103,447,29]</rect>
+                        <forecolor>[#120212,#FF00FF,#120212]</forecolor>
+                        <backcolor>[#3a5593,#3a5593,#3a5593]</backcolor>
+                        <unfocus_image>DS_BOX_ALLOW_BLUE.bmp</unfocus_image>
+                        <focus_image>DS_BOX_ALLOW_ORANGE.bmp</focus_image>
+                        <disable_image>DS_BOX_ALLOW_BLUE.bmp</disable_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_manual_search_qam" class="text">
+                            <property>
+                                <rect>[32,0,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>QAM</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_manual_search_qam_value" class="combobox">
+                            <property>
+                                <rect>[273,0,120,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[16QAM,32QAM,64QAM,128QAM,256QAM]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_manual_search_signal_qauality" class="text">
+            <property>
+                <rect>[119,374,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Signal quality</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_signal_strength" class="text">
+            <property>
+                <rect>[119,413,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Signal strength</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_signal_quality_progbar" class="progbar">
+            <property>
+                <rect>[219,386,320,13]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <back_image_l>DS_PROBAR_BLUE.bmp</back_image_l>
+                <back_image_m>DS_PROBAR_BLUE.bmp</back_image_m>
+                <back_image_r>DS_PROBAR_BLUE.bmp</back_image_r>
+                <fore_image_l>DS_PROBAR_ORANGE.bmp</fore_image_l>
+                <fore_image_m>DS_PROBAR_ORANGE.bmp</fore_image_m>
+                <fore_image_r>DS_PROBAR_ORANGE.bmp</fore_image_r>
+                <format>water</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_signal_quality_value" class="text">
+            <property>
+                <rect>[551,375,50,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_signal_strength_progbar" class="progbar">
+            <property>
+                <rect>[219,422,320,13]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <back_image_l>DS_PROBAR_BLUE.bmp</back_image_l>
+                <back_image_m>DS_PROBAR_BLUE.bmp</back_image_m>
+                <back_image_r>DS_PROBAR_BLUE.bmp</back_image_r>
+                <fore_image_l>DS_PROBAR_ORANGE.bmp</fore_image_l>
+                <fore_image_m>DS_PROBAR_ORANGE.bmp</fore_image_m>
+                <fore_image_r>DS_PROBAR_ORANGE.bmp</fore_image_r>
+                <format>water</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_signal_strength_value" class="text">
+            <property>
+                <rect>[552,414,50,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_manul_image203" class="image">
+            <property>
+                <rect>[80,455,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_image_leftright" class="image">
+            <property>
+                <rect>[93,466,54,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_SWORD.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_tip_image_exit" class="image">
+            <property>
+                <rect>[292,460,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_tip_image_ok" class="image">
+            <property>
+                <rect>[476,460,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_OK.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_updown" class="text">
+            <property>
+                <rect>[149,457,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Move Focus</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[333,457,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_ok" class="text">
+            <property>
+                <rect>[515,455,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Confirm Search</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_error_text" class="text">
+            <property>
+                <rect>[120,331,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>ERR</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_err_value" class="text">
+            <property>
+                <rect>[226,332,200,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_lock_text" class="text">
+            <property>
+                <rect>[551,332,60,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_manual_search_text_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Manual Search</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

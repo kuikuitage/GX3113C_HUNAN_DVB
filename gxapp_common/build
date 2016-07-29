@@ -1,0 +1,192 @@
+#!/bin/bash
+
+
+unset BUILD_CHIP
+unset BUILD_DEMOD
+unset BUILD_MARKET
+unset BUILD_OS
+unset ARCH
+unset OS
+# set_env $BUILD_CHIP $BUILD_DEMOD $BUILD_MARKET $BUILD_OS
+set_env() {
+    BUILD_CHIP=$1
+    BUILD_DEMOD=$2
+    BUILD_MARKET=$3
+    BUILD_OS=$4
+
+#    export ARCH OS BUILD_CHIP BUILD_DEMOD BUILD_MARKET BUILD_OS
+}
+
+build_clean() {
+    make clean
+}
+
+# build <chip> <demod> <market> <os>
+build() {
+ export   BUILD_CHIP=$1
+    case "$BUILD_CHIP" in
+        gx3201)
+            ARCH=csky
+            ;;
+	gx3113c)
+            ARCH=csky
+            ;;
+		gx3115)
+            ARCH=csky
+            ;;
+		gx3113h)
+            ARCH=csky
+            ;;
+		gx3201h)
+            ARCH=csky
+            ;;
+        gx6131)
+            ARCH=csky
+            ;;
+        gx3200)
+            ARCH=arm
+            ;;
+        *)
+            echo -e "\033[31m ERROR CHIP_ID: $BUILD_CHIP \033[0m"
+            exit 1
+            ;;
+    esac
+
+	
+    
+export    BUILD_DEMOD=$2
+export    BUILD_MARKET=$3
+export    BUILD_OS=$4
+export    OS=$4
+
+    case "$BUILD_OS" in
+        ecos)
+            ;;
+        linux)
+            ;;
+        *)
+            echo -e "\033[31m ERROR OS: $BUILD_OS \033[0m"
+            exit 1
+            ;;
+    esac
+	
+    if [ ! -f sh/$BUILD_CHIP/$BUILD_DEMOD/$BUILD_MARKET/env.sh ]; then
+	echo  -e "\033[31m sh/$BUILD_CHIP/$BUILD_DEMOD/$BUILD_MARKET/env.sh not	exist, please check. \033[0m"
+	exit 1
+    fi
+
+    
+    cp sh/$BUILD_CHIP/$BUILD_DEMOD/$BUILD_MARKET/env.sh env.sh
+	source env.sh  $ARCH-$OS
+
+	if [ "$BUILD_CHIP" != "$CHIP" ] ; then
+	echo -e "\033[31m   ERROR CHIP_ID CHECK: build_chip $BUILD_CHIP, env.sh	chip $CHIP \033[0m"
+	exit 1
+	fi
+
+
+	if [ $BUILD_DEMOD != $DEMOD ] ; then
+	echo -e "\033[31m  ERROR DEMOD_ID CHECK: build_demod $BUILD_DEMOD, env.sh chip $DEMOD \033[0m"
+	exit 1
+	fi
+
+	if [ "$DVB_CUSTOM" = "gongban" ] ; then
+		if [ $BUILD_MARKET != ${DVB_MARKET} ] ; then
+		echo -e "\033[31m ERROR MARKET CHECK: build_market $BUILD_MARKET, env.sh market	${DVB_MARKET}  \033[0m"
+		exit 1
+		fi
+	else
+		if [ $BUILD_MARKET != ${DVB_CUSTOM}_${DVB_MARKET} ] ; then
+		echo -e "\033[31m ERROR MARKET CHECK: build_market $BUILD_MARKET, env.sh market	${DVB_CUSTOM}_${DVB_MARKET}  \033[0m"
+		exit 1
+		fi
+	fi
+
+	make clean
+    make
+    
+}
+
+help() {
+	gx3201_gx1001_list=`ls sh/gx3201/gx1001`
+	gx3201_gx1001_list=`echo ${gx3201_gx1001_list}|sed "s/ /|/g"`
+	gx3201_gx1503_list=`ls sh/gx3201/gx1503`
+    gx3201_gx1503_list=`echo ${gx3201_gx1503_list}|sed "s/ /|/g"`
+    gx3201_atbm886x_list=`ls sh/gx3201/atbm886x`
+    gx3201_atbm886x_list=`echo ${gx3201_atbm886x_list}|sed "s/ /|/g"`
+	gx3113c_gx1503_list=`ls sh/gx3113c/gx1503`
+    gx3113c_gx1503_list=`echo ${gx3113c_gx1503_list}|sed "s/ /|/g"`
+    gx3113c_atbm886x_list=`ls sh/gx3113c/atbm886x`
+    gx3113c_atbm886x_list=`echo ${gx3113c_atbm886x_list}|sed "s/ /|/g"`
+
+	gx3115_gx1503_list=`ls sh/gx3115/gx1503`
+    gx3115_gx1503_list=`echo ${gx3115_gx1503_list}|sed "s/ /|/g"`
+
+	gx3113h_gx1503_list=`ls sh/gx3113h/gx1503`
+    gx3113h_gx1503_list=`echo ${gx3113h_gx1503_list}|sed "s/ /|/g"`
+
+    gx3113h_atbm886x_list=`ls sh/gx3113h/atbm886x`
+    gx3113h_atbm886x_list=`echo ${gx3113h_atbm886x_list}|sed "s/ /|/g"`
+
+    gx3201h_gx1801_list=`ls sh/gx3201h/gx1801`
+    gx3201h_gx1801_list=`echo ${gx3201h_gx1801_list}|sed "s/ /|/g"`
+
+        echo ""
+        echo "./build <chip> <demod> <market> <os>"
+	echo ""
+	echo "  chip    list :" 
+        echo "  	       gx3201|gx3113c|gx3115|gx3113h|gx3201h"
+	echo ""
+        echo "  demod    list :" 
+        echo "                  gx1001|gx1503|atbm886x|gx1801"
+	echo ""
+        echo "  market  list (gx3201+gx1001):"
+	echo "                  ${gx3201_gx1001_list}" 
+        echo ""
+        echo "  market  list (gx3201+gx1503):"
+        echo "                  ${gx3201_gx1503_list}" 
+        echo ""
+        echo "  market  list (gx3201+atbm886x):"
+        echo "                  ${gx3201_atbm886x_list}" 
+        echo ""
+        echo "  market  list (gx3113c+gx1503):"
+        echo "                  ${gx3113c_gx1503_list}" 
+        echo ""
+        echo "  market  list (gx3113c+atbm886x):"
+        echo "                  ${gx3113c_atbm886x_list}" 
+        echo ""
+
+        echo "  market  list (gx3115+gx1503):"
+        echo "                  ${gx3115_gx1503_list}" 
+        echo ""
+        echo "  market  list (gx3113h+gx1503):"
+        echo "                  ${gx3113h_gx1503_list}" 
+        echo ""
+        echo "  market  list (gx3113h+atbm886x):"
+        echo "                  ${gx3113h_atbm886x_list}" 
+        echo ""
+        echo "  market  list (gx3201h+gx1801):"
+        echo "                  ${gx3201h_gx1801_list}" 
+        echo ""
+	echo "  os    list :" 
+        echo "                  ecos|linux"
+        echo ""
+	echo ""
+	echo "  eg: ./build gx3201 gx1001 runde_guangxi_yulin ecos"
+        echo "      ./build gx3201 gx1503 gongban linux"
+        echo ""
+        echo "./build clean"
+        echo ""
+}
+
+if [ $# -le 2 ]; then
+    if [ "$1" = "clean" ]; then
+	source env.sh
+        build_clean
+    else
+	help
+    fi
+    exit 1
+fi
+
+build $@

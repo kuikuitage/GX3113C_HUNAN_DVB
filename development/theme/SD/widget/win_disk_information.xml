@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_disk_information" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#000000,#000000,#000000]</backcolor>
+        <back_ground>mediacenter.jpg</back_ground>
+    </property>
+    <signal>
+        <create>disk_information_create</create>
+        <destroy>disk_information_destroy</destroy>
+        <keypress>disk_information_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_disk_information_title" class="text">
+            <property>
+                <rect>[65,49,300,30]</rect>
+                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|bottom</alignment>
+                <string>USB DISK Info</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="disk_information_listview" class="listview">
+            <property>
+                <rect>[65,92,597,405]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#909092]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <roll_time>100</roll_time>
+                <enable_roll>true</enable_roll>
+                <format>enable_roll</format>
+                <interval>5</interval>
+                <focus_img>MP_BUTTON3.bmp</focus_img>
+                <item_active_image>MP_BUTTON3.bmp</item_active_image>
+                <item_active_color>#a8ca08</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,580,40]</item_rect>
+                <item_fore_color>[#c8c8c8,#bbff00,#909092]</item_fore_color>
+                <item_back_color>[#000000,#000000,#000000]</item_back_color>
+                <alignment>left|vcentre</alignment>
+            </property>
+            <signal>
+                <get_total>disk_information_listview_get_total</get_total>
+                <get_data>disk_information_listview_get_data</get_data>
+            </signal>
+            <children>
+                <widget style="default" name="disk_information_header12" class="header">
+                    <property>
+                        <rect>[0,0,580,40]</rect>
+                        <forecolor>[#808080,#808080,#808080]</forecolor>
+                        <backcolor>[#808080,#808080,#808080]</backcolor>
+                        <format>headershow</format>
+                        <colum_number>6</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="disk_information_text389" class="text">
+                            <property>
+                                <rect>[0,0,40,40]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>right|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="disk_information_text390" class="text">
+                            <property>
+                                <rect>[40,0,110,40]</rect>
+                                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Disk</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="disk_information_text391" class="text">
+                            <property>
+                                <rect>[150,0,110,40]</rect>
+                                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>USED</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="disk_information_text392" class="text">
+                            <property>
+                                <rect>[260,0,110,40]</rect>
+                                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>FREE</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="disk_information_text393" class="text">
+                            <property>
+                                <rect>[370,0,110,40]</rect>
+                                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>TOTAL</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="disk_information_text394" class="text">
+                            <property>
+                                <rect>[480,0,100,40]</rect>
+                                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>SYSTEM</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="disk_information_scrollbar14" class="scrollbar">
+                    <property>
+                        <rect>[580,40,17,365]</rect>
+                        <forecolor>[#909092,#909092,#909092]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <back_img>HDMP_SCROLL_MIDDLE.bmp</back_img>
+                        <arrow_up>HDMP_SCROLL_UP.bmp</arrow_up>
+                        <arrow_down>HDMP_SCROLL_DOWN.bmp</arrow_down>
+                        <fore_img>HDMP_SCROLL_MIDDLE2.bmp</fore_img>
+                        <format>scroll_show</format>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem0" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem6" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="disk_information_listitem7" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="GBK"?>
+<VideoList>
+  <video id="1">
+    <title>apache_pb.gif</title>
+    <size>2326</size>
+    <link>http://192.168.120.118:8088/1.gif</link>
+  </video>
+  <video id="2">
+    <title>apache_pb.png</title>
+    <size>1385</size>
+    <link>http://192.168.120.118:8088/2.png</link>
+  </video>
+  <video id="3">
+    <title>apache_pb22.gif</title>
+    <size>2410</size>
+    <link>http://192.168.120.118:8088/3.gif</link>
+  </video>
+  <video id="4">
+    <title>apache_pb22.png</title>
+    <size>1502</size>
+    <link>http://192.168.120.118:8088/4.png</link>
+  </video>
+  <video id="5">
+    <title>apache_pb22_ani.gif</title>
+    <size>2205</size>
+    <link>http://192.168.120.118:8088/5.gif</link>
+  </video>
+  <video id="6">
+    <title>av.ko</title>
+    <size>1168671</size>
+    <link>http://192.168.120.118:8088/6.ko</link>
+  </video>
+  <video id="7">
+    <title>av11.ko</title>
+    <size>1168623</size>
+    <link>http://192.168.120.118:8088/7.ko</link>
+  </video>
+  <video id="8">
+    <title>av20091224.ko</title>
+    <size>604899</size>
+    <link>http://192.168.120.118:8088/8.ko</link>
+  </video>
+  <video id="9">
+    <title>av_huangyf.ko</title>
+    <size>604938</size>
+    <link>http://192.168.120.118:8088/9.ko</link>
+  </video>
+  <video id="10">
+    <title>because.mp3</title>
+    <size>3175740</size>
+    <link>http://192.168.120.118:8088/10.mp3</link>
+  </video>
+  <video id="11">
+    <title>gxzg1.ts</title>
+    <size>3506576</size>
+    <link>http://192.168.120.118:8088/11.ts</link>
+  </video>
+  <video id="12">
+    <title>index.html</title>
+    <size>44</size>
+    <link>http://192.168.120.118:8088/12.html</link>
+  </video>
+  <video id="13">
+    <title>liufei.ko</title>
+    <size>601604</size>
+    <link>http://192.168.120.118:8088/13.ko</link>
+  </video>
+  <video id="14">
+    <title>load.sh</title>
+    <size>184</size>
+    <link>http://192.168.120.118:8088/14.sh</link>
+  </video>
+  <video id="15">
+    <title>load.sh~</title>
+    <size>204</size>
+    <link>http://192.168.120.118:8088/15.sh~</link>
+  </video>
+  <video id="16">
+    <title>main_liufei.o</title>
+    <size>4451250</size>
+    <link>http://192.168.120.118:8088/16.o</link>
+  </video>
+  <video id="17">
+    <title>test_av.ko</title>
+    <size>1164905</size>
+    <link>http://192.168.120.118:8088/17.ko</link>
+  </video>
+  <video id="18">
+    <title>theme1.tar.gz</title>
+    <size>502909</size>
+    <link>http://192.168.120.118:8088/18.gz</link>
+  </video>
+  <video id="19">
+    <title>11</title>
+    <class>77</class>
+    <language>33</language>
+    <pubdate>22</pubdate>
+    <media>66</media>
+    <size>55</size>
+    <link>http://192.168.120.118:8088/19</link>
+    <description>nationachip</description>
+  </video>
+</VideoList>

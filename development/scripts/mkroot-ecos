@@ -1,0 +1,73 @@
+#!/bin/bash
+
+source=/tmp/rootfs_with_lib
+target=rootfs_ecos.jffs2
+
+echo "----clear----"
+rm -rf $source
+rm -rf $target
+
+
+
+echo "----rootfs----"
+echo "copy ./rootfs_ecos/rootfs_with_lib to /tmp"
+cp -rf ./rootfs_ecos/rootfs_with_lib /tmp
+
+
+
+#copy theme
+if [ $# -ge 1 ]; then
+theme=$1
+theme_name=`basename $1`
+echo "----theme----"
+echo "copy $theme to $source/stb_dvbt and filter unnecessary"
+mkdir $source/stb_dvbt
+cp -rf $theme $source/stb_dvbt
+
+find $source/stb_dvbt/$theme_name -name '.svn'|xargs rm -rf
+find $source/stb_dvbt/$theme_name -name '*.sh'|xargs rm -rf
+find $source/stb_dvbt/$theme_name -name '*.xls'|xargs rm -rf
+
+theme_size=`du -sb $source/stb_dvbt/$theme_name | awk '{print $1}'`
+echo "theme_size: $theme_size"
+fi
+
+
+
+#copy app
+if [ $# -eq 2 ]; then
+app=$2
+app_name=`basename $2`
+echo "----app----"
+echo "copy $app to $source/stb_dvbt/app and objcopy as ecos.bin"
+mkdir $source/stb_dvbt/app
+cp -rf $app $source/stb_dvbt/app
+
+arm-eabi-objcopy $source/stb_dvbt/app/$app_name -S -g -Obinary $source/stb_dvbt/app/ecos.bin
+
+echo "move ecos.bin to $source and rm $app_name"
+mv $source/stb_dvbt/app/ecos.bin $source
+rm -rf $source/stb_dvbt/app/$app_name
+
+app_size=`du -sb $source/ecos.bin | awk '{print $1}'`
+echo "app_size: $app_size"
+fi
+
+
+
+echo "----image----"
+echo "mkfs.jffs2 -d $source -l -e 0x10000 -o $target"
+mkfs.jffs2 -d $source -l -e 0x10000 -o $target
+
+
+
+echo "----size----"
+source_size=`du -sb $source | awk '{print $1}'`
+target_size=`du -sb $target | awk '{print $1}'`
+echo "source: $source_size  ->  target: $target_size"
+
+
+
+rm -rf $source
+
+

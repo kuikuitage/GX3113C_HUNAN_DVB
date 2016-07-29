@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="wnd_file_list" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>app_file_list_create</create>
+        <destroy>app_file_list_destroy</destroy>
+        <keypress>app_file_list_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_file_list_image_bg" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_image202" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="listview_file_list" class="listview">
+            <property>
+                <rect>[135,140,447,300]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <roll_time>50</roll_time>
+                <enable_roll>true</enable_roll>
+                <format>enable_roll</format>
+                <focus_img>DS_update_orange.bmp</focus_img>
+                <i18n>false</i18n>
+                <item_rect>[0,0,447,36]</item_rect>
+                <item_fore_color>[#CEE8FF,#212021,#CEE8FF]</item_fore_color>
+                <item_back_color>[#FF00FF,#FF00FF,#FF00FF]</item_back_color>
+            </property>
+            <signal>
+                <get_total>app_file_list_get_total</get_total>
+                <get_data>app_file_list_get_data</get_data>
+                <change>app_file_list_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="header_file_list" class="header">
+                    <property>
+                        <rect>[0,0,447,35]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <format>headershow</format>
+                        <colum_number>2</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="header_text_file_list_1" class="text">
+                            <property>
+                                <rect>[0,0,40,35]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="header_text_file_list_2" class="text">
+                            <property>
+                                <rect>[40,0,407,35]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="listitem_file_list_1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listitem_file_list_2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listitem_file_list_3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listitem_file_list_4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listitem_file_list_5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listitem_file_list_6" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="scroll_file_list" class="scrollbar">
+                    <property>
+                        <rect>[440,40,0,260]</rect>
+                        <state>hide</state>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <format>scroll_hide</format>
+                    </property>
+                </widget>
+                <widget style="default" name="wnd_file_list_listitem103" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="text_file_list_path" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>File List</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_file_list_tip_image_left" class="image">
+            <property>
+                <rect>[125,466,12,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_allow_l.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_file_list_tip_text_left" class="text">
+            <property>
+                <rect>[146,458,130,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Prev directory</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_file_list_tip_image_right" class="image">
+            <property>
+                <rect>[294,465,12,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_allow_r.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_file_list_tip_text_right" class="text">
+            <property>
+                <rect>[319,458,130,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Next directory</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_file_list_tip_image_select" class="image">
+            <property>
+                <rect>[454,461,34,22]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#212021,#212021,#212021]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_OK.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_file_list_tip_text_select" class="text">
+            <property>
+                <rect>[490,458,105,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Select</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

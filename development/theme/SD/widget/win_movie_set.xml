@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_movie_set" class="window">
+    <property>
+        <rect>[60,70,600,360]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#16161c,#16161c,#16161c]</backcolor>
+    </property>
+    <signal>
+        <create>movie_set_init</create>
+        <destroy>movie_set_destroy</destroy>
+        <service>movie_set_service</service>
+        <keypress>movie_set_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_movie_set_image_back" class="image">
+            <property>
+                <rect>[0,0,600,360]</rect>
+                <forecolor>[#16161c,#16161c,#16161c]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_set_image_logo" class="image">
+            <property>
+                <rect>[222,28,126,30]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <mode>single</mode>
+                <img>MP_SETTING.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_set_box" class="box">
+            <property>
+                <rect>[14,88,580,212]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#242424]</backcolor>
+                <interval>2</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="movie_set_boxitem0" class="boxitem">
+                    <property>
+                        <rect>[0,2,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_set_text0" class="text">
+                            <property>
+                                <rect>[41,2,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Quick Seek</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_set_edit_seek" class="edit">
+                            <property>
+                                <rect>[366,4,110,32]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#191819,#191819,#242424]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>00:00:00</string>
+                                <maxlen>8</maxlen>
+                                <format>edit_time</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_set_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,44,580,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_set_txt1" class="text">
+                            <property>
+                                <rect>[41,4,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Audio Channel</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_set_combo_audio_channel" class="combobox">
+                            <property>
+                                <rect>[268,0,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[English,Chinese]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_set_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[0,86,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_set_txt2" class="text">
+                            <property>
+                                <rect>[41,2,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Play Mode</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_set_combo_play_sequence" class="combobox">
+                            <property>
+                                <rect>[268,4,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[Only once,Repeat one,Sequence]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_set_boxitem3" class="boxitem">
+                    <property>
+                        <rect>[0,128,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_set_txt3" class="text">
+                            <property>
+                                <rect>[41,4,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#bbff00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Audio Delay</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_set_button_delay" class="button">
+                            <property>
+                                <rect>[268,4,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="movie_set_boxitem4" class="boxitem">
+                    <property>
+                        <rect>[0,170,580,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#191819,#191819,#242424]</backcolor>
+                        <focus_image>MP_BUTTON3.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="movie_set_txt4" class="text">
+                            <property>
+                                <rect>[41,2,150,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#bbff00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>View Mode</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="movie_set_combo_display_mode" class="combobox">
+                            <property>
+                                <rect>[268,3,312,36]</rect>
+                                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <focus_left_img>MP_ICON_ARROW_L.bmp</focus_left_img>
+                                <focus_right_img>MP_ICON_ARROW_R.bmp</focus_right_img>
+                                <content>[Auto,Full screen,Original,4:3,16:9]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_movie_set_image_line" class="image">
+            <property>
+                <rect>[117,67,350,2]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_LINE.bmp</img>
+            </property>
+        </widget>
+    </children>
+</widget>

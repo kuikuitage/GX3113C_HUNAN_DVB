@@ -1,0 +1,13 @@
+linux:
+source env.sh csky-linux 
+make clean;make;make bin
+ecos:
+source env.sh csky-ecos
+make clean;make
+
+##########################
+for 3113C
+ecos:
+source env.sh csky-ecos [old/new]
+make clean;make
+

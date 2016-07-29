@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_main_menu" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+        <back_ground>NULL</back_ground>
+    </property>
+    <signal>
+        <create>win_main_menu_create</create>
+        <destroy>win_main_menu_destroy</destroy>
+        <show>win_main_menu_show</show>
+        <keypress>win_main_menu_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_main_menu_image_bg" class="image">
+            <property>
+                <rect>[40,48,640,480]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_Mmenu_Top_l.bmp</lt_img>
+                <rt_img>DS_Mmenu_Top_r.bmp</rt_img>
+                <l_img>DS_WIN_BG_320.bmp</l_img>
+                <r_img>DS_WIN_BG_320.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_ad_gif" class="file_image">
+            <property>
+                <rect>[238,397,245,110]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#515151,#515151,#515151]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_box" class="box">
+            <property>
+                <rect>[59,100,111,420]</rect>
+                <forecolor>[#0086ce,#0086ce,#0086ce]</forecolor>
+                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                <interval>25</interval>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_main_menu_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="win_main_menu_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,25,111,110]</rect>
+                        <forecolor>[#E9E9E9,#E9E9E9,#E9E9E9]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_main_menu_button_tv" class="button">
+                            <property>
+                                <rect>[0,0,111,110]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|bottom</alignment>
+                                <string>TV</string>
+                                <focus_img>DS_Mmenu_Borange.bmp</focus_img>
+                                <unfocus_img>DS_Mmenu_Bblue.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_main_menu_image_tv" class="image">
+                            <property>
+                                <rect>[27,20,53,43]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_Icon_Prog_List.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_main_menu_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[0,160,111,110]</rect>
+                        <forecolor>[#E9E9E9,#E9E9E9,#E9E9E9]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_main_menu_button_radio" class="button">
+                            <property>
+                                <rect>[0,0,111,110]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|bottom</alignment>
+                                <string>Radio</string>
+                                <focus_img>DS_Mmenu_Borange.bmp</focus_img>
+                                <unfocus_img>DS_Mmenu_Bblue.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_main_menu_image_radio" class="image">
+                            <property>
+                                <rect>[27,20,53,43]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_Icon_Prog_List.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_main_menu_boxitem3" class="boxitem">
+                    <property>
+                        <rect>[0,295,111,110]</rect>
+                        <forecolor>[#E9E9E9,#E9E9E9,#E9E9E9]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_main_menu_button_epg" class="button">
+                            <property>
+                                <rect>[0,0,111,110]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|bottom</alignment>
+                                <string>EPG</string>
+                                <focus_img>DS_Mmenu_Borange.bmp</focus_img>
+                                <unfocus_img>DS_Mmenu_Bblue.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_main_menu_image_epg" class="image">
+                            <property>
+                                <rect>[27,21,54,52]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_Icon_EPG.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_main_menu_boxr" class="box">
+            <property>
+                <rect>[550,100,111,420]</rect>
+                <forecolor>[#0086ce,#0086ce,#0086ce]</forecolor>
+                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                <interval>25</interval>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_main_menu_boxr_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="win_main_menu_boxitem4" class="boxitem">
+                    <property>
+                        <rect>[0,25,111,110]</rect>
+                        <forecolor>[#E9E9E9,#E9E9E9,#E9E9E9]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_main_menu_button_edit" class="button">
+                            <property>
+                                <rect>[0,0,111,110]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|bottom</alignment>
+                                <string>Program Manage</string>
+                                <focus_img>DS_Mmenu_Borange.bmp</focus_img>
+                                <unfocus_img>DS_Mmenu_Bblue.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_main_menu_image_edit" class="image">
+                            <property>
+                                <rect>[32,20,52,50]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_Icon_Prog_Edit.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_main_menu_boxitem5" class="boxitem">
+                    <property>
+                        <rect>[0,160,111,110]</rect>
+                        <forecolor>[#E9E9E9,#E9E9E9,#E9E9E9]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_main_menu_button_media" class="button">
+                            <property>
+                                <rect>[0,0,111,110]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|bottom</alignment>
+                                <string>Media</string>
+                                <focus_img>DS_Mmenu_Borange.bmp</focus_img>
+                                <unfocus_img>DS_Mmenu_Bblue.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_main_menu_image_media" class="image">
+                            <property>
+                                <rect>[34,20,47,42]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_Icon_media_focus.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_main_menu_boxitem96" class="boxitem">
+                    <property>
+                        <rect>[0,295,111,110]</rect>
+                        <forecolor>[#E9E9E9,#E9E9E9,#E9E9E9]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_main_menu_button_system_set" class="button">
+                            <property>
+                                <rect>[0,0,111,110]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|bottom</alignment>
+                                <string>System Set</string>
+                                <focus_img>DS_Mmenu_Borange.bmp</focus_img>
+                                <unfocus_img>DS_Mmenu_Bblue.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_main_menu_image_system_set" class="image">
+                            <property>
+                                <rect>[37,23,38,41]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <mode>single</mode>
+                                <img>DS_Icon_Setting.bmp</img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_main_menu_text_tv" class="text">
+            <property>
+                <rect>[70,220,100,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>TV</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_text_radio" class="text">
+            <property>
+                <rect>[70,355,100,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>EPG</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_text_epg" class="text">
+            <property>
+                <rect>[68,490,100,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Media</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_text_nvod" class="text">
+            <property>
+                <rect>[555,237,100,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Nvod</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_text_media" class="text">
+            <property>
+                <rect>[552,356,100,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Media</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_text_system_set" class="text">
+            <property>
+                <rect>[552,492,100,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>System Set</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_image242" class="image">
+            <property>
+                <rect>[192,152,338,236]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_TV_l_u.bmp</lt_img>
+                <rt_img>DS_TV_r_u.bmp</rt_img>
+                <lb_img>DS_TV_l_b.bmp</lb_img>
+                <rb_img>DS_TV_r_b.bmp</rb_img>
+                <l_img>DS_TV_l_m.bmp</l_img>
+                <r_img>DS_TV_r_m.bmp</r_img>
+                <t_img>DS_TV_u_m.bmp</t_img>
+                <b_img>DS_TV_b_m.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_image_ad" class="file_image">
+            <property>
+                <rect>[238,397,245,110]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>ad.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_text498" class="text">
+            <property>
+                <rect>[278,80,150,25]</rect>
+                <forecolor>[#120212,#120212,#120212]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_title" class="image">
+            <property>
+                <rect>[237,51,245,63]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_Title_Menu.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_image571" class="image">
+            <property>
+                <rect>[200,251,320,34]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <l_img>DS_TIP_RED_LEFT.bmp</l_img>
+                <r_img>DS_TIP_RED_RIGHT.bmp</r_img>
+                <t_img>DS_TIP_RED_MIDDLE.bmp</t_img>
+                <b_img>DS_TIP_RED_MIDDLE.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_image572" class="image">
+            <property>
+                <rect>[197,246,43,42]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_WARNING.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_main_menu_text_msg" class="text">
+            <property>
+                <rect>[239,251,280,34]</rect>
+                <state>hide</state>
+                <forecolor>[#121212,#121212,#121212]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>automatic</format>
+            </property>
+        </widget>
+    </children>
+</widget>

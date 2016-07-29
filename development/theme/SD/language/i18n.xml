@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="gb2312" standalone="yes"?>
+<i18n>
+	<language id= "English">English.xml</language>
+	<language id= "Chinese">Chinese.xml</language>
+</i18n>

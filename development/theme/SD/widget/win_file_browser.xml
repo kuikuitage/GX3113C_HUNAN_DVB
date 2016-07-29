@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_file_browser" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+        <back_ground>mediacenter.jpg</back_ground>
+    </property>
+    <signal>
+        <create>file_browser_init</create>
+        <destroy>file_browser_destroy</destroy>
+        <got_focus>file_browser_got_focus</got_focus>
+        <lost_focus>file_browser_lost_focus</lost_focus>
+        <service>file_browser_service</service>
+        <keypress>file_browser_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_file_browser_image_background" class="image">
+            <property>
+                <rect>[0,0,720,576]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_img_top_line" class="image">
+            <property>
+                <rect>[0,0,720,576]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#000000,#000000,#000000]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget style="default" name="file_browser_text_path1" class="text">
+            <property>
+                <rect>[111,469,100,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="file_browser_text_path2" class="text">
+            <property>
+                <rect>[212,469,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <font>Arial</font>
+                <time>40</time>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>fix_r2l</format>
+            </property>
+        </widget>
+        <widget style="default" name="file_browser_listview" class="listview">
+            <property>
+                <rect>[60,143,597,300]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#909092]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <roll_time>50</roll_time>
+                <enable_roll>true</enable_roll>
+                <format>enable_roll</format>
+                <interval>5</interval>
+                <focus_img>MP_BUTTON3.bmp</focus_img>
+                <item_active_image>MP_BUTTON3.bmp</item_active_image>
+                <item_active_color>#a8ca08</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,580,40]</item_rect>
+                <item_fore_color>[#c8c8c8,#bbff00,#909092]</item_fore_color>
+                <item_back_color>[#000000,#000000,#000000]</item_back_color>
+                <alignment>left|vcentre</alignment>
+            </property>
+            <signal>
+                <keypress>file_browser_listview_keypress</keypress>
+                <get_total>file_browser_listview_get_count</get_total>
+                <get_data>file_browser_listview_get_data</get_data>
+                <change>file_browser_listview_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="file_browser_listview_header" class="header">
+                    <property>
+                        <rect>[0,0,504,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#67A958,#503A8F,#85347A]</backcolor>
+                        <colum_number>2</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="file_browser_listview_header_text0" class="text">
+                            <property>
+                                <rect>[0,0,100,30]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>right|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="file_browser_listview_header_text1" class="text">
+                            <property>
+                                <rect>[100,0,404,30]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="file_browser_listview_scroll" class="scrollbar">
+                    <property>
+                        <rect>[580,30,17,270]</rect>
+                        <forecolor>[#909092,#909092,#909092]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <back_img>HDMP_SCROLL_MIDDLE.bmp</back_img>
+                        <arrow_up>HDMP_SCROLL_UP.bmp</arrow_up>
+                        <arrow_down>HDMP_SCROLL_DOWN.bmp</arrow_down>
+                        <fore_img>HDMP_SCROLL_MIDDLE2.bmp</fore_img>
+                        <format>scroll_show</format>
+                    </property>
+                </widget>
+                <widget style="default" name="file_browser_listview_header_item0" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="file_browser_listview_header_item1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="file_browser_listview_header_item2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="file_browser_listview_header_item3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="file_browser_listview_header_item4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="file_browser_listview_header_item5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_file_browser_image_line" class="image">
+            <property>
+                <rect>[0,129,720,5]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>HDMP_LINE_PART.bmp</lt_img>
+                <rt_img>HDMP_LINE_PART.bmp</rt_img>
+                <t_img>HDMP_LINE_PART.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_img_bottom_line" class="image">
+            <property>
+                <rect>[0,459,720,5]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>HDMP_LINE_PART.bmp</lt_img>
+                <rt_img>HDMP_LINE_PART.bmp</rt_img>
+                <t_img>HDMP_LINE_PART.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default" name="file_browser_text_title" class="text">
+            <property>
+                <rect>[106,40,300,60]</rect>
+                <forecolor>[#d6d2d6,#d6d2d6,#d6d2d6]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_image_path" class="image">
+            <property>
+                <rect>[59,471,49,37]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_LOGO.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_image_usb" class="image">
+            <property>
+                <rect>[453,38,65,77]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_USB_TITLE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_image_sdcard" class="image">
+            <property>
+                <rect>[521,38,80,77]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_SDCARD2.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_image_net" class="image">
+            <property>
+                <rect>[607,38,52,77]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_NET2.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_image_set" class="image">
+            <property>
+                <rect>[564,477,22,22]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_RED.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_file_browser_text_setting" class="text">
+            <property>
+                <rect>[588,470,80,40]</rect>
+                <state>hide</state>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Setting</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

@@ -1,0 +1,124 @@
+/*****************************************************************************
+* 			  CONFIDENTIAL								
+*        Hangzhou GuoXin Science and Technology Co., Ltd.             
+*                      (C)2009, All right reserved
+******************************************************************************
+
+******************************************************************************
+* File Name :	xxx.c
+* Author    : 	xxx
+* Project   :	GoXceed -S
+******************************************************************************
+* Purpose   :	
+******************************************************************************
+* Release History:
+  VERSION	Date			  AUTHOR         Description
+   0.0  	2009.12.04	            xxx         creation
+*****************************************************************************/
+
+/* Define to prevent recursive inclusion */
+#ifndef __APP_SEND_MSG_H__
+#define __APP_SEND_MSG_H__
+
+/* Includes --------------------------------------------------------------- */
+
+/* Cooperation with C and C++ */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "gxcore.h"
+#include "gxmsg.h"
+/* Exported Constants ----------------------------------------------------- */
+#include "app_common_search.h"
+typedef enum
+{
+    GXMSG_PM_OPEN = GXMSG_TOTAL_NUM,
+    GXMSG_PM_CLOSE,
+    GXMSG_PM_NODE_NUM_GET,
+    GXMSG_PM_NODE_BY_POS_GET,
+    GXMSG_PM_MULTI_NODE_BY_POS_GET,
+    GXMSG_PM_NODE_BY_ID_GET,
+    GXMSG_PM_NODE_ADD,
+    GXMSG_PM_NODE_MODIFY,
+    GXMSG_PM_NODE_DELETE,
+    GXMSG_PM_NODE_GET_URL,
+    GXMSG_PM_LOAD_DEFAULT,
+
+    GXMSG_PM_PLAY_BY_POS,
+    GXMSG_PM_PLAY_BY_ID,
+    GXMSG_TUNER_COPY,
+    GXMSG_PM_VIEWINFO_SET,
+    GXMSG_PM_VIEWINFO_GET,
+
+    GXMSG_INTERFACE_HELP,
+    GXMSG_INTERFACE_LOCK_TS,
+    GXMSG_CHECK_PM_EXIST,
+    GXMSG_EMPTY_SERVICE_MSG,
+
+    GXMSG_GET_MEDIA_TIME,
+    GXMSG_AV_OUTPUT_OFF,
+
+    GXMSG_SUBTITLE_INIT,
+    GXMSG_SUBTITLE_DESTROY,
+    GXMSG_SUBTITLE_HIDE,
+    GXMSG_SUBTITLE_SHOW,
+    GXMSG_SUBTITLE_DRAW,
+    GXMSG_SUBTITLE_CLEAR,
+
+#ifdef LINUX_OS
+#if NETWORK_SUPPORT
+    GXMSG_NETWORK_DEV_LIST,
+
+    GXMSG_NETWORK_GET_STATE,
+    GXMSG_NETWORK_STATE_REPORT,
+
+    GXMSG_NETWORK_GET_TYPE,
+
+    GXMSG_NETWORK_GET_CUR_DEV,
+
+    GXMSG_NETWORK_PLUG_IN,
+    GXMSG_NETWORK_PLUG_OUT,
+
+    GXMSG_NETWORK_SET_MAC,
+    GXMSG_NETWORK_GET_MAC,
+
+    GXMSG_NETWORK_SET_IPCFG,
+    GXMSG_NETWORK_GET_IPCFG,
+
+    GXMSG_NETWORK_SET_MODE,
+    GXMSG_NETWORK_GET_MODE,
+
+    GXMSG_WIFI_SCAN_AP,
+    GXMSG_WIFI_SCAN_AP_OVER,
+
+    GXMSG_WIFI_GET_CUR_AP,
+    GXMSG_WIFI_SET_CUR_AP,
+    GXMSG_WIFI_DEL_CUR_AP,
+
+    GXMSG_3G_CONNECT,
+    GXMSG_3G_DISCONNECT,
+    GXMSG_3G_SET_PARAM,
+    GXMSG_3G_GET_PARAM,
+#endif
+#endif
+    GXMAX_MSG_NUM
+}AppMsgId;
+extern status_t app_send_msg_exec(uint32_t msg_id,void* params);
+typedef struct {
+	PlayerWindow rect;
+	int type;
+	int handle;
+	int num;
+	void* data;
+}GxMsgProperty_AppSubtitle;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __GX_BOOK_H__ */
+/*@}*/
+/* End of file -------------------------------------------------------------*/
+
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_popmsg_yesno" class="window">
+    <property>
+        <rect>[0,0,300,141]</rect>
+        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+        <format>popup</format>
+    </property>
+    <signal>
+        <create>app_popmsg_init</create>
+        <keypress>app_popmsg_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_popmsg_yesno_image" class="image">
+            <property>
+                <rect>[0,0,300,141]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#515151,#515151,#515151]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_MESSAGE_LEFT.bmp</lt_img>
+                <rt_img>DS_MESSAGE_RIGHT.bmp</rt_img>
+                <lb_img>DS_MESSAGE_LEFT.bmp</lb_img>
+                <rb_img>DS_MESSAGE_RIGHT.bmp</rb_img>
+                <l_img>DS_MESSAGE_LEFT.bmp</l_img>
+                <r_img>DS_MESSAGE_RIGHT.bmp</r_img>
+                <t_img>DS_MESSAGE_MIDDLE.bmp</t_img>
+                <b_img>DS_MESSAGE_MIDDLE.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_text_yesno" class="text">
+            <property>
+                <rect>[10,30,280,80]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Content</string>
+                <format>automatic</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_button_yes" class="button">
+            <property>
+                <rect>[61,108,53,26]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|vcentre</alignment>
+                <string>YES</string>
+                <focus_img>DS_MASSAGE_YESNO_ORANGE.bmp</focus_img>
+                <unfocus_img>DS_MASSAGE_YESBO_BLUE.bmp</unfocus_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_button_no" class="button">
+            <property>
+                <rect>[178,108,53,26]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|vcentre</alignment>
+                <string>NO</string>
+                <focus_img>DS_MASSAGE_YESNO_ORANGE.bmp</focus_img>
+                <unfocus_img>DS_MASSAGE_YESBO_BLUE.bmp</unfocus_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_time_out" class="text">
+            <property>
+                <rect>[237,5,50,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|top</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_yesno_text650" class="text">
+            <property>
+                <rect>[75,5,150,30]</rect>
+                <forecolor>[#bbff00,#bbff00,#bbff00]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Tips title</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

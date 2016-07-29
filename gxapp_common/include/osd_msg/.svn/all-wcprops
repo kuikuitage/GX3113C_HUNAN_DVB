@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/3201_DVBC/!svn/ver/1247/gxapp_common/include/osd_msg
+END
+app_data_type.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/include/osd_msg/app_data_type.h
+END
+app_osd_msg.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/include/osd_msg/app_osd_msg.h
+END
+osd_msg.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/include/osd_msg/osd_msg.h
+END
+app_pop.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/include/osd_msg/app_pop.h
+END
+app_send_msg.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/3201_DVBC/!svn/ver/1247/gxapp_common/include/osd_msg/app_send_msg.h
+END
+app_id_manage.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/include/osd_msg/app_id_manage.h
+END
+app_str_id.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/3201_DVBC/!svn/ver/1244/gxapp_common/include/osd_msg/app_str_id.h
+END

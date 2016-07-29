@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_pop_tip" class="window">
+    <property>
+        <rect>[210,150,300,180]</rect>
+        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+    </property>
+    <signal>
+        <create>win_pop_tip_create</create>
+        <destroy>win_pop_tip_destroy</destroy>
+        <keypress>win_pop_tip_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_pop_tip_rect_image" class="image">
+            <property>
+                <rect>[0,0,300,180]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#515151,#515151,#515151]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_MASSAGE_LT.bmp</lt_img>
+                <rt_img>DS_MASSAGE_RT.bmp</rt_img>
+                <lb_img>DS_MASSAGE_LD.bmp</lb_img>
+                <rb_img>DS_MASSAGE_RD.bmp</rb_img>
+                <l_img>DS_MASSAGE_L.bmp</l_img>
+                <r_img>DS_MASSAGE_R.bmp</r_img>
+                <t_img>DS_MASSAGE_TOP.bmp</t_img>
+                <b_img>DS_MASSAGE_B.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_pop_tip_image" class="image">
+            <property>
+                <rect>[20,20,260,140]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <l_img>DS_MSG_IMAGE_225_70.bmp</l_img>
+                <r_img>DS_MSG_IMAGE_225_70.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_pop_tip_tip" class="text">
+            <property>
+                <rect>[10,70,280,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_pop_tip_text_title" class="text">
+            <property>
+                <rect>[50,2,200,35]</rect>
+                <forecolor>[#bbff00,#bbff00,#bbff00]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Tips title</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_update_manual" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>app_update_manual_create</create>
+        <destroy>app_update_manual_destroy</destroy>
+        <service>app_update_manual_service</service>
+        <keypress>app_update_manual_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_update_manual_image_bg" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default_testbox" name="update_manual_box" class="box">
+            <property>
+                <rect>[138,152,447,220]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <interval>10</interval>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_update_manual_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default_item" name="update_manual_item1" class="boxitem">
+                    <property>
+                        <rect>[0,10,447,35]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <unfocus_image>DS_update_blue.bmp</unfocus_image>
+                        <focus_image>DS_update_orange.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default_text" name="update_manual_box_item1_text" class="text">
+                            <property>
+                                <rect>[20,2,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Upgrade Type</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_combobox" name="update_manual_box_item1_combobox" class="combobox">
+                            <property>
+                                <rect>[228,3,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[Update,Dump]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default_item" name="update_manual_item4" class="boxitem">
+                    <property>
+                        <rect>[0,55,447,35]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <unfocus_image>DS_update_blue.bmp</unfocus_image>
+                        <focus_image>DS_update_orange.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default_text" name="update_manual_box_item4_text" class="text">
+                            <property>
+                                <rect>[20,2,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Data Type</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_combobox" name="update_manual_box_item4_combobox" class="combobox">
+                            <property>
+                                <rect>[227,3,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[All,Booter,Loader,Kernel,Root_fs,Logo]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default_item" name="update_manual_item2" class="boxitem">
+                    <property>
+                        <rect>[0,100,447,35]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <unfocus_image>DS_update_blue.bmp</unfocus_image>
+                        <focus_image>DS_update_orange.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default_text" name="update_manual_box_item2_text1" class="text">
+                            <property>
+                                <rect>[20,2,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>File Path</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_text" name="update_manual_box_item2_text2" class="text">
+                            <property>
+                                <rect>[226,4,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Press OK</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default_item" name="update_manual_item3" class="boxitem">
+                    <property>
+                        <rect>[0,145,447,36]</rect>
+                        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                        <backcolor>[#212021,#212021,#212021]</backcolor>
+                        <unfocus_image>DS_update_blue.bmp</unfocus_image>
+                        <focus_image>DS_update_orange.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default_text" name="update_manual_box_item2_text1" class="text">
+                            <property>
+                                <rect>[20,3,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>Start</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_text" name="update_manual_box_item2_text2" class="text">
+                            <property>
+                                <rect>[225,5,200,30]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Press OK</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_update_manual_upgrading_text" class="text">
+            <property>
+                <rect>[111,409,500,30]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#BC0000,#e67d08]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="update_manual_text_progress" class="text">
+            <property>
+                <rect>[83,372,85,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Progress</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_update_manual_image577" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="update_manual_progbar" class="progbar">
+            <property>
+                <rect>[168,382,420,12]</rect>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <back_image_l>DS_PROBAR_BLUE.bmp</back_image_l>
+                <back_image_m>DS_PROBAR_BLUE.bmp</back_image_m>
+                <back_image_r>DS_PROBAR_BLUE.bmp</back_image_r>
+                <fore_image_l>DS_PROBAR_ORANGE.bmp</fore_image_l>
+                <fore_image_m>DS_PROBAR_ORANGE.bmp</fore_image_m>
+                <fore_image_r>DS_PROBAR_ORANGE.bmp</fore_image_r>
+                <format>water</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+            </property>
+        </widget>
+        <widget style="default" name="win_update_manual_tip_image_ok" class="image">
+            <property>
+                <rect>[211,461,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_OK.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_update_manual_tip_text_ok" class="text">
+            <property>
+                <rect>[251,458,80,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Select</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default_text" name="win_update_manual_text_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>USB Update</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_update_manual_text_prog_percent" class="text">
+            <property>
+                <rect>[568,373,60,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>right|vcentre</alignment>
+                <string>0%</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_update_manual_tip_image_updown" class="image">
+            <property>
+                <rect>[372,466,54,12]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_SWORD.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_update_manual_tip_text_leftright" class="text">
+            <property>
+                <rect>[431,457,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Switch</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

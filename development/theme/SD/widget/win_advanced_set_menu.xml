@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default_window" name="win_advanced_set_menu" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+    </property>
+    <signal>
+        <create>app_advanced_menu_create</create>
+        <destroy>app_advanced_menu_destroy</destroy>
+        <keypress>app_advanced_menu_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_system_set_image130" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#334E8C,#334E8C,#334E8C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_system_set_box" class="box">
+            <property>
+                <rect>[238,179,244,304]</rect>
+                <forecolor>[#ffffff,#ffffff,#ffffff]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <interval>15</interval>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_advanced_menu_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="win_system_set_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,15,244,54]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_set_button8" class="button">
+                            <property>
+                                <rect>[0,0,244,54]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>System Update</string>
+                                <focus_img>DS_ADVANCED_ORANGE.bmp</focus_img>
+                                <unfocus_img>DS_ADVANCED_BLUE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_system_set_boxitem4" class="boxitem">
+                    <property>
+                        <rect>[0,84,244,54]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_set_button11" class="button">
+                            <property>
+                                <rect>[0,0,244,54]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Password Setting</string>
+                                <focus_img>DS_ADVANCED_ORANGE.bmp</focus_img>
+                                <unfocus_img>DS_ADVANCED_BLUE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_system_set_boxitem5" class="boxitem">
+                    <property>
+                        <rect>[0,153,244,54]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_system_set_button12" class="button">
+                            <property>
+                                <rect>[0,0,244,54]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Reset To Factory</string>
+                                <focus_img>DS_ADVANCED_ORANGE.bmp</focus_img>
+                                <unfocus_img>DS_ADVANCED_BLUE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_advanced_menu_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Advance Setting</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_advanced_set_menu_image_bg" class="image">
+            <property>
+                <rect>[137,240,450,97]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_MESSAGE_BLUE_LEFT.bmp</lt_img>
+                <rt_img>DS_MESSAGE_BLUE_RIGHT.bmp</rt_img>
+                <lb_img>DS_MESSAGE_BLUE_LEFT.bmp</lb_img>
+                <rb_img>DS_MESSAGE_BLUE_RIGHT.bmp</rb_img>
+                <l_img>DS_MESSAGE_BLUE_LEFT.bmp</l_img>
+                <r_img>DS_MESSAGE_BLUE_RIGHT.bmp</r_img>
+                <t_img>DS_MESSAGE_BLUE_MIDDLE.bmp</t_img>
+                <b_img>DS_MESSAGE_BLUE_MIDDLE.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_advanced_set_menu_image_warning" class="image">
+            <property>
+                <rect>[167,266,46,42]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_WARNING_2.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_sys_set_factory_text" class="text">
+            <property>
+                <rect>[213,272,350,30]</rect>
+                <state>hide</state>
+                <forecolor>[#12406b,#12406b,#12406b]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

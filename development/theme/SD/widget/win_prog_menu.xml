@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default_window" name="win_prog_menu" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00ff00,#00ff00,#00ff00]</backcolor>
+    </property>
+    <signal>
+        <create>app_prog_menu_create</create>
+        <destroy>app_prog_menu_destroy</destroy>
+        <keypress>app_prog_menu_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_prog_menu_image130" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#334E8C,#334E8C,#334E8C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_menu_box" class="box">
+            <property>
+                <rect>[238,179,244,304]</rect>
+                <forecolor>[#ffffff,#ffffff,#ffffff]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <interval>15</interval>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_prog_menu_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget style="default" name="win_prog_menu_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,15,244,54]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_prog_menu_button8" class="button">
+                            <property>
+                                <rect>[0,0,244,54]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>TV Service</string>
+                                <focus_img>DS_ADVANCED_ORANGE.bmp</focus_img>
+                                <unfocus_img>DS_ADVANCED_BLUE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_prog_menu_boxitem4" class="boxitem">
+                    <property>
+                        <rect>[0,84,244,54]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_prog_menu_button11" class="button">
+                            <property>
+                                <rect>[0,0,244,54]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Radio Service</string>
+                                <focus_img>DS_ADVANCED_ORANGE.bmp</focus_img>
+                                <unfocus_img>DS_ADVANCED_BLUE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_prog_menu_boxitem5" class="boxitem">
+                    <property>
+                        <rect>[0,153,244,54]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_prog_menu_button12" class="button">
+                            <property>
+                                <rect>[0,0,244,54]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Favorite Program</string>
+                                <focus_img>DS_ADVANCED_ORANGE.bmp</focus_img>
+                                <unfocus_img>DS_ADVANCED_BLUE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_prog_menu_boxitem6" class="boxitem">
+                    <property>
+                        <rect>[0,222,244,54]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_prog_menu_button13" class="button">
+                            <property>
+                                <rect>[0,0,244,54]</rect>
+                                <forecolor>[#CEE8FF,#121212,#CEE8FF]</forecolor>
+                                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Book Manage</string>
+                                <focus_img>DS_ADVANCED_ORANGE.bmp</focus_img>
+                                <unfocus_img>DS_ADVANCED_BLUE.bmp</unfocus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="win_prog_menu_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Program Manage</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

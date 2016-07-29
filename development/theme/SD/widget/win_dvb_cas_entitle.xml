@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default_window" name="win_dvb_cas_entitle" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>app_entitle_create</create>
+        <destroy>app_entitle_destroy</destroy>
+        <keypress>app_entitle_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default_img" name="entitle_img0" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default_img" name="entitle_img_help" class="image">
+            <property>
+                <rect>[81,456,560,34]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default_text" name="entitle_title_text" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Entitle Info</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="entitle_list" class="listview">
+            <property>
+                <rect>[109,133,500,336]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <roll_time>0</roll_time>
+                <interval>2</interval>
+                <focus_img>DS_LISTVIEW_BLUE_500.bmp</focus_img>
+                <i18n>true</i18n>
+                <item_rect>[0,0,500,30]</item_rect>
+                <item_fore_color>[#EEEEEE,#070707,#EEEEEE]</item_fore_color>
+                <item_back_color>[#FF00FF,#FF00FF,#FF00FF]</item_back_color>
+            </property>
+            <signal>
+                <get_total>app_entitle_list_get_total</get_total>
+                <get_data>app_entitle_list_get_data</get_data>
+                <change>app_entitle_list_change</change>
+            </signal>
+            <children>
+                <widget style="default_header" name="entitle_list_header" class="header">
+                    <property>
+                        <rect>[0,0,500,30]</rect>
+                        <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <format>headershow</format>
+                        <colum_number>3</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default_text" name="entitle_list_header_2_text" class="text">
+                            <property>
+                                <rect>[0,0,80,30]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Entitle No</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_text" name="entitle_list_header_3_text" class="text">
+                            <property>
+                                <rect>[80,0,210,30]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>StartTime</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default_text" name="entitle_list_header_4_text" class="text">
+                            <property>
+                                <rect>[290,0,210,30]</rect>
+                                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>EndTime</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default_listitem" name="entitle_listitem1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default_listitem" name="entitle_listitem2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default_listitem" name="entitle_listitem3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default_listitem" name="entitle_listitem4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_entitle_listitem89" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_entitle_listitem90" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_entitle_listitem91" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_entitle_scrollbar14" class="scrollbar">
+                    <property>
+                        <rect>[510,30,0,306]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <format>scroll_hide</format>
+                    </property>
+                </widget>
+                <widget style="default" name="win_ca_entitle_listitem95" class="listitem"/>
+                <widget style="default" name="win_ca_entitle_listitem96" class="listitem"/>
+            </children>
+        </widget>
+        <widget style="default" name="win_ca_entitle_image_dvb_sword" class="image">
+            <property>
+                <rect>[134,466,54,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_SWORD.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_ca_entitle_image201" class="image">
+            <property>
+                <rect>[299,461,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_ca_entitle_image202" class="image">
+            <property>
+                <rect>[446,460,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_OK.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_ca_entitle_text486" class="text">
+            <property>
+                <rect>[190,457,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Move Focus</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_ca_entitle_help_text37" class="text">
+            <property>
+                <rect>[341,455,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_ca_entitle_help_text38" class="text">
+            <property>
+                <rect>[491,457,100,30]</rect>
+                <forecolor>[#CEE8FF,#FFFFFF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Save</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

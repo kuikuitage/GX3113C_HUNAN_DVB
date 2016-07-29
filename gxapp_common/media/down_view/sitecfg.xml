@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<download>		
+	<site name="verycd" logo="MP_ICON_PIC.bmp" class="rss">
+		<channel>
+			<title>用户推荐视频</title>
+			<link>/tmp/webeast.xml</link>
+		</channel>
+		<channel>
+			<title>今日排行视频</title>
+			<link>http://sldjflajs2.rss</link>
+		</channel>
+	</site>	
+	<site name="thunder" logo="MP_ICON_PIC.bmp" class="rss">
+		<channel>
+			<title>热门电影</title>
+			<link>http://sldjflajs.rss</link>
+		</channel>
+		<channel>
+			<title>今日排行</title>
+			<link>http://sldjflajs2.rss</link>
+		</channel>
+	</site>	
+	<site name="ppstream" logo="MP_ICON_PIC.bmp" class="rss">
+		<channel>
+			<title>今日热播</title>
+			<link>http://sldjflajs.rss</link>
+		</channel>
+		<channel>
+			<title>用户推荐</title>
+			<link>http://sldjflajs2.rss</link>
+		</channel>
+	</site>			
+	<site name="mediaserver" logo="MP_ICON_PIC.bmp" class="pc">
+		<channel>
+			<title>server1</title>
+			<link>http://192.168.120.118:8088/list</link>
+		</channel>
+		<channel>
+			<title>server2</title>
+			<link>http://sldjflajs2.torrent</link>
+		</channel>
+	</site>	
+</download>

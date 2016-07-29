@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="wnd_pvr_media_list" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+        <back_ground>mediacenter.jpg</back_ground>
+    </property>
+    <signal>
+        <create>app_pvr_media_create</create>
+        <destroy>app_pvr_media_destroy</destroy>
+        <keypress>app_pvr_media_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="wnd_pvr_media_list_image_background" class="image">
+            <property>
+                <rect>[0,0,720,576]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget style="default" name="text_pvr_meida_title" class="text">
+            <property>
+                <rect>[60,90,300,30]</rect>
+                <forecolor>[#f4f4f4,#f4f4f4,#f4f4f4]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|bottom</alignment>
+                <string>Record Files</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_pvr_media_list_red_flag" class="image">
+            <property>
+                <rect>[210,508,20,19]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#428ed6,#428ed6,#428ed6]</backcolor>
+                <mode>single</mode>
+                <img>tips_red.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_pvr_media_list_red_text" class="text">
+            <property>
+                <rect>[240,503,120,30]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Delete</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_pvr_media_list_blue_flag" class="image">
+            <property>
+                <rect>[400,508,20,19]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#428ed6,#428ed6,#428ed6]</backcolor>
+                <mode>single</mode>
+                <img>tips_blue.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_pvr_media_list_blue_text" class="text">
+            <property>
+                <rect>[430,503,120,30]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Delete All</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="listview_pvr_list" class="listview">
+            <property>
+                <rect>[60,181,597,280]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#909092]</forecolor>
+                <backcolor>[#020206,#020206,#020206]</backcolor>
+                <roll_time>100</roll_time>
+                <enable_roll>true</enable_roll>
+                <format>enable_roll</format>
+                <interval>5</interval>
+                <focus_img>MP_BUTTON3.bmp</focus_img>
+                <item_active_image>MP_BUTTON3.bmp</item_active_image>
+                <item_active_color>#a8ca08</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,580,40]</item_rect>
+                <item_fore_color>[#c8c8c8,#bbff00,#909092]</item_fore_color>
+                <item_back_color>[#000000,#000000,#000000]</item_back_color>
+                <alignment>left|vcentre</alignment>
+            </property>
+            <signal>
+                <get_total>app_pvr_media_list_get_total</get_total>
+                <get_data>app_pvr_media_list_get_data</get_data>
+                <change>app_pvr_media_list_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="header_pvr_list" class="header">
+                    <property>
+                        <rect>[0,0,580,0]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#67A958,#503A8F,#85347A]</backcolor>
+                        <colum_number>2</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="text_pvr_list_header_1" class="text">
+                            <property>
+                                <rect>[0,0,40,0]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>right|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="text_pvr_list_header_2" class="text">
+                            <property>
+                                <rect>[40,0,540,0]</rect>
+                                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="scrollbar_pvr_list" class="scrollbar">
+                    <property>
+                        <rect>[580,0,17,280]</rect>
+                        <forecolor>[#909092,#909092,#909092]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <back_img>HDMP_SCROLL_MIDDLE.bmp</back_img>
+                        <arrow_up>HDMP_SCROLL_UP.bmp</arrow_up>
+                        <arrow_down>HDMP_SCROLL_DOWN.bmp</arrow_down>
+                        <fore_img>HDMP_SCROLL_MIDDLE2.bmp</fore_img>
+                        <format>scroll_show</format>
+                    </property>
+                </widget>
+                <widget style="default" name="listview_pvr_list_1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listview_pvr_list_2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listview_pvr_list_3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listview_pvr_list_4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listview_pvr_list_5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="listview_pvr_list_6" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default" name="wnd_pvr_media_list_image_line" class="image">
+            <property>
+                <rect>[60,167,597,5]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>HDMP_LINE_PART.bmp</lt_img>
+                <rt_img>HDMP_LINE_PART.bmp</rt_img>
+                <t_img>HDMP_LINE_PART.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default" name="wnd_pvr_media_list_img_bottom_line" class="image">
+            <property>
+                <rect>[60,473,597,5]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>HDMP_LINE_PART.bmp</lt_img>
+                <rt_img>HDMP_LINE_PART.bmp</rt_img>
+                <t_img>HDMP_LINE_PART.bmp</t_img>
+            </property>
+        </widget>
+        <widget style="default" name="text_pvr_midia_info_1" class="text">
+            <property>
+                <rect>[377,50,280,30]</rect>
+                <forecolor>[#cecece,#cecece,#cecece]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="text_pvr_midia_info_2" class="text">
+            <property>
+                <rect>[377,80,280,30]</rect>
+                <forecolor>[#cecece,#cecece,#cecece]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="text_pvr_midia_info_3" class="text">
+            <property>
+                <rect>[377,110,280,30]</rect>
+                <forecolor>[#cecece,#cecece,#cecece]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <alignment>right|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

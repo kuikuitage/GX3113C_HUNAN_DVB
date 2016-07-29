@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_pmp_set" class="window">
+    <property>
+        <rect>[16,0,320,576]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#242424,#242424,#242424]</backcolor>
+        <back_ground>menuback.jpg</back_ground>
+    </property>
+    <signal>
+        <create>pmp_set_init</create>
+        <destroy>pmp_set_destroy</destroy>
+        <keypress>pmp_set_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="pmp_set_image_logo" class="image">
+            <property>
+                <rect>[40,70,100,22]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>MP_ICON_SETTING.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="pmp_set_box" class="box">
+            <property>
+                <rect>[16,120,300,270]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#242424,#242424,#242424]</backcolor>
+                <interval>2</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="pmp_set_boxitem_language" class="boxitem">
+                    <property>
+                        <rect>[0,2,300,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <focus_image>MP_BUTTON6.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pmp_set_text_language" class="text">
+                            <property>
+                                <rect>[0,0,150,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Language</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pmp_set_combo_language" class="combobox">
+                            <property>
+                                <rect>[179,3,120,26]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[Chinese,English]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pmp_set_boxitem_tvout" class="boxitem">
+                    <property>
+                        <rect>[0,34,300,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <focus_image>MP_BUTTON6.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pmp_set_txt_tvout" class="text">
+                            <property>
+                                <rect>[0,0,150,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>TV Ouput</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pmp_set_combo_tvout" class="combobox">
+                            <property>
+                                <rect>[178,4,120,26]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[CVBS,SCART,VGA]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pmp_set_boxitem_video_format" class="boxitem">
+                    <property>
+                        <rect>[0,66,300,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <focus_image>MP_BUTTON6.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pmp_set_txt_video_format" class="text">
+                            <property>
+                                <rect>[0,0,150,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Video format</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pmp_set_combo_video_format" class="combobox">
+                            <property>
+                                <rect>[177,3,120,26]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#242424,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[Auto]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pmp_set_boxitem_screen_format" class="boxitem">
+                    <property>
+                        <rect>[0,98,300,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <focus_image>MP_BUTTON6.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pmp_set_txt_screen_format" class="text">
+                            <property>
+                                <rect>[0,0,150,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Screen format</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pmp_set_combo_screen_format" class="combobox">
+                            <property>
+                                <rect>[177,1,120,26]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[Auto,Full screen,Original,4:3,16:9]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pmp_set_boxitem_save_tags" class="boxitem">
+                    <property>
+                        <rect>[0,130,300,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <focus_image>MP_BUTTON6.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pmp_set_txt_save_tags" class="text">
+                            <property>
+                                <rect>[0,0,150,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Save tags</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pmp_set_combo_save_tags" class="combobox">
+                            <property>
+                                <rect>[177,3,120,26]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[Off,On]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="pmp_set_boxitem_fac_default" class="boxitem">
+                    <property>
+                        <rect>[0,162,300,30]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#242424,#242424,#242424]</backcolor>
+                        <focus_image>MP_BUTTON7.bmp</focus_image>
+                    </property>
+                    <children>
+                        <widget style="default" name="pmp_set_txt_fac_default" class="text">
+                            <property>
+                                <rect>[0,0,150,30]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string>Factory default</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="pmp_set_button_fac_default" class="button">
+                            <property>
+                                <rect>[185,2,100,26]</rect>
+                                <forecolor>[#909092,#cecece,#00FF00]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

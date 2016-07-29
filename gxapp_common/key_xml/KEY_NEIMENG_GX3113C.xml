@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<keymap>
+    <tree>
+    <item display="Remote Key map">
+    <item display="Remote 1" group="KEY_NEIMENG_GX3113C"/>
+    </item>
+    </tree>
+    <group name="KEY_NEIMENG_GX3113C">
+	<key name="GUIK_0">0x3030</key>
+	<key name="GUIK_1">0x3031</key>
+	<key name="GUIK_2">0x3032</key>
+	<key name="GUIK_3">0x3033</key>
+	<key name="GUIK_4">0x3034</key>
+	<key name="GUIK_5">0x3035</key>
+	<key name="GUIK_6">0x3036</key>
+	<key name="GUIK_7">0x3037</key>
+	<key name="GUIK_8">0x3038</key>
+	<key name="GUIK_9">0x3039</key>
+	<key name="GUIK_M">0x4548</key>		<!--menu-->
+	<key name="GUIK_ESCAPE">0x5858</key>	<!--exit-->
+	<key name="GUIK_RETURN">0x454E</key>	<!-->KEY_OK<-->
+	<key name="GUIK_UP">0x4450</key>
+	<key name="GUIK_DOWN">0x5344</key>
+	<key name="GUIK_LEFT">0x4E4F</key>
+	<key name="GUIK_RIGHT">0x5a4a</key>
+	<key name="GUIK_S">0x5a58</key>	<!--info-->
+	<key name="GUIK_HOME">0x4d55</key><!-->KEY_MUTE<-->
+	<key name="GUIK_T">0x4d44</key><!-->KEY_TV_RADIO<-->	
+	<key name="GUIK_R">0x5245</key><!-->KEY_RED<-->
+	<key name="GUIK_G">0x4752</key><!-->KEY_GREEN<-->
+	<key name="GUIK_Y">0x5945</key><!-->KEY_YELLOW<-->
+	<key name="GUIK_B">0x424c</key><!-->KEY_BLUE<-->
+	<key name="GUIK_P">0x5057</key><!-->KEY_POWER<-->
+	<key name="GUIK_BACKSPACE">0x5a4e</key><!-->KEY_MAIL<-->
+    </group>
+</keymap>
+

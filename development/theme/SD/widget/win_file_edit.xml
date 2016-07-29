@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_file_edit" class="window">
+    <property>
+        <rect>[0,0,180,180]</rect>
+        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+        <backcolor>[#909092,#909092,#909092]</backcolor>
+    </property>
+    <signal>
+        <create>file_edit_init</create>
+        <keypress>file_edit_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_file_edit_image437" class="image">
+            <property>
+                <rect>[0,0,180,180]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#808080]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U1.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U1.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B1.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B1.bmp</rb_img>
+                <l_img>MP_WIN4_L_M1.bmp</l_img>
+                <r_img>MP_WIN4_R_M1.bmp</r_img>
+                <t_img>MP_WIN4_U_M1.bmp</t_img>
+                <b_img>MP_WIN4_B_M1.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="file_edit_txt_wait" class="text">
+            <property>
+                <rect>[10,10,160,60]</rect>
+                <forecolor>[#f39a1d,#f39a1d,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>hcenter|vcentre</alignment>
+                <string>Waiting...</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="file_edit_box_edit" class="box">
+            <property>
+                <rect>[5,5,170,170]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#000000,#000000,#000000]</backcolor>
+                <interval>2</interval>
+                <format>vertical</format>
+            </property>
+            <children>
+                <widget style="default" name="file_edit_boxitem0" class="boxitem">
+                    <property>
+                        <rect>[0,2,170,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#000000,#000000,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="file_edit_button_copy" class="button">
+                            <property>
+                                <rect>[0,0,170,40]</rect>
+                                <forecolor>[#f4f4f4,#f39a1d,#00FF00]</forecolor>
+                                <backcolor>[#000000,#000000,#000000]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Copy</string>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="file_edit_boxitem1" class="boxitem">
+                    <property>
+                        <rect>[0,44,170,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#000000,#000000,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="file_edit_image_cut" class="button">
+                            <property>
+                                <rect>[0,0,170,40]</rect>
+                                <forecolor>[#f4f4f4,#f39a1d,#00FF00]</forecolor>
+                                <backcolor>[#000000,#000000,#000000]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Cut</string>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="file_edit_boxitem2" class="boxitem">
+                    <property>
+                        <rect>[0,86,170,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#000000,#000000,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="file_edit_button_paste" class="button">
+                            <property>
+                                <rect>[0,0,170,40]</rect>
+                                <forecolor>[#f4f4f4,#f39a1d,#00FF00]</forecolor>
+                                <backcolor>[#000000,#000000,#000000]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Paste</string>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="file_edit_boxitem3" class="boxitem">
+                    <property>
+                        <rect>[0,128,170,40]</rect>
+                        <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                        <backcolor>[#000000,#000000,#242424]</backcolor>
+                    </property>
+                    <children>
+                        <widget style="default" name="file_edit_button_delete" class="button">
+                            <property>
+                                <rect>[0,0,170,40]</rect>
+                                <forecolor>[#f4f4f4,#f39a1d,#00FF00]</forecolor>
+                                <backcolor>[#000000,#000000,#000000]</backcolor>
+                                <font>Arial</font>
+                                <alignment>hcentre|vcentre</alignment>
+                                <string>Delete</string>
+                                <focus_img>MP_BUTTON_DARKGREY3.bmp</focus_img>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

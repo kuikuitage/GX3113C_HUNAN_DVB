@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_menu_tv_list" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_menu_tv_list_create</create>
+        <destroy>win_menu_tv_list_destroy</destroy>
+        <keypress>win_menu_tv_list_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_menu_tv_list_image_bg" class="image">
+            <property>
+                <rect>[40,48,640,480]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#0086ce,#0086ce,#0086ce]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l_320.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r_320.bmp</rt_img>
+                <l_img>DS_WIN_BG_320.bmp</l_img>
+                <r_img>DS_WIN_BG_320.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tv_prog_image_video" class="image">
+            <property>
+                <rect>[85,140,245,184]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_TV_l_u.bmp</lt_img>
+                <rt_img>DS_TV_r_u.bmp</rt_img>
+                <lb_img>DS_TV_l_b.bmp</lb_img>
+                <rb_img>DS_TV_r_b.bmp</rb_img>
+                <l_img>DS_TV_l_m.bmp</l_img>
+                <r_img>DS_TV_r_m.bmp</r_img>
+                <t_img>DS_TV_u_m.bmp</t_img>
+                <b_img>DS_TV_b_m.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_menu_tv_list_text_msg" class="text">
+            <property>
+                <rect>[109,195,200,70]</rect>
+                <state>hide</state>
+                <forecolor>[#CEE8FF,#CEE8FF,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|top</alignment>
+                <string></string>
+                <format>automatic</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tv_prog_listview" class="listview">
+            <property>
+                <rect>[389,169,242,280]</rect>
+                <forecolor>[#212021,#212021,#212021]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <roll_time>50</roll_time>
+                <enable_roll>true</enable_roll>
+                <focus_img>DS_Channel_list_Yellow.bmp</focus_img>
+                <item_active_image>DS_Channel_list_Yellow.bmp</item_active_image>
+                <item_active_color>#CEE8FF</item_active_color>
+                <i18n>false</i18n>
+                <item_rect>[0,0,242,30]</item_rect>
+                <item_fore_color>[#CEE8FF,#212021,#CEE8FF]</item_fore_color>
+                <item_back_color>[#FF00FF,#FF00FF,#FF00FF]</item_back_color>
+                <alignment>left|vcentre</alignment>
+            </property>
+            <signal>
+                <get_total>win_tv_prog_listview_get_total</get_total>
+                <get_data>win_tv_prog_listview_get_data</get_data>
+                <change>win_tv_prog_listview_change</change>
+            </signal>
+            <children>
+                <widget style="default" name="win_tv_prog_header" class="header">
+                    <property>
+                        <rect>[0,0,242,0]</rect>
+                        <state>hide</state>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <colum_number>3</colum_number>
+                    </property>
+                    <children>
+                        <widget style="default" name="win_tv_prog_num" class="text">
+                            <property>
+                                <rect>[0,0,50,0]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#515151,#515151,#515151]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_menu_tv_list_prog_name" class="text">
+                            <property>
+                                <rect>[50,0,162,0]</rect>
+                                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                                <backcolor>[#515151,#515151,#515151]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget style="default" name="win_menu_tv_list_text_money" class="text">
+                            <property>
+                                <rect>[212,0,30,0]</rect>
+                                <forecolor>[#000000,#000000,#000000]</forecolor>
+                                <backcolor>[#808080,#808080,#808080]</backcolor>
+                                <font>Arial</font>
+                                <string></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget style="default" name="win_tv_prog_scrollbar" class="scrollbar">
+                    <property>
+                        <rect>[253,0,0,360]</rect>
+                        <state>hide</state>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                        <format>scroll_hide</format>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem1" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem2" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem3" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem4" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem5" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem6" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem7" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem8" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+                <widget style="default" name="win_tv_prog_listitem9" class="listitem">
+                    <property>
+                        <font>Arial</font>
+                    </property>
+                </widget>
+            </children>
+        </widget>
+        <widget style="default_img" name="win_tv_program_list_help_img" class="image">
+            <property>
+                <rect>[40,484,640,34]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE_640.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tv_list_tip_image_exit" class="image">
+            <property>
+                <rect>[159,489,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tv_list_tip_image_ok" class="image">
+            <property>
+                <rect>[394,489,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_ICON_OK.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[205,486,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_ok" class="text">
+            <property>
+                <rect>[438,484,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Select</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_menu_tv_list_text_title" class="text">
+            <property>
+                <rect>[409,121,200,35]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Simhei</font>
+                <string>TV</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_menu_tv_list_image_ad" class="file_image">
+            <property>
+                <rect>[85,352,245,110]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>ad.bmp</img>
+            </property>
+        </widget>
+        <widget style="default_img" name="win_tv_program_list_image179" class="image">
+            <property>
+                <rect>[355,175,4,290]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_channel_list_v.bmp</img>
+            </property>
+        </widget>
+        <widget style="default_img" name="win_tv_program_list_image180" class="image">
+            <property>
+                <rect>[387,158,242,5]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_channel_list_h.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tv_prog_text_title" class="text">
+            <property>
+                <rect>[168,56,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Program Browse</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_prog_info" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_prog_info_create</create>
+        <destroy>win_prog_info_destroy</destroy>
+        <keypress>win_prog_info_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_prog_info_set_image_bg" class="image">
+            <property>
+                <rect>[80,78,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#33508C,#33508C,#33508C]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_image202" class="image">
+            <property>
+                <rect>[80,456,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_prog_name" class="text">
+            <property>
+                <rect>[160,137,400,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_video_pid" class="text">
+            <property>
+                <rect>[97,181,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Video Pid</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_video_pid_value" class="text">
+            <property>
+                <rect>[201,181,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_pcr_pid" class="text">
+            <property>
+                <rect>[387,181,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Pcr pid</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_pcr_pid_value" class="text">
+            <property>
+                <rect>[490,181,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_audio_pid" class="text">
+            <property>
+                <rect>[97,221,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Audio Pid</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_audio_pid_value" class="text">
+            <property>
+                <rect>[201,221,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_fre" class="text">
+            <property>
+                <rect>[387,221,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Frequency</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_fre_value" class="text">
+            <property>
+                <rect>[490,220,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_err" class="text">
+            <property>
+                <rect>[97,301,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>ERR</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_err_value" class="text">
+            <property>
+                <rect>[201,301,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_track" class="text">
+            <property>
+                <rect>[387,261,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Track</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_track_value" class="text">
+            <property>
+                <rect>[490,261,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_authorization_info" class="text">
+            <property>
+                <rect>[97,261,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Authorization</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_authorization_info_value" class="text">
+            <property>
+                <rect>[201,261,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_signal_qauality" class="text">
+            <property>
+                <rect>[97,355,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Signal quality</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_signal_strength" class="text">
+            <property>
+                <rect>[97,394,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Signal strength</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_signal_quality_progbar" class="progbar">
+            <property>
+                <rect>[200,364,350,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <back_image_l>DS_PROBAR_BLUE.bmp</back_image_l>
+                <back_image_m>DS_PROBAR_BLUE.bmp</back_image_m>
+                <back_image_r>DS_PROBAR_BLUE.bmp</back_image_r>
+                <fore_image_l>DS_ICON_TRAN_BG.bmp</fore_image_l>
+                <fore_image_m>DS_ICON_TRAN_BG.bmp</fore_image_m>
+                <fore_image_r>DS_ICON_TRAN_BG.bmp</fore_image_r>
+                <format>water</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_signal_quality_value" class="text">
+            <property>
+                <rect>[557,355,80,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_signal_strength_progbar" class="progbar">
+            <property>
+                <rect>[199,402,350,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <back_image_l>DS_PROBAR_BLUE.bmp</back_image_l>
+                <back_image_m>DS_PROBAR_BLUE.bmp</back_image_m>
+                <back_image_r>DS_PROBAR_BLUE.bmp</back_image_r>
+                <fore_image_l>DS_ICON_TRAN_BG.bmp</fore_image_l>
+                <fore_image_m>DS_ICON_TRAN_BG.bmp</fore_image_m>
+                <fore_image_r>DS_ICON_TRAN_BG.bmp</fore_image_r>
+                <format>water</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_signal_strength_value" class="text">
+            <property>
+                <rect>[558,392,80,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_tip_image_exit" class="image">
+            <property>
+                <rect>[298,461,34,22]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[350,457,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_lock_text" class="text">
+            <property>
+                <rect>[386,301,100,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>LockState</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_lock_value" class="text">
+            <property>
+                <rect>[490,301,150,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_title" class="image">
+            <property>
+                <rect>[280,78,160,54]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_TITLE_PRO_SIGNAL.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_prog_info_text_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Program Information</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

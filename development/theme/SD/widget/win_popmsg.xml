@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_popmsg" class="window">
+    <property>
+        <rect>[0,0,340,220]</rect>
+        <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+        <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+    </property>
+    <signal>
+        <create>win_popmsg_create</create>
+        <keypress>win_popmsg_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_popmsg_image" class="image">
+            <property>
+                <rect>[0,0,340,220]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#515151,#515151,#515151]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_MASSAGE_LT.bmp</lt_img>
+                <rt_img>DS_MASSAGE_RT.bmp</rt_img>
+                <lb_img>DS_MASSAGE_LD.bmp</lb_img>
+                <rb_img>DS_MASSAGE_RD.bmp</rb_img>
+                <l_img>DS_MASSAGE_L.bmp</l_img>
+                <r_img>DS_MASSAGE_R.bmp</r_img>
+                <t_img>DS_MASSAGE_TOP.bmp</t_img>
+                <b_img>DS_MASSAGE_B.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_image_bg" class="image">
+            <property>
+                <rect>[20,20,300,180]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <l_img>DS_MSG_IMAGE_225_70.bmp</l_img>
+                <r_img>DS_MSG_IMAGE_225_70.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_head" class="text">
+            <property>
+                <rect>[27,2,280,36]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Inform</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_popmsg_text" class="text">
+            <property>
+                <rect>[10,48,320,160]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|top</alignment>
+                <string>Content</string>
+                <format>automatic</format>
+            </property>
+        </widget>
+    </children>
+</widget>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_search_result" class="window">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>win_search_result_create</create>
+        <destroy>win_search_result_destroy</destroy>
+        <service>app_search_result_service</service>
+        <keypress>win_search_result_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="win_search_result_image_bg" class="image">
+            <property>
+                <rect>[80,79,560,420]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#3a5594,#3a5594,#3a5594]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>DS_WIN_BG_T_l.bmp</lt_img>
+                <rt_img>DS_WIN_BG_T_r.bmp</rt_img>
+                <l_img>DS_WIN_BG.bmp</l_img>
+                <r_img>DS_WIN_BG.bmp</r_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tv_name" class="text">
+            <property>
+                <rect>[111,181,240,200]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|top</alignment>
+                <string></string>
+                <format>automatic</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tv_title" class="text">
+            <property>
+                <rect>[121,137,150,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>TV Service</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tv_num" class="text">
+            <property>
+                <rect>[272,137,60,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_frequency_name" class="text">
+            <property>
+                <rect>[112,388,100,38]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Search Freq</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_progbar" class="progbar">
+            <property>
+                <rect>[220,436,360,12]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <min>0</min>
+                <max>100</max>
+                <back_image_l>DS_PROBAR_BLUE.bmp</back_image_l>
+                <back_image_m>DS_PROBAR_BLUE.bmp</back_image_m>
+                <back_image_r>DS_PROBAR_BLUE.bmp</back_image_r>
+                <fore_image_l>DS_PROBAR_ORANGE.bmp</fore_image_l>
+                <fore_image_m>DS_PROBAR_ORANGE.bmp</fore_image_m>
+                <fore_image_r>DS_PROBAR_ORANGE.bmp</fore_image_r>
+                <format>water</format>
+                <text_format>hide</text_format>
+                <alignment>hcentre|vcentre</alignment>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_radio_title" class="text">
+            <property>
+                <rect>[393,139,150,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Radio Service</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_radio_num" class="text">
+            <property>
+                <rect>[544,138,60,40]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_radio_name" class="text">
+            <property>
+                <rect>[375,182,240,200]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|top</alignment>
+                <string></string>
+                <format>automatic</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_frequency_value" class="text">
+            <property>
+                <rect>[312,388,120,38]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_search_progress" class="text">
+            <property>
+                <rect>[111,428,110,38]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Search Progress:</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_search_value" class="text">
+            <property>
+                <rect>[586,423,50,38]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_auto_search_progress_image170" class="image">
+            <property>
+                <rect>[360,202,2,177]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_SEARCHING_V.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_auto_search_progress_image209" class="image">
+            <property>
+                <rect>[80,461,560,31]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <mode>single</mode>
+                <img>DS_HELP_COTE.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_tip_text_exit" class="text">
+            <property>
+                <rect>[356,462,140,30]</rect>
+                <forecolor>[#CEE8FF,#212021,#CEE8FF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Exit Menu</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tip_image_exit" class="image">
+            <property>
+                <rect>[307,465,34,22]</rect>
+                <forecolor>[#FFFFFF,#FF00FF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>single</mode>
+                <img>DS_Icon_Exit.bmp</img>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_save_img" class="image">
+            <property>
+                <rect>[74,241,580,97]</rect>
+                <state>hide</state>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <l_img>DS_MESSAGE_BLUE_LEFT.bmp</l_img>
+                <r_img>DS_MESSAGE_BLUE_RIGHT.bmp</r_img>
+                <t_img>DS_MESSAGE_BLUE_MIDDLE.bmp</t_img>
+                <b_img>DS_MESSAGE_BLUE_MIDDLE.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_save_tip" class="text">
+            <property>
+                <rect>[115,243,500,40]</rect>
+                <state>hide</state>
+                <forecolor>[#12406b,#12406b,#12406b]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>Saving prog,please waiting...</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tv_total" class="text">
+            <property>
+                <rect>[115,289,120,40]</rect>
+                <state>hide</state>
+                <forecolor>[#12406b,#12406b,#12406b]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>TvTotal:</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_tv_num1" class="text">
+            <property>
+                <rect>[255,288,100,40]</rect>
+                <state>hide</state>
+                <forecolor>[#12406b,#12406b,#12406b]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_radio_total" class="text">
+            <property>
+                <rect>[365,288,160,40]</rect>
+                <state>hide</state>
+                <forecolor>[#12406b,#12406b,#12406b]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string>RadioTotal:</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_radio_num1" class="text">
+            <property>
+                <rect>[530,289,90,40]</rect>
+                <state>hide</state>
+                <forecolor>[#12406b,#12406b,#12406b]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>Arial</font>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="win_search_result_text_title" class="text">
+            <property>
+                <rect>[163,88,400,42]</rect>
+                <forecolor>[#FFFFFF,#FFFFFF,#FFFFFF]</forecolor>
+                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                <font>simhei</font>
+                <string>Program Search</string>
+                <format>static</format>
+            </property>
+        </widget>
+    </children>
+</widget>

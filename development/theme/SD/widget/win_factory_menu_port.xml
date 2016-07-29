@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget class="window" style="default" name="win_factory_menu_port">
+    <property>
+        <rect>[0,0,720,576]</rect>
+        <forecolor>[#000000,#000000,#000000]</forecolor>
+        <backcolor>[#00FF00,#00FF00,#00FF00]</backcolor>
+    </property>
+    <signal>
+        <create>app_factory_menu_port_create</create>
+        <destroy>app_factory_menu_port_destroy</destroy>
+        <keypress>app_factory_menu_port_keypress</keypress>
+    </signal>
+    <children>
+        <widget class="image" style="default" name="win_factory_menu_image178">
+            <property>
+                <rect>[66,55,590,468]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#54bcf6,#54bcf6,#54bcf6]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget class="image" style="default" name="win_factory_menu_image180">
+            <property>
+                <rect>[66,116,590,370]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#96d9f2,#96d9f2,#96d9f2]</backcolor>
+                <mode>single</mode>
+                <img></img>
+            </property>
+        </widget>
+        <widget class="text" style="default" name="win_factory_menu_text_hit">
+            <property>
+                <rect>[67,493,590,30]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#96d9f2,#96d9f2,#96d9f2]</backcolor>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget class="text" style="default" name="win_factory_menu_text397">
+            <property>
+                <rect>[87,57,200,25]</rect>
+                <forecolor>[#120212,#120212,#120212]</forecolor>
+                <backcolor>[#54bcf6,#54bcf6,#54bcf6]</backcolor>
+                <font>Arial</font>
+                <string>Factory Menu 0.0.1</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget class="text" style="default" name="win_factory_menu_scan_text427">
+            <property>
+                <rect>[95,84,100,30]</rect>
+                <forecolor>[#120212,#120212,#120212]</forecolor>
+                <backcolor>[#96d9f2,#96d9f2,#96d9f2]</backcolor>
+                <font>Arial</font>
+                <string>BaseInfo</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget class="text" style="default" name="win_factory_menu_scan_text428">
+            <property>
+                <rect>[197,85,100,30]</rect>
+                <forecolor>[#120212,#120212,#120212]</forecolor>
+                <backcolor>[#96d9f2,#96d9f2,#96d9f2]</backcolor>
+                <font>Arial</font>
+                <string>Dplay</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget class="text" style="default" name="win_factory_menu_scan_text429">
+            <property>
+                <rect>[300,85,100,30]</rect>
+                <forecolor>[#120212,#120212,#120212]</forecolor>
+                <backcolor>[#949500,#949500,#949500]</backcolor>
+                <font>Arial</font>
+                <string>Port</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget class="text" style="default" name="win_factory_menu_scan_text430">
+            <property>
+                <rect>[403,86,100,30]</rect>
+                <forecolor>[#ffffff,#ffffff,#ffffff]</forecolor>
+                <backcolor>[#96d9f2,#96d9f2,#96d9f2]</backcolor>
+                <font>Arial</font>
+                <string>T-scan</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget class="box" style="default" name="win_factory_menu_port_box_set">
+            <property>
+                <rect>[137,148,400,220]</rect>
+                <forecolor>[#000000,#000000,#000000]</forecolor>
+                <backcolor>[#96d9f2,#96d9f2,#96d9f2]</backcolor>
+                <interval>10</interval>
+                <format>vertical</format>
+            </property>
+            <signal>
+                <keypress>app_factory_menu_port_box_keypress</keypress>
+            </signal>
+            <children>
+                <widget class="boxitem" style="default" name="win_factory_menu_port_boxitem93">
+                    <property>
+                        <rect>[0,10,400,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#96d9f2,#949500,#96d9f2]</backcolor>
+                    </property>
+                    <children>
+                        <widget class="combobox" style="default" name="win_factory_menu_port_combobox17">
+                            <property>
+                                <rect>[273,9,100,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[LOCKµ∆,¥˝ª˙µ∆]</content>
+                            </property>
+                        </widget>
+                        <widget class="text" style="default" name="win_factory_menu_port_text465">
+                            <property>
+                                <rect>[0,6,150,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>œ‘ æ…Ë÷√</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget class="boxitem" style="default" name="win_factory_menu_port_boxitem94">
+                    <property>
+                        <rect>[0,60,400,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#96d9f2,#949500,#96d9f2]</backcolor>
+                    </property>
+                    <children>
+                        <widget class="text" style="default" name="win_factory_menu_port_text466">
+                            <property>
+                                <rect>[0,6,150,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>—Ô…˘∆˜…Ë÷√</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget class="combobox" style="default" name="win_factory_menu_port_combobox18">
+                            <property>
+                                <rect>[274,7,100,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[πÿ,ø™]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget class="boxitem" style="default" name="win_factory_menu_port_boxitem95">
+                    <property>
+                        <rect>[0,110,400,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#96d9f2,#949500,#96d9f2]</backcolor>
+                    </property>
+                    <children>
+                        <widget class="text" style="default" name="win_factory_menu_port_text465">
+                            <property>
+                                <rect>[1,8,150,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>LEDµ∆…Ë÷√</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget class="combobox" style="default" name="win_factory_menu_port_combobox_led">
+                            <property>
+                                <rect>[275,7,100,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <content>[8888,0000]</content>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+                <widget class="boxitem" style="default" name="win_factory_menu_port_boxitem96">
+                    <property>
+                        <rect>[0,160,400,40]</rect>
+                        <forecolor>[#000000,#000000,#000000]</forecolor>
+                        <backcolor>[#96d9f2,#949500,#96d9f2]</backcolor>
+                    </property>
+                    <children>
+                        <widget class="text" style="default" name="win_factory_menu_port_text466">
+                            <property>
+                                <rect>[0,8,150,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <alignment>left|vcentre</alignment>
+                                <string>∞¥º¸ºÏ≤‚</string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                        <widget class="text" style="default" name="win_factory_menu_port_text_key">
+                            <property>
+                                <rect>[277,9,100,25]</rect>
+                                <forecolor>[#120212,#120212,#120212]</forecolor>
+                                <backcolor>[#FF00FF,#FF00FF,#FF00FF]</backcolor>
+                                <font>Arial</font>
+                                <string><></string>
+                                <format>static</format>
+                            </property>
+                        </widget>
+                    </children>
+                </widget>
+            </children>
+        </widget>
+    </children>
+</widget>

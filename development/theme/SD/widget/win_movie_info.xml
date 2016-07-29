@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<widget style="default" name="win_movie_info" class="window">
+    <property>
+        <rect>[60,70,600,340]</rect>
+        <forecolor>[#909092,#909092,#00FF00]</forecolor>
+        <backcolor>[#16161c,#16161c,#16161c]</backcolor>
+    </property>
+    <signal>
+        <create>movie_info_init</create>
+        <destroy>movie_info_destroy</destroy>
+        <service>movie_info_service</service>
+        <keypress>movie_info_keypress</keypress>
+    </signal>
+    <children>
+        <widget style="default" name="music_info_textback" class="image">
+            <property>
+                <rect>[0,0,600,340]</rect>
+                <forecolor>[#00FF00,#00FF00,#00FF00]</forecolor>
+                <backcolor>[#191819,#191819,#191819]</backcolor>
+                <mode>multiple</mode>
+                <img></img>
+                <lt_img>MP_WIN4_L_U.bmp</lt_img>
+                <rt_img>MP_WIN4_R_U.bmp</rt_img>
+                <lb_img>MP_WIN4_L_B.bmp</lb_img>
+                <rb_img>MP_WIN4_R_B.bmp</rb_img>
+                <l_img>MP_WIN4_L_M.bmp</l_img>
+                <r_img>MP_WIN4_R_M.bmp</r_img>
+                <t_img>MP_WIN4_U_M.bmp</t_img>
+                <b_img>MP_WIN4_B_M.bmp</b_img>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text0" class="text">
+            <property>
+                <rect>[36,27,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#addd28]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>File Name</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text1" class="text">
+            <property>
+                <rect>[36,66,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>File Size</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text2" class="text">
+            <property>
+                <rect>[36,105,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Resolution</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text3" class="text">
+            <property>
+                <rect>[36,144,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Code Format</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text4" class="text">
+            <property>
+                <rect>[36,183,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Bit Rate</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text5" class="text">
+            <property>
+                <rect>[36,222,180,40]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#242424]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string>Frame Rate</string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text_info0" class="text">
+            <property>
+                <rect>[219,27,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#addd28]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#ff00ff]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text_info1" class="text">
+            <property>
+                <rect>[219,66,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text_info2" class="text">
+            <property>
+                <rect>[219,105,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text_info3" class="text">
+            <property>
+                <rect>[219,144,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text_info4" class="text">
+            <property>
+                <rect>[219,183,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_text_info5" class="text">
+            <property>
+                <rect>[219,222,350,40]</rect>
+                <forecolor>[#c8c8c8,#c8c8c8,#00FF00]</forecolor>
+                <backcolor>[#ff00ff,#ff00ff,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>left|vcentre</alignment>
+                <string></string>
+                <format>static</format>
+            </property>
+        </widget>
+        <widget style="default" name="movie_info_button_ok" class="button">
+            <property>
+                <rect>[258,271,91,32]</rect>
+                <forecolor>[#c8c8c8,#bbff00,#00FF00]</forecolor>
+                <backcolor>[#808080,#808080,#808080]</backcolor>
+                <font>Arial</font>
+                <alignment>hcentre|vcentre</alignment>
+                <string>OK</string>
+                <focus_img>MP_BUTTON_OK.bmp</focus_img>
+                <unfocus_img>MP_BUTTON_OK.bmp</unfocus_img>
+            </property>
+        </widget>
+    </children>
+</widget>
